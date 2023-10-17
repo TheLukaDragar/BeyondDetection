@@ -1,0 +1,5 @@
+DFGC-1st-2022-model/convnext_xlarge_384_in22ft1k_30.pth
+convnext_models_images/*
+wandb/*
+__pycache__
+BeyondDetection/*
