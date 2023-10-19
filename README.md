@@ -5,7 +5,7 @@
 ```conda activate pytorch_env```
 
 ## Training
-Allocate a node with 4 gpus for training
+Allocate a node with 4 gpus for training(optional)
 
 ``` bash
 salloc --nodes=1 --gres=gpu:4 --ntasks-per-node=4 --mem=0 --time=0-10:00:00 --cpus-per-task=12 --job-name=Interactive_GPU2 --partition=gpu
@@ -16,9 +16,9 @@ Initialize a sweep with this will return a sweep id
 wandb sweep train_conv.yaml
 ```
 
-Run the sweep agent within the allocated node
+Run the sweep agent with slurm so that it can run in the background
 ``` bash
-wandb agent <sweep_id>
+sbatch ./run_agent.sh luka_borut/BeyondDetection/tw32ir3q
 ```
 
 this results in 

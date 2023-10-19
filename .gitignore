@@ -3,3 +3,6 @@ convnext_models_images/*
 wandb/*
 __pycache__
 BeyondDetection/*
+borut_models/*
+swin_models_images/*
+train_VRA5*
