@@ -1,0 +1,14 @@
+start
+imports done
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+trained_models ['eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=04-train_loss=0.07.ckpt', 'eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=09-train_loss=0.05.ckpt', 'eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=14-train_loss=0.03.ckpt']
+['/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=04-train_loss=0.07.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=09-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=14-train_loss=0.03.ckpt']
+epoch /ceph/hpc/data/st2207
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=04-train_loss=0.07.ckpt is 0.863757
+epoch /ceph/hpc/data/st2207
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=09-train_loss=0.05.ckpt is 0.889156
+epoch /ceph/hpc/data/st2207
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=14-train_loss=0.03.ckpt is 0.865768

@@ -46,6 +46,10 @@ from lightning.pytorch import seed_everything
 from tqdm import tqdm
 
 
+from train_timm import TimmModel
+import timm
+
+
 def train_val_test_split(dataset, train_prop=0.7, val_prop=0.2, test_prop=0.1):
     assert (
         0 <= train_prop <= 1 and 0 <= val_prop <= 1 and 0 <= test_prop <= 1
@@ -60,260 +64,6 @@ def train_val_test_split(dataset, train_prop=0.7, val_prop=0.2, test_prop=0.1):
     test_length = total_length - train_length - val_length
 
     return random_split(dataset, [train_length, val_length, test_length])
-
-
-class ConvNeXt(pl.LightningModule):
-    def __init__(self, og_path, model_name="convnext_tiny", dropout=0.1, loss="rmse"):
-        super(ConvNeXt, self).__init__()
-        self.model_name = model_name
-        self.backbone = create_model(self.model_name, pretrained=True, num_classes=2)
-        # load from checkpoint
-        # self.backbone.load_state_dict(torch.load('/d/hpc/projects/FRI/ldragar/convnext_xlarge_384_in22ft1k_10.pth'))
-
-        n_features = self.backbone.head.fc.in_features
-        self.backbone.head.fc = nn.Linear(n_features, 2)
-        self.backbone = torch.nn.DataParallel(self.backbone)
-        self.backbone.load_state_dict(torch.load(og_path))
-
-        self.backbone = self.backbone.module
-        self.backbone.head.fc = nn.Identity()
-
-        self.drop = nn.Dropout(dropout)
-
-        # one frame feature vector
-        self.fc = nn.Linear(n_features, 512)
-        self.fc2 = nn.Linear(512, 1)
-        # self.fc3 = nn.Linear(256, 64)
-        # self.fc4 = nn.Linear(64, 1)
-        self.mse = nn.MSELoss()
-        self.mae = nn.L1Loss()
-
-        self.test_preds = {}
-        self.test_labels = {}
-        self.current_test_set = None
-
-        # Initialize PearsonCorrCoef metric
-        self.pearson_corr_coef = torchmetrics.PearsonCorrCoef().to(self.device)
-        self.spearman_corr_coef = torchmetrics.SpearmanCorrCoef().to(self.device)
-        # rmse
-        self.mse_log = torchmetrics.MeanSquaredError().to(self.device)
-
-        # ddp debug
-        self.seen_samples = set()
-        self.seen_sample_names = set()
-
-        self.loss_fn = None
-
-        if loss == "rmse":
-            self.loss_fn = self.RMSE
-        elif loss == "mae":
-            self.loss_fn = self.MAE
-
-        elif loss == "opdai":
-
-            def custom_loss(pred, target):
-                return self.norm_loss_with_normalization(
-                    pred, target, p=1, q=2
-                ) + self.kl_div_loss(pred, target)
-
-            self.loss_fn = custom_loss
-
-        elif loss == "hust":
-
-            def custom_loss(pred, target):
-                # combine mae with rank and pearson
-                alpha = 0.5
-                beta = 1
-                # L = LMAE + α · LP LCC + β · Lrank (
-                return (
-                    self.MAE(pred, target)
-                    + alpha * self.pearson_corr_coef_loss(pred, target)
-                    # + beta * self.pairwise_ranking_loss(pred, target) #TODO
-                )
-
-            self.loss_fn = custom_loss
-        else:
-            raise ValueError("Invalid loss function")
-
-        self.save_hyperparameters()
-
-    def RMSE(self, preds, y):
-        mse = self.mse(preds.view(-1), y.view(-1))
-        return torch.sqrt(mse)
-
-    def forward(self, x):
-        # Choose a random index from the sequence dimension
-        random_idx = torch.randint(0, x.shape[1], (x.shape[0],))
-
-        # Select a random frame for each item in the batch
-        x_random_frame = x[torch.arange(x.shape[0]), random_idx]
-
-        # Process the selected frame with the backbone
-        features = self.backbone(
-            x_random_frame
-        )  # Output shape: (batch_size, n_features)
-
-        # Optionally, you can continue with further processing as needed
-        x = self.drop(features)
-        x = torch.nn.functional.relu(self.fc(x))
-        # x = torch.nn.functional.relu(self.fc2(x))
-        # x = torch.nn.functional.relu(self.fc3(x))
-        x = self.fc2(x)
-        logit = x
-
-        return logit
-
-    def training_step(self, batch, batch_idx):
-        x, y = batch
-        preds = self(x)
-        loss = self.loss_fn(preds, y)
-        rmse_loss = self.RMSE(preds, y)
-        self.log(
-            "train_loss", loss.item(), on_epoch=True, prog_bar=True, sync_dist=True
-        )
-        self.log(
-            "train_rmse_loss",
-            rmse_loss.item(),
-            on_epoch=True,
-            prog_bar=True,
-            sync_dist=True,
-        )
-
-        return loss
-
-    def validation_step(self, batch, batch_idx):
-        x, y = batch
-        preds = self(x)
-        loss = self.loss_fn(preds, y)
-        rmse_loss = self.RMSE(preds, y)
-        loss_value = loss.item()
-
-        self.log("val_loss", loss.item(), on_epoch=True, prog_bar=True, sync_dist=True)
-        self.log(
-            "val_rmse_loss",
-            rmse_loss.item(),
-            on_epoch=True,
-            prog_bar=True,
-            sync_dist=True,
-        )
-
-        # if loss is nan.0 then stop training
-        if math.isnan(loss_value):
-            print("val_loss is nan.0 stopping training")
-            self.trainer.should_stop = True
-        elif math.isinf(loss_value):
-            print("val_loss is inf stopping training")
-            self.trainer.should_stop = True
-
-    def pearson_corr_coef_mine(self, preds, y, eps=1e-8):
-        preds_mean = preds.mean()
-        y_mean = y.mean()
-        cov = ((preds - preds_mean) * (y - y_mean)).mean()
-        preds_std = torch.sqrt((preds - preds_mean).pow(2).mean() + eps)
-        y_std = torch.sqrt((y - y_mean).pow(2).mean() + eps)
-        plcc = cov / (preds_std * y_std)
-        return plcc
-
-    def pearson_corr_coef_loss(self, preds, y):
-        plcc = self.pearson_corr_coef_mine(preds.view(-1), y.view(-1))
-        loss = 1 - torch.abs(plcc)
-        return loss
-
-    def kl_div_loss(self, preds, target, eps=1e-8):
-        preds_softmax = torch.nn.functional.softmax(preds, dim=-1)
-        target_softmax = torch.nn.functional.softmax(target, dim=-1)
-        loss = torch.sum(
-            target_softmax * torch.log((target_softmax + eps) / (preds_softmax + eps)),
-            dim=-1,
-        )
-        loss = torch.mean(loss)
-        return loss
-
-    def norm_loss_with_normalization(self, pred, target, p=1, q=2):
-        """
-        Args:
-            pred (Tensor): of shape (N, 1). Predicted tensor.
-            target (Tensor): of shape (N, 1). Ground truth tensor.
-        """
-        batch_size = pred.shape[0]
-        if batch_size > 1:
-            vx = pred - pred.mean()
-            vy = target - target.mean()
-            if torch.all(vx == 0) or torch.all(vy == 0):
-                return torch.nn.functional.l1_loss(pred, target)
-
-            scale = np.power(2, p) * np.power(batch_size, max(0, 1 - p / q))  # p, q>0
-            norm_pred = torch.nn.functional.normalize(vx, p=q, dim=0)
-            norm_target = torch.nn.functional.normalize(vy, p=q, dim=0)
-            loss = torch.norm(norm_pred - norm_target, p=p) / scale
-        else:
-            loss = torch.nn.functional.l1_loss(pred, target)
-        return loss.mean()
-
-    def MAE(self, preds, y):
-        return self.mae(preds.view(-1), y.view(-1))
-
-    def configure_optimizers(self):
-        optimizer = AdamW(self.parameters(), lr=2e-5)
-        lr_scheduler = {
-            "scheduler": ReduceLROnPlateau(
-                optimizer, mode="min", factor=0.1, patience=2, verbose=True
-            ),
-            "monitor": "val_loss",
-        }
-        return [optimizer], [lr_scheduler]
-
-    def test_step(self, batch, batch_idx):
-        x, y, name = batch
-        # Check for duplicates THIS IS FOR DDP DEBUGGING
-        # for sample in x:
-        #     sample_hash = hash(sample.cpu().numpy().tostring())
-        #     if sample_hash in self.seen_samples:
-        #         print("Duplicate sample detected:", sample)
-        #         warnings.warn("Duplicate sample detected!!! ")
-        #     else:
-        #         # print("New sample detected:", str(sample_hash),str(batch_idx))
-        #         self.seen_samples.add(sample_hash)
-
-        for sample_name in name:
-            if sample_name in self.seen_sample_names:
-                print("Duplicate sample name detected:", sample_name)
-                warnings.warn("Duplicate sample name detected!!! ")
-            else:
-                # print("New sample name detected:", sample_name)
-                self.seen_sample_names.add(sample_name)
-                # print("New sample name detected:", sample_name)
-
-        preds = self(x)
-
-        if self.current_test_set not in self.test_preds:
-            self.test_preds[self.current_test_set] = []
-
-        self.test_preds[self.current_test_set].append(preds)
-
-        if self.current_test_set not in self.test_labels:
-            self.test_labels[self.current_test_set] = []
-
-        self.test_labels[self.current_test_set].append(y)
-
-    def on_test_epoch_end(self):
-        test_preds = torch.cat(self.test_preds[self.current_test_set])
-        test_labels = torch.cat(self.test_labels[self.current_test_set])
-        test_preds = test_preds.view(-1)
-        plcc = self.pearson_corr_coef(test_preds, test_labels)
-        spearman = self.spearman_corr_coef(test_preds, test_labels)
-        mse_log = self.mse_log(test_preds, test_labels)
-        rmse = torch.sqrt(mse_log)
-
-        self.log(self.current_test_set + "_plcc", plcc, sync_dist=True)
-        self.log(self.current_test_set + "_spearman", spearman, sync_dist=True)
-        self.log(
-            self.current_test_set + "_score", (plcc + spearman) / 2, sync_dist=True
-        )
-        self.log(self.current_test_set + "_rmse", rmse, sync_dist=True)
-
-    def get_predictions(self):
-        return torch.cat(self.test_preds).numpy()
 
 
 if __name__ == "__main__":
@@ -332,7 +82,7 @@ if __name__ == "__main__":
     # parser.add_argument('--cp_save_dir', default='/d/hpc/projects/FRI/ldragar/checkpoints/', help='Path to save checkpoints.')
     parser.add_argument(
         "--model_dir",
-        default="./convnext_models_images/",
+        default="./timm_models_images/",
         help="Path to save the final model.",
     )
     parser.add_argument("--batch_size", type=int, default=2, help="Batch size.")
@@ -348,12 +98,16 @@ if __name__ == "__main__":
         default="37orwro0",
         help="id(wandb_id) of the checkpoint to load from the model_dir.",
     )
+
+    #model_name
     parser.add_argument(
-        "--x_predictions",
-        type=int,
-        default=1,
-        help="Number of predictions to make. then average them.",
+        "--model_name",
+        default="convnext_xlarge_384_in22ft1k",
+        help="model_name.",
     )
+    
+
+
     parser.add_argument(
         "--out_predictions_dir",
         default="./predictions/",
@@ -363,11 +117,6 @@ if __name__ == "__main__":
         "--test_labels_dir",
         default="./competition_end_groundtruth/",
         help="Path to the test labels directory.",
-    )
-    parser.add_argument(
-        "--og_checkpoint",
-        default="./DFGC-1st-2022-model/convnext_xlarge_384_in22ft1k_30.pth",
-        help="DFGC1st convnext_xlarge_384_in22ft1k_30.pth file path",
     )
     # stage array
     parser.add_argument(
@@ -387,9 +136,7 @@ if __name__ == "__main__":
     seq_len = args.seq_len
     seed = args.seed
     cp_id = args.cp_id
-    x_predictions = args.x_predictions
     out_predictions_dir = args.out_predictions_dir
-    og_path = args.og_checkpoint
 
     # cp_save_dir = args.cp_save_dir
     test_labels_dir = args.test_labels_dir
@@ -397,25 +144,41 @@ if __name__ == "__main__":
     if not seed == -1:
         seed_everything(seed, workers=True)
 
-    transform_train, transform_test = build_transforms(
-        384,
-        384,
+
+    model = TimmModel(model_name=args.model_name)
+
+    resolution = model.backbone.pretrained_cfg['input_size'][1] #pretrained_cfg since we are using pretrained model
+
+
+    data_cfg = timm.data.resolve_data_config(model.backbone.pretrained_cfg)
+    print("Timm data_cfg", data_cfg)
+
+    #get std 
+    norm_std = data_cfg["std"]
+    print("using norm_std", norm_std)
+    norm_mean = data_cfg["mean"]
+    print("using norm_mean", norm_mean)
+
+    #important USE TIMM TRANSFORMS! https://huggingface.co/docs/timm/quickstart
+    _, transform_test = build_transforms(
+        resolution,
+        resolution,
         max_pixel_value=255.0,
-        norm_mean=[0.485, 0.456, 0.406],
-        norm_std=[0.229, 0.224, 0.225],
+        norm_mean=[norm_mean[0], norm_mean[1], norm_mean[2]],
+        norm_std=[norm_std[0], norm_std[1], norm_std[2]],
+      
     )
+
+
     _, transform_test_LR = build_transforms(
-        384,
-        384,
+        resolution,
+        resolution,
         max_pixel_value=255.0,
-        norm_mean=[0.485, 0.456, 0.406],
-        norm_std=[0.229, 0.224, 0.225],
+        norm_mean=[norm_mean[0], norm_mean[1], norm_mean[2]],
+        norm_std=[norm_std[0], norm_std[1], norm_std[2]],
         test_lr_flip=True,
     )
 
-    model = ConvNeXt(
-        og_path, model_name="convnext_xlarge_384_in22ft1k", dropout=0.1, loss="rmse"
-    )
     # load checkpoint
     # get files in dir
     files = os.listdir(model_dir)

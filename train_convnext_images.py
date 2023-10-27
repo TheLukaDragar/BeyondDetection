@@ -714,9 +714,13 @@ if __name__ == "__main__":
             with torch.no_grad():
                 for x,gt,nameee in ds:
                     x = x.unsqueeze(0).to(model.device)
+                    print("x.shape)",x.shape)
                     y = model(x)
+                    print("y.shape",y.shape)
+                    print("y",y)
                     y = y.cpu().numpy()
                     y =y[0][0]
+                   
                     test_gt.append(gt)
                     test_labels.append(y)
                     test_names.append(nameee)

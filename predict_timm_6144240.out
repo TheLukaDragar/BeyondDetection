@@ -1,0 +1,23 @@
+hello
+importing modules
+imported dataset_1
+imported torch
+imported pytorch_lightning
+imported pytorch_lightning callbacks
+imported timm
+hello
+importing modules
+imported dataset_1
+imported torch
+imported pytorch_lightning
+imported pytorch_lightning callbacks
+imported timm
+starting
+in_feats 1536
+no pretrained backbone loaded
+backbone modified head  ClassifierHead(
+  (global_pool): SelectAdaptivePool2d (pool_type=avg, flatten=Identity())
+  (drop): Dropout(p=0.0, inplace=False)
+  (fc): Identity()
+  (flatten): Identity()
+)

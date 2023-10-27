@@ -28,7 +28,6 @@ method: random
 metric:
   goal: minimize
   name: val_loss
-
 parameters:
   # model_name:
   #   values:
@@ -37,7 +36,6 @@ parameters:
   batch_size:
     values:
       - 1
-      - 8
     distribution: categorical
     
     
@@ -57,14 +55,12 @@ parameters:
   dropout:
     distribution: categorical
     values:
+      - 0.0
       - 0.1
-      - 0.5
 
   max_epochs:
     values:
-      - 16
-      - 32
-      - 48
+      - 1
     distribution: categorical
 
   loss:
@@ -75,24 +71,19 @@ parameters:
 
   augmentation:
     values:
-      - True
       - False
 
     distribution: categorical
 
   augment_prob:
     values:
-      - 0.5
-      - 0.9
+      - 0.0
     distribution: categorical
 
   drop_path_rate:
     values:
       - 0.0
-      - 0.1
       - 0.2
-
-
     distribution: categorical
 
   val_split:
@@ -113,11 +104,13 @@ parameters:
       - 1126
     distribution: categorical
 
+
   og_checkpoint:
     values:
       # - "./DFGC-1st-2022-model/convnext_xlarge_384_in22ft1k_30.pth"
       # - "./borut_models/convnext_xlarge_384_in22ft1k_30.pth"
-      - "borut_models/swin_large_patch4_window12_384_in22k_40.pth"
+      - "/ceph/hpc/data/st2207-pgp-users/models_luka/swin_large_patch4_window12_384.ms_in22k_ft_in1k/last.ckpt"
+
     
 
     distribution: categorical

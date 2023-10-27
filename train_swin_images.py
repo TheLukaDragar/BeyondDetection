@@ -74,12 +74,32 @@ class Swin(pl.LightningModule):
         n_features = self.backbone.head.in_features
         # self.backbone.head = nn.Linear(n_features, 2)
         # self.backbone = torch.nn.DataParallel(self.backbone)
-        self.backbone.load_state_dict(torch.load(og_path))
+        
+
+        # if og_path.endswith(".pth"):
+        #     print("loading from pth")
+        #     self.backbone.load_state_dict(torch.load(og_path))
+
+        # elif og_path.endswith(".ckpt"):
+        #     print("loading from ckpt")
+        #     checkpoint = torch.load(og_path)
+        #     model_weights = checkpoint["state_dict"]
+
+
+        #     #https://lightning.ai/docs/pytorch/stable/deploy/production_intermediate.html !
+        #     # update keys by dropping `auto_encoder.`
+        #     for key in list(model_weights):
+        #         model_weights[key.replace("model.", "")] = model_weights.pop(key)
+
+        #     self.backbone.load_state_dict(model_weights)
+        # else:
+        #     raise ValueError("Invalid og_path")
+        
 
         # self.backbone = self.backbone.module
         self.backbone.head = nn.Identity()
 
-        print("mod",self.backbone)
+        # print("mod",self.backbone)
 
         self.drop = nn.Dropout(dropout)
 
@@ -350,7 +370,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--og_checkpoint",
-        default="/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_models/swin_large_patch4_window12_384_in22k_40.pth",
+        default="/ceph/hpc/data/st2207-pgp-users/models_luka/swin_large_patch4_window12_384.ms_in22k_ft_in1k/last.ckpt",
         help="DFGC1st convnext_xlarge_384_in22ft1k_30.pth file path",
     )
     # parser.add_argument('--cp_save_dir', default='/d/hpc/projects/FRI/ldragar/checkpoints/', help='Path to save checkpoints.')
@@ -601,7 +621,7 @@ if __name__ == "__main__":
         state_dict = torch.load(checkpoint_path)
         model.load_state_dict(state_dict)
 
-    wandb_logger.watch(model, log="all", log_freq=100)
+    wandb_logger.watch(model, log="all", log_freq=100,log_graph=False)
     # log batch size
     wandb_logger.log_hyperparams({"batch_size": batch_size})
     # random face frames
@@ -717,18 +737,31 @@ if __name__ == "__main__":
             with torch.no_grad():
                 for x,gt,nameee in ds:
                     x = x.unsqueeze(0).to(model.device)
+                    print("x.shape)",x.shape)
                     y = model(x)
+                    print("y.shape",y.shape)
+                    print("y",y)
                     y = y.cpu().numpy()
                     y =y[0][0]
+                   
                     test_gt.append(gt)
                     test_labels.append(y)
                     test_names.append(nameee)
+
+            print(f"predicted {len(test_labels)} labels for {name}")
+            print(f'len test_names {len(test_names)}')
+            print(f'len test_labels aka predictions{len(test_labels)}')
+            print(test_labels)
 
             #compute score for test set
             test_labels = torch.tensor(test_labels).to(model.device)
             test_gt = torch.tensor(test_gt).to(model.device)
             test_names = np.array(test_names)
             test_labels = test_labels.view(-1)
+
+            print("test_labels shape",test_labels.shape)
+            print("test_gt shape",test_gt.shape)
+
 
             plcc = model.pearson_corr_coef(test_labels, test_gt)
             spearman = model.spearman_corr_coef(test_labels, test_gt)

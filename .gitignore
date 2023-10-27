@@ -5,4 +5,11 @@ __pycache__
 BeyondDetection/*
 borut_models/*
 swin_models_images/*
-train_VRA5*
+train_VRA*
+borut_pretrain/borut_pretrain/*
+borut_pretrain/wandb/*
+borut_pretrain/__pycache__/*
+borut_pretrain/save_result2_swin/*
+borut_pretrain/train_Borut*
+
+timm_models_images/*

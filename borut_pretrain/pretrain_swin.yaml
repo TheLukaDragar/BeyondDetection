@@ -1,0 +1,75 @@
+project: borut_pretrain
+name: vega_swin_pretrain
+program: pretrain_swin2.py
+
+
+command:
+  - ${env}
+  # - echo
+  - srun
+  - "--nodes=1"
+  - "--cpus-per-task=12"
+  - "--gpus=4"
+  - "-p gpu"
+  - "--ntasks-per-node=4"
+  - "--exclusive"
+  - python3
+  - ${program}
+  - ${args}
+  - "--devices"
+  - "0"
+  - "1"
+  - "2"
+  - "3"
+
+
+
+method: grid
+metric:
+  goal: minimize
+  name: train_loss
+
+parameters:
+  # model_name:
+  #   values:
+  #     - convnext_xlarge_384_in22ft1k
+  #   distribution: categorical
+  batch_size:
+    values:
+      - 24
+      - 6
+    distribution: categorical
+    
+  num_epochs:
+    values:
+      - 16
+      - 32
+      - 48
+      - 64
+    distribution: categorical
+
+ 
+  # seed:
+  #   values:
+  #     - -1
+  #     - 1126
+  #   distribution: categorical
+
+    
+
+
+
+  
+  
+
+
+
+  # devices:
+  #   value:
+  #     - [0,1,2,3]
+  #   distribution: constant
+
+  # dataset_root:
+  #   value:
+  #     - "/ceph/hpc/data/st2207-pgp-users/ldragar/dataset/"
+  #   distribution: constant

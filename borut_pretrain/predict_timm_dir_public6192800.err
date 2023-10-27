@@ -1,0 +1,10 @@
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+usage: predict_timm_dir_public.py [-h] [--root_path ROOT_PATH]
+                                  [--save_path SAVE_PATH]
+                                  [--model_name MODEL_NAME]
+                                  [--pre_trained_dir PRE_TRAINED_DIR]
+                                  [--output_txt OUTPUT_TXT] [--latest_only]
+                                  [--gpu_id GPU_ID]
+                                  [--val_batch_size VAL_BATCH_SIZE]
+predict_timm_dir_public.py: error: unrecognized arguments: True
+srun: error: gn27: task 0: Exited with exit code 2

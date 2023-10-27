@@ -1,0 +1,10 @@
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torchmetrics/utilities/prints.py:42: UserWarning: Metric `SpearmanCorrcoef` will save all targets and predictions in the buffer. For large datasets, this may lead to large memory footprint.
+  warnings.warn(*args, **kwargs)  # noqa: B028
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/predict_all_frames.py", line 152, in <module>
+    data_cfg = timm.data.resolve_data_config(model.backbone.pretrained_cfg)
+NameError: name 'timm' is not defined
+srun: error: gn37: task 0: Exited with exit code 1

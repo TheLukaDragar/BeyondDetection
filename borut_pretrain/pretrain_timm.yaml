@@ -1,0 +1,76 @@
+project: borut_pretrain
+name: vega_timm_pretrain_2
+program: pretrain_timm.py
+
+
+command:
+  - ${env}
+  # - echo
+  - srun
+  - "--nodes=2"
+  - "--cpus-per-task=12"
+  # - "--gpus=4"
+  - --gpus-per-node=4
+  - "-p gpu"
+  - "--ntasks-per-node=4"
+  - "--exclusive"
+  - python3
+  - ${program}
+  - ${args}
+  - "--devices"
+  - "0"
+  - "1"
+  - "2"
+  - "3"
+  - "--num_nodes"
+  - "2"
+
+
+
+method: grid
+metric:
+  goal: minimize
+  name: train_loss
+
+parameters:
+  model_name:
+    values:
+      - eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+    distribution: categorical
+  batch_size:
+    values:
+      - 8
+      - 16
+    distribution: categorical
+    
+  num_epochs:
+    values:
+      - 2
+
+    distribution: categorical
+
+ 
+  # seed:
+  #   values:
+  #     - -1
+  #     - 1126
+  #   distribution: categorical
+
+    
+
+
+
+  
+  
+
+
+
+  # devices:
+  #   value:
+  #     - [0,1,2,3]
+  #   distribution: constant
+
+  # dataset_root:
+  #   value:
+  #     - "/ceph/hpc/data/st2207-pgp-users/ldragar/dataset/"
+  #   distribution: constant
