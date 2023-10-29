@@ -45,7 +45,7 @@ parameters:
     
   num_epochs:
     values:
-      - 2
+      - 10
 
     distribution: categorical
 

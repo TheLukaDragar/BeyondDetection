@@ -8,7 +8,7 @@ import torch
 import torch.optim as optim
 from torch.autograd import Variable
 import argparse
-
+import sys
 
 import json
 import random
@@ -357,6 +357,8 @@ def main():
 
         #get args
         print("args", args)
+        print("sys.argv", sys.argv)
+
 
 
 
@@ -371,6 +373,8 @@ def main():
         #add argument to sys.argv
         sys.argv.append("--wandb_run_id")
         sys.argv.append(wandb_run_id)
+
+        print("sys.argv", sys.argv)
 
         
 
@@ -391,6 +395,7 @@ def main():
         save_top_k=-1,  # Save all checkpoints
         every_n_epochs=args.save_checkpoint_every_n_epochs,
     )
+    print("checkpoint_callback", checkpoint_callback)
    
 
 
