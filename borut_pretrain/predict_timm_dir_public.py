@@ -10,6 +10,7 @@ from torch.autograd import Variable
 import random
 import argparse
 import json
+import wandb
 
 import numpy as np
 
@@ -42,11 +43,11 @@ def parse_args():
     )
 
     parser.add_argument("--save_path", type=str, default="./save_result/txt")
-    parser.add_argument(
-        "--model_name",
-        type=str,
-        default="swin_large_patch4_window12_384.ms_in22k_ft_in1k",
-    )
+    # parser.add_argument(
+    #     "--model_name",
+    #     type=str,
+    #     default="swin_large_patch4_window12_384.ms_in22k_ft_in1k",
+    # )
     # parser.add_argument('--pre_trained', type=str, default='./save_result/models/efficientnet-b4.pth')
     # parser.add_argument('--pre_trained', type=str, default='./models/swin_large_patch4_window12_384_in22k_40.pth')
     parser.add_argument(
@@ -66,6 +67,10 @@ def parse_args():
         default=False,
         help="evaluate the latest model only",
     )
+
+    #run_id
+    parser.add_argument("--run_id", type=str, default="ys59z47m")
+
 
     parser.add_argument("--gpu_id", type=int, default=0)
 
@@ -96,11 +101,26 @@ def main():
     args = parse_args()
     test_videos = os.listdir(args.root_path)
 
+    project_name = "borut_pretrain"
+    run_id = args.run_id   
+
+    # Authenticate to wandb
+    wandb.login()
+
+    # Connect to the specified project
+    api = wandb.Api()
+
+    #get details of the run
+    run = api.run(f"{project_name}/{run_id}")
+    model_name = run.config['model_name']
+    print("wandb run", run_id)
+    print("model_name", model_name)
+
     # _, transform_test = build_transforms(args.resolution, args.resolution,
     #                     max_pixel_value=255.0, norm_mean=[0.485, 0.456, 0.406], norm_std=[0.229, 0.224, 0.225])
 
     # ptl
-    model = MyModel(model_name=args.model_name)
+    model = MyModel(model_name=model_name)
     # get resolution from model
     resolution = model.model.pretrained_cfg["input_size"][
         1
@@ -127,11 +147,11 @@ def main():
     )
 
     # load saved model
-    trained_models = os.listdir(os.path.join(args.pre_trained_dir, args.model_name))
+    trained_models = os.listdir(os.path.join(args.pre_trained_dir, model_name,run_id))
     # print("trained_models", trained_models)
     # trained_models = ['swin_large_patch4_window12_384_in22k_0.pth']
     # trained_models = ["swin_large_patch4_window12_384_in22k_40.pth", "swin_large_patch4_window12_384_in22k.pth"]
-    path = os.path.abspath(os.path.join(args.pre_trained_dir, args.model_name))
+    path = os.path.abspath(os.path.join(args.pre_trained_dir, model_name,run_id))
     # keep only .pth files
     files = [os.path.join(path, f) for f in trained_models if f.endswith(".ckpt")]
 
@@ -191,6 +211,30 @@ def main():
         # gt_labels,prediction_scores = print_ERR.init(args.output_txt,"Private Label.json")
         score = print_ERR.printAUC(gt_labels, prediction_scores)
         print("AUC score for model %s is %f" % (pre_trained, score))
+
+        # log to wandb for each epoch
+
+        best_auc = run.summary.get("best_auc", 0)
+        if score >= best_auc:
+            run.summary["best_auc"] = score
+            run.summary["best_auc_epoch"] = epoch
+            run.summary.update()
+            print("new best_auc", score)
+        
+
+        
+        
+
+
+        
+
+    
+
+
+
+
+        
+
 
 
 if __name__ == "__main__":

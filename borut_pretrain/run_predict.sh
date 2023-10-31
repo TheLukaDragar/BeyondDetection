@@ -17,7 +17,10 @@
 source /ceph/hpc/data/st2207-pgp-users/ldragar/miniconda3/etc/profile.d/conda.sh
 conda activate  /ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env
 
-#    parser.add_argument('--model_name', type=str, default='swin_large_patch4_window12_384.ms_in22k_ft_in1k')           
-#    parser.add_argument('--output_txt', type=str, default='./save_result/pred_swin55_public.txt')
 
-srun python3 predict_timm_dir_public.py  --model_name eva02_large_patch14_448.mim_m38m_ft_in22k_in1k --output_txt ./save_result/pred_eva02_large_patch14_448.mim_m38m_ft_in22k_in1k_public.txt 
+
+#get wandb run id from command line
+run_id=$1
+output_txt="./save_result/pred_"$run_id"_public.txt"
+
+srun python3 predict_timm_dir_public.py --run_id $run_id --output_txt $output_txt

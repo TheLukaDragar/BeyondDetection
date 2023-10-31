@@ -40,12 +40,12 @@ parameters:
   batch_size:
     values:
       - 8
-      - 16
     distribution: categorical
     
   num_epochs:
     values:
-      - 10
+      - 60
+
 
     distribution: categorical
 
