@@ -274,8 +274,8 @@ def main():
         wandb_logger = WandbLogger(name=args.model_name, project=args.project_name)
 
     else:
-        print("resuming run id", args.run_id)
-        wandb_logger = WandbLogger(name=args.model_name, project=args.project_name,version=args.run_id,resume="must")
+        print("resuming run id", args.resume_run_id)
+        wandb_logger = WandbLogger(name=args.model_name, project=args.project_name,version=args.resume_run_id,resume="must")
         
         
 
@@ -513,7 +513,7 @@ def main():
     val_labels = [dataset_labels[i] for i in val_indexes]
     val_metadata = [dataset_metadata[i] for i in val_indexes]
 
-    print("validation videos", val_videos)
+    # print("validation videos", val_videos)
 
     # Remove validation set from training set
     train_videos = [i for j, i in enumerate(dataset_videos) if j not in val_indexes]
@@ -627,6 +627,7 @@ def main():
                 ],
                 key=os.path.getctime,
             )
+        
             print("found checkpoint", ckpt_path)
         else:
             print("no checkpoint found")
@@ -641,8 +642,17 @@ def main():
         num_nodes=args.num_nodes,
         devices=args.devices,
         callbacks=[checkpoint_callback],
-        ckpt_path=ckpt_path,
     )
+
+
+
+    # ft_checkpoints = [cb for cb in trainer.callbacks if isinstance(cb, ModelCheckpoint)]
+    # print("ft_checkpoints", ft_checkpoints[0].dirpath)
+
+
+
+
+
     if trainer.global_rank == 0:
         # make cp save dir savepath _ model name _ wandb run id
         if not os.path.exists(
@@ -656,7 +666,10 @@ def main():
 
     print(trainer.global_rank, trainer.world_size, os.environ["SLURM_NTASKS"])
 
-    trainer.fit(model, datamodule=data_module)
+    if not args.resume_run_id == "None":
+        print("using checkpoint", ckpt_path)
+
+    trainer.fit(model, datamodule=data_module, ckpt_path=os.path.abspath(ckpt_path))
     print("saving last checkpoint")
     trainer.save_checkpoint(
         "%s/%s/%s/%s_final.ckpt"
