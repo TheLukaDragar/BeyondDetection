@@ -1,0 +1,3 @@
+wandb: Starting wandb agent 🕵️
+2023-10-20 12:24:57,480 - wandb.wandb_agent - INFO - Running runs: []
+slurmstepd: error: *** JOB 5937216 ON gn15 CANCELLED AT 2023-10-20T12:38:28 ***

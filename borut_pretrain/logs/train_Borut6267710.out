@@ -1,0 +1,210 @@
+start
+imports done
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:53:38]
+start
+imports done
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:53:38]
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:53:38]
+start
+imports done
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:53:38]
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:53:38]
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:53:38]
+[2023-10-26 16:53:38 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:53:38]
+start
+imports done
+[2023-10-26 16:53:40 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 16:53:40 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:53:40]
+loading train_labels from cache
+[2023-10-26 16:53:39], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:53:47] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+loading train_labels from cache
+[2023-10-26 16:53:39], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:53:48] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+loading train_labels from cache
+[2023-10-26 16:53:39], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:53:48] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+loading train_labels from cache
+[2023-10-26 16:53:38], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:53:48] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+loading train_labels from cache
+[2023-10-26 16:53:38], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:53:48] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+loading train_labels from cache
+[2023-10-26 16:53:40], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:53:48] All Train videos Number: 10
+batch_size = 8
+set env variable MY_WANDB_RUN_ID to 5u5gml5t
+init trainer
+loading train_labels from cache
+[2023-10-26 16:53:38], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:53:48] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+loading train_labels from cache
+[2023-10-26 16:53:39], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:53:48] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+start
+imports done
+[2023-10-26 16:54:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 16:54:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:54:00]
+start
+imports done
+[2023-10-26 16:54:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 16:54:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:54:00]
+start
+imports done
+[2023-10-26 16:54:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 16:54:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:54:00]
+start
+imports done
+[2023-10-26 16:54:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 16:54:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:54:00]
+start
+imports done
+[2023-10-26 16:54:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 16:54:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 16:54:01 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:54:01]
+[2023-10-26 16:54:01 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:54:01]
+start
+imports done
+[2023-10-26 16:54:01 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 16:54:01 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:54:01]
+start
+imports done
+[2023-10-26 16:54:03 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 16:54:03 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-26 16:54:03]
+loading train_labels from cache
+[2023-10-26 16:54:00], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:54:05] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+loading train_labels from cache
+[2023-10-26 16:54:00], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:54:06] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+loading train_labels from cache
+[2023-10-26 16:54:00], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:54:06] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+loading train_labels from cache
+[2023-10-26 16:54:01], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:54:07] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+loading train_labels from cache
+[2023-10-26 16:54:00], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:54:07] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+loading train_labels from cache
+[2023-10-26 16:54:01], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:54:07] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+loading train_labels from cache
+[2023-10-26 16:54:01], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:54:09] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+loading train_labels from cache
+[2023-10-26 16:54:03], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 16:54:09] All Train videos Number: 10
+batch_size = 16
+set env variable MY_WANDB_RUN_ID to adzmjrhg
+init trainer

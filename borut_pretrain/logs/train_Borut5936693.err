@@ -1,0 +1,229 @@
+wandb: Starting wandb agent 🕵️
+2023-10-20 12:06:06,686 - wandb.wandb_agent - INFO - Running runs: []
+2023-10-20 12:06:07,081 - wandb.wandb_agent - INFO - Agent received command: run
+2023-10-20 12:06:07,081 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 8
+	model_name: swin_large_patch4_window12_384.ms_in22k_ft_in1k
+	num_epochs: 5
+2023-10-20 12:06:07,083 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 "-p gpu" --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --batch_size=8 --model_name=swin_large_patch4_window12_384.ms_in22k_ft_in1k --num_epochs=5 --devices 0 1 2 3
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+2023-10-20 12:06:12,092 - wandb.wandb_agent - INFO - Running runs: ['8dqs7m1r']
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231020_120618-8dqs7m1r
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run swin_large_patch4_window12_384.ms_in22k_ft_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🧹 View sweep at https://wandb.ai/luka_borut/borut_pretrain/sweeps/nk818zp0
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/8dqs7m1r
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+wandb: logging graph, to disable use `wandb.watch(log_graph=False)`
+wandb: WARNING Config item 'model_name' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'num_epochs' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'batch_size' was locked by 'sweep' (ignored update).
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+
+You are using a CUDA device ('NVIDIA A100-SXM4-40GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:617: UserWarning: Checkpoint directory /ceph/hpc/data/st2207-pgp-users/models_luka/swin_large_patch4_window12_384.ms_in22k_ft_in1k exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | model     | SwinTransformer  | 195 M 
+1 | criterion | CrossEntropyLoss | 0     
+-----------------------------------------------
+195 M     Trainable params
+0         Non-trainable params
+195 M     Total params
+780.806   Total estimated model params size (MB)
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 435, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 366, in main
+    trainer.fit(model, datamodule=data_module)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42, in _call_and_handle_interrupt
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 435, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 366, in main
+    trainer.fit(model, datamodule=data_module)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93, in launch
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93, in launch
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 435, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 366, in main
+    trainer.fit(model, datamodule=data_module)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571, in _fit_impl
+    return function(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571, in _fit_impl
+    return function(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 980, in _run
+    self._run(model, ckpt_path=ckpt_path)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 980, in _run
+    results = self._run_stage()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1023, in _run_stage
+    self._run(model, ckpt_path=ckpt_path)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 980, in _run
+    results = self._run_stage()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1023, in _run_stage
+    self.fit_loop.run()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 194, in run
+    results = self._run_stage()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1023, in _run_stage
+    self.fit_loop.run()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 194, in run
+    self.fit_loop.run()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 194, in run
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 435, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 366, in main
+    trainer.fit(model, datamodule=data_module)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 980, in _run
+    results = self._run_stage()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1023, in _run_stage
+    self.fit_loop.run()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 194, in run
+    self.setup_data()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 237, in setup_data
+    self.setup_data()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 237, in setup_data
+    self.setup_data()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 237, in setup_data
+    self.setup_data()
+    dl = _process_dataloader(trainer, dl)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 495, in _process_dataloader
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 237, in setup_data
+    dl = _process_dataloader(trainer, dl)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 495, in _process_dataloader
+    dl = _process_dataloader(trainer, dl)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 495, in _process_dataloader
+    dl = _process_dataloader(trainer, dl)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 495, in _process_dataloader
+    dataloader = trainer._data_connector._prepare_dataloader(dataloader, shuffle=is_shuffled, mode=stage)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 200, in _prepare_dataloader
+    dataloader = trainer._data_connector._prepare_dataloader(dataloader, shuffle=is_shuffled, mode=stage)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 200, in _prepare_dataloader
+    dataloader = trainer._data_connector._prepare_dataloader(dataloader, shuffle=is_shuffled, mode=stage)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 200, in _prepare_dataloader
+    dataloader = trainer._data_connector._prepare_dataloader(dataloader, shuffle=is_shuffled, mode=stage)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 200, in _prepare_dataloader
+    sampler = self._resolve_sampler(dataloader, shuffle=shuffle, mode=mode)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 211, in _resolve_sampler
+    sampler = self._resolve_sampler(dataloader, shuffle=shuffle, mode=mode)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 211, in _resolve_sampler
+    sampler = self._resolve_sampler(dataloader, shuffle=shuffle, mode=mode)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 211, in _resolve_sampler
+    sampler = _get_distributed_sampler(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 253, in _get_distributed_sampler
+    sampler = _get_distributed_sampler(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 253, in _get_distributed_sampler
+    sampler = _get_distributed_sampler(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 253, in _get_distributed_sampler
+    sampler = self._resolve_sampler(dataloader, shuffle=shuffle, mode=mode)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 211, in _resolve_sampler
+    return DistributedSamplerWrapper(dataloader.sampler, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 325, in __init__
+    return DistributedSamplerWrapper(dataloader.sampler, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 325, in __init__
+    return DistributedSamplerWrapper(dataloader.sampler, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 325, in __init__
+    sampler = _get_distributed_sampler(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 253, in _get_distributed_sampler
+    return DistributedSamplerWrapper(dataloader.sampler, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 325, in __init__
+    super().__init__(_DatasetSamplerWrapper(sampler), *args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/distributed.py", line 74, in __init__
+    super().__init__(_DatasetSamplerWrapper(sampler), *args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/distributed.py", line 74, in __init__
+    super().__init__(_DatasetSamplerWrapper(sampler), *args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/distributed.py", line 74, in __init__
+    super().__init__(_DatasetSamplerWrapper(sampler), *args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/distributed.py", line 74, in __init__
+    raise ValueError(
+ValueError: Invalid rank 5, rank should be in the interval [0, 3]
+    raise ValueError(
+ValueError: Invalid rank 6, rank should be in the interval [0, 3]
+    raise ValueError(
+ValueError: Invalid rank 7, rank should be in the interval [0, 3]
+    raise ValueError(
+ValueError: Invalid rank 4, rank should be in the interval [0, 3]
+srun: error: gn30: tasks 5-6: Exited with exit code 1
+srun: error: gn30: task 4: Exited with exit code 1
+srun: error: gn30: task 7: Exited with exit code 1
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 5936693 ON gn26 CANCELLED AT 2023-10-20T12:10:42 ***
+slurmstepd: error: *** STEP 5936693.0 ON gn26 CANCELLED AT 2023-10-20T12:10:42 ***

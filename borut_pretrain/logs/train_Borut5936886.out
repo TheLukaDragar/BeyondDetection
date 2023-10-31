@@ -1,0 +1,316 @@
+start
+imports done
+[2023-10-20 12:12:11 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+start
+imports done
+[2023-10-20 12:12:11 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+start
+imports done
+[2023-10-20 12:12:11 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+[2023-10-20 12:12:11 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:11]
+[2023-10-20 12:12:11 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:11]
+[2023-10-20 12:12:11 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:11]
+start
+imports done
+[2023-10-20 12:12:11 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+start
+imports done
+[2023-10-20 12:12:12 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+start
+imports done
+[2023-10-20 12:12:12 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+start
+imports done
+[2023-10-20 12:12:12 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+[2023-10-20 12:12:12 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:12]
+[2023-10-20 12:12:12 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:12]
+[2023-10-20 12:12:12 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:12]
+[2023-10-20 12:12:12 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:12]
+start
+imports done
+[2023-10-20 12:12:12 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+[2023-10-20 12:12:13 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:13]
+loading train_labels from cache
+[2023-10-20 12:12:12], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:12] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:12], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:12] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:12], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:12] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:12], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:12] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:12], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:12] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:12], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:12] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:13], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:13] All Train videos Number: 100
+batch_size = 24
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:12], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:12] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+start
+imports done
+[2023-10-20 12:12:27 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:12:27 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:27]
+start
+imports done
+[2023-10-20 12:12:28 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:12:28 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:28]
+start
+imports done
+[2023-10-20 12:12:28 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:12:28 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:28]
+start
+imports done
+[2023-10-20 12:12:28 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:12:28 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:28]
+start
+imports done
+[2023-10-20 12:12:28 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:12:28 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:28]
+start
+imports done
+[2023-10-20 12:12:28 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:12:28 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:28]
+start
+imports done
+[2023-10-20 12:12:28 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:12:28 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:28]
+start
+imports done
+[2023-10-20 12:12:30 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:12:30 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:30]
+loading train_labels from cache
+[2023-10-20 12:12:28], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:28] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:28], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:28] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:28], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:28] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:28], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:28] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:30], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:30] All Train videos Number: 100
+batch_size = 24
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:28], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:28] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:28], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:28] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:28], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:28] All Train videos Number: 100
+batch_size = 24
+no wandb run id this is a copy of model with DDP
+init trainer
+start
+imports done
+[2023-10-20 12:12:48 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+[2023-10-20 12:12:48 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:48]
+start
+imports done
+[2023-10-20 12:12:48 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+[2023-10-20 12:12:48 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:48]
+start
+imports done
+[2023-10-20 12:12:49 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+[2023-10-20 12:12:49 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:49]
+start
+imports done
+[2023-10-20 12:12:49 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+[2023-10-20 12:12:49 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:49]
+start
+imports done
+[2023-10-20 12:12:49 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+start
+imports done
+[2023-10-20 12:12:49 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+[2023-10-20 12:12:49 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:49]
+[2023-10-20 12:12:49 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:49]
+start
+imports done
+[2023-10-20 12:12:49 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+[2023-10-20 12:12:49 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:49]
+start
+imports done
+[2023-10-20 12:12:50 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 187): INFO Start Training swin_large_patch4_window12_384.ms_in22k_ft_in1k
+[2023-10-20 12:12:51 swin_large_patch4_window12_384.ms_in22k_ft_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:12:51]
+loading train_labels from cache
+[2023-10-20 12:12:49], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:49] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:49], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:49] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:49], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:49] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:49], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:49] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:49], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:49] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:49], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:49] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:51], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:51] All Train videos Number: 100
+batch_size = 8
+init trainer
+loading train_labels from cache
+[2023-10-20 12:12:49], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:12:49] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer
+start
+imports done
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:13:10]
+start
+imports done
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:13:10]
+start
+imports done
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:13:10]
+start
+imports done
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:13:10]
+start
+imports done
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+start
+imports done
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+start
+imports done
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:13:10]
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:13:10]
+[2023-10-20 12:13:10 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:13:10]
+start
+imports done
+[2023-10-20 12:13:12 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva_large_patch14_336.in22k_ft_in22k_in1k
+[2023-10-20 12:13:12 eva_large_patch14_336.in22k_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-20 12:13:12]
+loading train_labels from cache
+[2023-10-20 12:13:10], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:13:10] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:13:10], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:13:10] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:13:10], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:13:10] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:13:10], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:13:10] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:13:10], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:13:10] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:13:10], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:13:10] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer
+loading train_labels from cache
+[2023-10-20 12:13:12], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:13:12] All Train videos Number: 100
+batch_size = 8
+init trainer
+loading train_labels from cache
+[2023-10-20 12:13:10], All Train videos: all:100, fake:91, ratio(FAKE/ALL):0.91
+[2023-10-20 12:13:10] All Train videos Number: 100
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+init trainer

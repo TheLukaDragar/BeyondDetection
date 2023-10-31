@@ -20,7 +20,7 @@ import os
 
 class binary_Rebalanced_Dataloader(object):
     def __init__(self, video_names=[], video_labels=[], phase='train', num_class=2, transform=None):
-        assert phase in ['train', 'valid', 'test']
+        assert phase in ['train', 'val', 'test']
         self.video_names = video_names
         self.video_labels = video_labels
         self.phase = phase

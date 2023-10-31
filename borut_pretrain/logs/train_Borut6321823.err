@@ -1,0 +1,338 @@
+wandb: Starting wandb agent 🕵️
+2023-10-27 14:54:32,788 - wandb.wandb_agent - INFO - Running runs: []
+2023-10-27 14:54:33,162 - wandb.wandb_agent - INFO - Agent received command: run
+2023-10-27 14:54:33,162 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 8
+	model_name: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+	num_epochs: 2
+2023-10-27 14:54:33,217 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 "-p gpu" --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --batch_size=8 --model_name=eva02_large_patch14_448.mim_m38m_ft_in22k_in1k --num_epochs=2 --devices 0 1 2 3 --num_nodes 2
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+2023-10-27 14:54:38,227 - wandb.wandb_agent - INFO - Running runs: ['r3xt06oz']
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231027_145805-r3xt06oz
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🧹 View sweep at https://wandb.ai/luka_borut/borut_pretrain/sweeps/eebabzfs
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/r3xt06oz
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+wandb: WARNING Config item 'model_name' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'num_epochs' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'batch_size' was locked by 'sweep' (ignored update).
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 496, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 372, in main
+    sys.argv.append("--wandb_run_id")
+NameError: name 'sys' is not defined
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+srun: error: gn36: task 0: Exited with exit code 1
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+[E socket.cpp:922] [c10d] The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+[E socket.cpp:922] [c10d] The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+[E socket.cpp:922] [c10d] The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+[E socket.cpp:922] [c10d] The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 496, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 419, in main
+    trainer.fit(model, datamodule=data_module)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532, in fit
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 496, in <module>
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 496, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 419, in main
+    trainer.fit(model, datamodule=data_module)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532, in fit
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 419, in main
+    trainer.fit(model, datamodule=data_module)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532, in fit
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 496, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 419, in main
+    trainer.fit(model, datamodule=data_module)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532, in fit
+[E socket.cpp:922] [c10d] The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+[E socket.cpp:922] [c10d] The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 496, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 419, in main
+    trainer.fit(model, datamodule=data_module)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532, in fit
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 496, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 419, in main
+    trainer.fit(model, datamodule=data_module)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42, in _call_and_handle_interrupt
+    call._call_and_handle_interrupt(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42, in _call_and_handle_interrupt
+    call._call_and_handle_interrupt(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42, in _call_and_handle_interrupt
+    call._call_and_handle_interrupt(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42, in _call_and_handle_interrupt
+    call._call_and_handle_interrupt(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42, in _call_and_handle_interrupt
+    call._call_and_handle_interrupt(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93, in launch
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93, in launch
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93, in launch
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93, in launch
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93, in launch
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571, in _fit_impl
+    return function(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571, in _fit_impl
+    return function(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571, in _fit_impl
+    return function(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 938, in _run
+    return function(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571, in _fit_impl
+    return function(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 938, in _run
+    self._run(model, ckpt_path=ckpt_path)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 938, in _run
+    self._run(model, ckpt_path=ckpt_path)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 938, in _run
+    self.strategy.setup_environment()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 143, in setup_environment
+    self._run(model, ckpt_path=ckpt_path)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 938, in _run
+    self.strategy.setup_environment()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 143, in setup_environment
+    self._run(model, ckpt_path=ckpt_path)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 938, in _run
+    self.strategy.setup_environment()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 143, in setup_environment
+    self.strategy.setup_environment()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 143, in setup_environment
+    self.strategy.setup_environment()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 143, in setup_environment
+    self.strategy.setup_environment()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 143, in setup_environment
+    self.setup_distributed()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 192, in setup_distributed
+    self.setup_distributed()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 192, in setup_distributed
+    self.setup_distributed()
+    _init_dist_connection(self.cluster_environment, self._process_group_backend, timeout=self._timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 192, in setup_distributed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 258, in _init_dist_connection
+    _init_dist_connection(self.cluster_environment, self._process_group_backend, timeout=self._timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 258, in _init_dist_connection
+    self.setup_distributed()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 192, in setup_distributed
+    _init_dist_connection(self.cluster_environment, self._process_group_backend, timeout=self._timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 258, in _init_dist_connection
+    self.setup_distributed()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 192, in setup_distributed
+    self.setup_distributed()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 192, in setup_distributed
+    _init_dist_connection(self.cluster_environment, self._process_group_backend, timeout=self._timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 258, in _init_dist_connection
+    _init_dist_connection(self.cluster_environment, self._process_group_backend, timeout=self._timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 258, in _init_dist_connection
+    _init_dist_connection(self.cluster_environment, self._process_group_backend, timeout=self._timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 258, in _init_dist_connection
+    torch.distributed.init_process_group(torch_distributed_backend, rank=global_rank, world_size=world_size, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    torch.distributed.init_process_group(torch_distributed_backend, rank=global_rank, world_size=world_size, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    torch.distributed.init_process_group(torch_distributed_backend, rank=global_rank, world_size=world_size, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    torch.distributed.init_process_group(torch_distributed_backend, rank=global_rank, world_size=world_size, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    torch.distributed.init_process_group(torch_distributed_backend, rank=global_rank, world_size=world_size, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    torch.distributed.init_process_group(torch_distributed_backend, rank=global_rank, world_size=world_size, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 1141, in init_process_group
+    func_return = func(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 1141, in init_process_group
+    func_return = func(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 1141, in init_process_group
+    func_return = func(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 1141, in init_process_group
+    func_return = func(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 1141, in init_process_group
+    func_return = func(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 1141, in init_process_group
+    store, rank, world_size = next(rendezvous_iterator)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 241, in _env_rendezvous_handler
+    store, rank, world_size = next(rendezvous_iterator)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 241, in _env_rendezvous_handler
+    store, rank, world_size = next(rendezvous_iterator)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 241, in _env_rendezvous_handler
+    store, rank, world_size = next(rendezvous_iterator)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 241, in _env_rendezvous_handler
+    store, rank, world_size = next(rendezvous_iterator)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 241, in _env_rendezvous_handler
+    store, rank, world_size = next(rendezvous_iterator)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 241, in _env_rendezvous_handler
+    store = _create_c10d_store(master_addr, master_port, rank, world_size, timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 172, in _create_c10d_store
+    store = _create_c10d_store(master_addr, master_port, rank, world_size, timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 172, in _create_c10d_store
+    store = _create_c10d_store(master_addr, master_port, rank, world_size, timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 172, in _create_c10d_store
+    return TCPStore(
+TimeoutError: The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+    return TCPStore(
+TimeoutError: The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+    return TCPStore(
+TimeoutError: The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+    store = _create_c10d_store(master_addr, master_port, rank, world_size, timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 172, in _create_c10d_store
+    store = _create_c10d_store(master_addr, master_port, rank, world_size, timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 172, in _create_c10d_store
+    store = _create_c10d_store(master_addr, master_port, rank, world_size, timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 172, in _create_c10d_store
+    return TCPStore(
+TimeoutError: The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+    return TCPStore(
+TimeoutError: The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+    return TCPStore(
+TimeoutError: The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+srun: error: gn41: tasks 4-5,7: Exited with exit code 1
+srun: error: gn36: tasks 1-3: Exited with exit code 1
+[E socket.cpp:922] [c10d] The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 496, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 419, in main
+    trainer.fit(model, datamodule=data_module)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 938, in _run
+    self.strategy.setup_environment()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 143, in setup_environment
+    self.setup_distributed()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 192, in setup_distributed
+    _init_dist_connection(self.cluster_environment, self._process_group_backend, timeout=self._timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 258, in _init_dist_connection
+    torch.distributed.init_process_group(torch_distributed_backend, rank=global_rank, world_size=world_size, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 1141, in init_process_group
+    store, rank, world_size = next(rendezvous_iterator)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 241, in _env_rendezvous_handler
+    store = _create_c10d_store(master_addr, master_port, rank, world_size, timeout)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/rendezvous.py", line 172, in _create_c10d_store
+    return TCPStore(
+TimeoutError: The client socket has timed out after 1800s while trying to connect to (gn36, 16823).
+srun: error: gn41: task 6: Exited with exit code 1
+2023-10-27 15:28:18,135 - wandb.wandb_agent - INFO - Cleaning up finished run: r3xt06oz
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: 🚀 View run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k at: https://wandb.ai/luka_borut/borut_pretrain/runs/r3xt06oz
+wandb: Synced 3 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20231027_145805-r3xt06oz/logs
+2023-10-27 15:28:26,233 - wandb.wandb_agent - INFO - Agent received command: run
+2023-10-27 15:28:26,233 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 16
+	model_name: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+	num_epochs: 2
+2023-10-27 15:28:26,235 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 "-p gpu" --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --batch_size=16 --model_name=eva02_large_patch14_448.mim_m38m_ft_in22k_in1k --num_epochs=2 --devices 0 1 2 3 --num_nodes 2
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+2023-10-27 15:28:31,244 - wandb.wandb_agent - INFO - Running runs: ['1cw1s1ud']
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231027_152833-1cw1s1ud
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🧹 View sweep at https://wandb.ai/luka_borut/borut_pretrain/sweeps/eebabzfs
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/1cw1s1ud
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+wandb: WARNING Config item 'model_name' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'num_epochs' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'batch_size' was locked by 'sweep' (ignored update).
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 496, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 372, in main
+    sys.argv.append("--wandb_run_id")
+NameError: name 'sys' is not defined
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: \ 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: | 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: / 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: - 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: 🚀 View run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k at: https://wandb.ai/luka_borut/borut_pretrain/runs/1cw1s1ud
+wandb: Synced 3 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20231027_152833-1cw1s1ud/logs
+srun: error: gn36: task 0: Exited with exit code 1
+slurmstepd: error: *** STEP 6321823.1 ON gn36 CANCELLED AT 2023-10-27T15:32:32 ***
+slurmstepd: error: *** JOB 6321823 ON gn36 CANCELLED AT 2023-10-27T15:32:32 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

@@ -1,0 +1,195 @@
+wandb: Starting wandb agent 🕵️
+2023-10-26 11:59:26,658 - wandb.wandb_agent - INFO - Running runs: []
+2023-10-26 11:59:27,074 - wandb.wandb_agent - INFO - Agent received command: run
+2023-10-26 11:59:27,075 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 8
+	model_name: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+	num_epochs: 2
+2023-10-26 11:59:27,076 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 "-p gpu" --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --batch_size=8 --model_name=eva02_large_patch14_448.mim_m38m_ft_in22k_in1k --num_epochs=2 --devices 0 1 2 3 --num_nodes 2
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+2023-10-26 11:59:32,086 - wandb.wandb_agent - INFO - Running runs: ['iu9kzjc6']
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231026_120303-iu9kzjc6
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🧹 View sweep at https://wandb.ai/luka_borut/borut_pretrain/sweeps/txwvkdse
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/iu9kzjc6
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+srun: error: gn50: task 7: Exited with exit code 1
+srun: error: gn43: tasks 1-2: Exited with exit code 1
+srun: error: gn50: task 5: Exited with exit code 1
+srun: error: gn50: tasks 4,6: Exited with exit code 1
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+srun: error: gn43: task 0: Exited with exit code 1
+srun: error: gn43: task 3: Exited with exit code 1
+2023-10-26 12:03:14,053 - wandb.wandb_agent - INFO - Cleaning up finished run: iu9kzjc6
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.000 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: \ 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: 🚀 View run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k at: https://wandb.ai/luka_borut/borut_pretrain/runs/iu9kzjc6
+wandb: Synced 3 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20231026_120303-iu9kzjc6/logs
+2023-10-26 12:03:19,163 - wandb.wandb_agent - INFO - Agent received command: run
+2023-10-26 12:03:19,163 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 16
+	model_name: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+	num_epochs: 2
+2023-10-26 12:03:19,165 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 "-p gpu" --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --batch_size=16 --model_name=eva02_large_patch14_448.mim_m38m_ft_in22k_in1k --num_epochs=2 --devices 0 1 2 3 --num_nodes 2
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+2023-10-26 12:03:24,173 - wandb.wandb_agent - INFO - Running runs: ['dqopnwdm']
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231026_120325-dqopnwdm
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🧹 View sweep at https://wandb.ai/luka_borut/borut_pretrain/sweeps/txwvkdse
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/dqopnwdm
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+srun: error: gn50: task 6: Exited with exit code 1
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+srun: error: gn43: task 3: Exited with exit code 1
+srun: error: gn50: task 7: Exited with exit code 1
+srun: error: gn43: task 1: Exited with exit code 1
+srun: error: gn50: task 4: Exited with exit code 1
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 491, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 354, in main
+    data_module = MyDataModule(train_dataset, weights_train, args.batch_size)
+TypeError: MyDataModule.__init__() missing 1 required positional argument: 'val_split'
+srun: error: gn43: task 2: Exited with exit code 1
+srun: error: gn50: task 5: Exited with exit code 1
+wandb: - 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: \ 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: | 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: / 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: 🚀 View run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k at: https://wandb.ai/luka_borut/borut_pretrain/runs/dqopnwdm
+wandb: Synced 3 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20231026_120325-dqopnwdm/logs
+srun: error: gn43: task 0: Exited with exit code 1
+2023-10-26 12:03:39,657 - wandb.wandb_agent - INFO - Cleaning up finished run: dqopnwdm
+2023-10-26 12:03:39,996 - wandb.wandb_agent - INFO - Agent received command: exit
+2023-10-26 12:03:39,996 - wandb.wandb_agent - INFO - Received exit command. Killing runs and quitting.
+wandb: Terminating and syncing runs. Press ctrl-c to kill.

@@ -1,0 +1,72 @@
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+[rank: 1] Global seed set to 1126
+[rank: 4] Global seed set to 1126
+[rank: 2] Global seed set to 1126
+[rank: 0] Global seed set to 1126
+[rank: 3] Global seed set to 1126
+[rank: 5] Global seed set to 1126
+[rank: 6] Global seed set to 1126
+[rank: 7] Global seed set to 1126
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+[rank: 4] Global seed set to 1126
+[rank: 5] Global seed set to 1126
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+[rank: 1] Global seed set to 1126
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+[rank: 2] Global seed set to 1126
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+[rank: 3] Global seed set to 1126
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+[rank: 6] Global seed set to 1126
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+[rank: 7] Global seed set to 1126
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231031_134316-0zylj5e0
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run eva_large_patch14_336.in22k_ft_in22k_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/0zylj5e0
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Global seed set to 1126
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+
+You are using a CUDA device ('NVIDIA A100-SXM4-40GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+
+  | Name      | Type              | Params
+------------------------------------------------
+0 | model     | VisionTransformer | 303 M 
+1 | criterion | CrossEntropyLoss  | 0     
+------------------------------------------------
+303 M     Trainable params
+0         Non-trainable params
+303 M     Total params
+1,214.034 Total estimated model params size (MB)
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/wandb/wandb_torch.py:193: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:83.)
+  check = torch.cuda.FloatTensor(1).fill_(0)

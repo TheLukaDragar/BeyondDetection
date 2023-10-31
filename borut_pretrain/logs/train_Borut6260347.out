@@ -1,0 +1,192 @@
+start
+imports done
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:02]
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:02]
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:02]
+start
+imports done
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:02]
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:02]
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:02]
+[2023-10-26 12:03:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:02]
+start
+imports done
+[2023-10-26 12:03:04 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 12:03:04 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:04]
+loading train_labels from cache
+[2023-10-26 12:03:03], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:11] All Train videos Number: 10
+batch_size = 8
+loading train_labels from cache
+[2023-10-26 12:03:03], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:11] All Train videos Number: 10
+batch_size = 8
+loading train_labels from cache
+[2023-10-26 12:03:02], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:11] All Train videos Number: 10
+batch_size = 8
+loading train_labels from cache
+[2023-10-26 12:03:04], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:11] All Train videos Number: 10
+batch_size = 8
+loading train_labels from cache
+[2023-10-26 12:03:03], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:11] All Train videos Number: 10
+batch_size = 8
+loading train_labels from cache
+[2023-10-26 12:03:03], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:11] All Train videos Number: 10
+batch_size = 8
+loading train_labels from cache
+[2023-10-26 12:03:03], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:12] All Train videos Number: 10
+batch_size = 8
+loading train_labels from cache
+[2023-10-26 12:03:03], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:13] All Train videos Number: 10
+batch_size = 8
+start
+imports done
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:24]
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:24]
+start
+imports done
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:24]
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:24]
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:24]
+start
+imports done
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:24]
+[2023-10-26 12:03:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:24]
+start
+imports done
+[2023-10-26 12:03:26 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 202): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-26 12:03:26 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 204): INFO [2023-10-26 12:03:26]
+loading train_labels from cache
+[2023-10-26 12:03:24], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:29] All Train videos Number: 10
+batch_size = 16
+loading train_labels from cache
+[2023-10-26 12:03:24], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:29] All Train videos Number: 10
+batch_size = 16
+loading train_labels from cache
+[2023-10-26 12:03:24], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:30] All Train videos Number: 10
+batch_size = 16
+loading train_labels from cache
+[2023-10-26 12:03:24], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:30] All Train videos Number: 10
+batch_size = 16
+loading train_labels from cache
+[2023-10-26 12:03:24], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:30] All Train videos Number: 10
+batch_size = 16
+loading train_labels from cache
+[2023-10-26 12:03:24], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:31] All Train videos Number: 10
+batch_size = 16
+loading train_labels from cache
+[2023-10-26 12:03:26], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:31] All Train videos Number: 10
+batch_size = 16
+loading train_labels from cache
+[2023-10-26 12:03:24], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-26 12:03:31] All Train videos Number: 10
+batch_size = 16

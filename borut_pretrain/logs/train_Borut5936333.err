@@ -1,0 +1,56 @@
+wandb: Starting wandb agent 🕵️
+2023-10-20 11:55:22,709 - wandb.wandb_agent - INFO - Running runs: []
+2023-10-20 11:55:23,111 - wandb.wandb_agent - INFO - Agent received command: run
+2023-10-20 11:55:23,111 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 24
+	model_name: eva_large_patch14_336.in22k_ft_in22k_in1k
+	num_epochs: 5
+2023-10-20 11:55:23,113 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 "-p gpu" --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --batch_size=24 --model_name=eva_large_patch14_336.in22k_ft_in22k_in1k --num_epochs=5 --devices 0 1 2 3
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+2023-10-20 11:55:28,123 - wandb.wandb_agent - INFO - Running runs: ['p136ab49']
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 431, in <module>
+    os.makedirs('%s/%s/' % (args.save_path,args.model_name))
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/os.py", line 225, in makedirs
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 431, in <module>
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 431, in <module>
+    os.makedirs('%s/%s/' % (args.save_path,args.model_name))
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/os.py", line 225, in makedirs
+    os.makedirs('%s/%s/' % (args.save_path,args.model_name))
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/'
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/'
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/'
+srun: error: gn04: tasks 1-3: Exited with exit code 1
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231020_115657-p136ab49
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run eva_large_patch14_336.in22k_ft_in22k_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🧹 View sweep at https://wandb.ai/luka_borut/borut_pretrain/sweeps/nk818zp0
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/p136ab49
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+wandb: logging graph, to disable use `wandb.watch(log_graph=False)`
+wandb: WARNING Config item 'model_name' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'num_epochs' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'batch_size' was locked by 'sweep' (ignored update).
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 5936333.0 ON gn04 CANCELLED AT 2023-10-20T12:05:44 ***
+slurmstepd: error: *** JOB 5936333 ON gn04 CANCELLED AT 2023-10-20T12:05:44 ***

@@ -1,0 +1,192 @@
+start
+imports done
+[2023-10-23 21:49:27 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-23 21:49:27 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-23 21:49:27 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:27 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:27]
+start
+imports done
+[2023-10-23 21:49:27 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:27 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:27]
+[2023-10-23 21:49:27 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:27]
+start
+imports done
+[2023-10-23 21:49:27 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:27 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:27]
+start
+imports done
+[2023-10-23 21:49:27 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-23 21:49:27 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:27 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:27]
+[2023-10-23 21:49:28 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:28]
+loading train_labels from cache
+[2023-10-23 21:49:28], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:49:28], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:49:28], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+[2023-10-23 21:49:28 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:28]
+loading train_labels from cache
+[2023-10-23 21:49:28], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:49:28], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:49:28], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:49:28], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+start
+imports done
+[2023-10-23 21:49:29 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:29 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:29]
+loading train_labels from cache
+[2023-10-23 21:49:29], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+start
+imports done
+[2023-10-23 21:49:44 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:44 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:44]
+start
+imports done
+[2023-10-23 21:49:44 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:44 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:44]
+loading train_labels from cache
+[2023-10-23 21:49:44], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+start
+imports done
+[2023-10-23 21:49:44 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:44 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:44]
+start
+imports done
+[2023-10-23 21:49:44 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:44 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:44]
+loading train_labels from cache
+[2023-10-23 21:49:44], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:49:44], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:49:44], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+start
+imports done
+[2023-10-23 21:49:45 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:45 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:45]
+start
+imports done
+[2023-10-23 21:49:45 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-23 21:49:45 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:45 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:45]
+[2023-10-23 21:49:45 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:45]
+loading train_labels from cache
+[2023-10-23 21:49:45], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:49:45], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:49:45], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+start
+imports done
+[2023-10-23 21:49:46 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:46 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:46]
+loading train_labels from cache
+[2023-10-23 21:49:47], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+start
+imports done
+[2023-10-23 21:49:59 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:59 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:59]
+loading train_labels from cache
+[2023-10-23 21:49:59], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+start
+imports done
+[2023-10-23 21:49:59 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:59 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:59]
+start
+imports done
+[2023-10-23 21:49:59 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:49:59 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:49:59]
+start
+imports done
+[2023-10-23 21:50:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:50:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:50:00]
+loading train_labels from cache
+[2023-10-23 21:50:00], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:50:00], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:50:00], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+start
+imports done
+[2023-10-23 21:50:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-23 21:50:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:50:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:50:00]
+[2023-10-23 21:50:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:50:00]
+start
+imports done
+[2023-10-23 21:50:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:50:00 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:50:00]
+loading train_labels from cache
+[2023-10-23 21:50:00], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:50:00], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:50:00], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+start
+imports done
+[2023-10-23 21:50:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:50:02 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:50:02]
+loading train_labels from cache
+[2023-10-23 21:50:02], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+start
+imports done
+[2023-10-23 21:50:15 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:50:15 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:50:15]
+start
+imports done
+[2023-10-23 21:50:16 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:50:16 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:50:16]
+loading train_labels from cache
+[2023-10-23 21:50:16], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+start
+imports done
+[2023-10-23 21:50:16 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:50:16 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:50:16]
+start
+imports done
+[2023-10-23 21:50:16 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:50:16 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:50:16]
+loading train_labels from cache
+[2023-10-23 21:50:16], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+start
+imports done
+[2023-10-23 21:50:16 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-23 21:50:16 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+loading train_labels from cache
+[2023-10-23 21:50:16], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+[2023-10-23 21:50:16 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:50:16]
+[2023-10-23 21:50:16 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:50:16]
+start
+imports done
+[2023-10-23 21:50:16 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:50:16 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:50:16]
+loading train_labels from cache
+[2023-10-23 21:50:16], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:50:16], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:50:16], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+loading train_labels from cache
+[2023-10-23 21:50:16], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106
+start
+imports done
+[2023-10-23 21:50:18 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 187): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-23 21:50:18 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 189): INFO [2023-10-23 21:50:18]
+loading train_labels from cache
+[2023-10-23 21:50:18], All Train videos: all:214524, fake:134093, ratio(FAKE/ALL):0.6250722529880106

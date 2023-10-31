@@ -1,0 +1,1184 @@
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+[rank: 0] Global seed set to 1126
+[rank: 5] Global seed set to 1126
+[rank: 1] Global seed set to 1126
+[rank: 3] Global seed set to 1126
+[rank: 2] Global seed set to 1126
+[rank: 6] Global seed set to 1126
+[rank: 7] Global seed set to 1126
+[rank: 4] Global seed set to 1126
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+Downloading model.safetensors:   0%|          | 0.00/77.9M [00:00<?, ?B/s]Downloading model.safetensors:  13%|█▎        | 10.5M/77.9M [00:00<00:02, 31.4MB/s]Downloading model.safetensors:  27%|██▋       | 21.0M/77.9M [00:00<00:01, 48.6MB/s]Downloading model.safetensors:  54%|█████▍    | 41.9M/77.9M [00:00<00:00, 84.8MB/s]Downloading model.safetensors:  94%|█████████▍| 73.4M/77.9M [00:00<00:00, 135MB/s] Downloading model.safetensors: 100%|██████████| 77.9M/77.9M [00:00<00:00, 104MB/s]
+[rank: 7] Global seed set to 1126
+[rank: 1] Global seed set to 1126
+[rank: 5] Global seed set to 1126
+[rank: 4] Global seed set to 1126
+[rank: 6] Global seed set to 1126
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+[rank: 3] Global seed set to 1126
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+[rank: 2] Global seed set to 1126
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231031_132219-oubrbomc
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run efficientnet_b4.ra2_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/oubrbomc
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[rank: 0] Global seed set to 1126
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+
+You are using a CUDA device ('NVIDIA A100-SXM4-40GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | model     | EfficientNet     | 17.6 M
+1 | criterion | CrossEntropyLoss | 0     
+-----------------------------------------------
+17.6 M    Trainable params
+0         Non-trainable params
+17.6 M    Total params
+70.209    Total estimated model params size (MB)
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/wandb/wandb_torch.py:193: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:83.)
+  check = torch.cuda.FloatTensor(1).fill_(0)
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 703, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 627, in main
+    trainer.fit(model, datamodule=data_module)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 980, in _run
+    results = self._run_stage()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1023, in _run_stage
+    self.fit_loop.run()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 203, in run
+    self.on_advance_end()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 370, in on_advance_end
+    call._call_callback_hooks(trainer, "on_train_epoch_end", monitoring_callbacks=True)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 194, in _call_callback_hooks
+    fn(trainer, trainer.lightning_module, *args, **kwargs)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py", line 303, in on_train_epoch_end
+    self._save_topk_checkpoint(trainer, monitor_candidates)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py", line 360, in _save_topk_checkpoint
+    self._save_monitor_checkpoint(trainer, monitor_candidates)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py", line 663, in _save_monitor_checkpoint
+    self._update_best_and_save(current, trainer, monitor_candidates)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py", line 714, in _update_best_and_save
+    self._save_checkpoint(trainer, filepath)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py", line 365, in _save_checkpoint
+    trainer.save_checkpoint(filepath, self.save_weights_only)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1316, in save_checkpoint
+    self._checkpoint_connector.save_checkpoint(filepath, weights_only=weights_only, storage_options=storage_options)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 507, in save_checkpoint
+    self.trainer.strategy.save_checkpoint(_checkpoint, filepath, storage_options=storage_options)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/strategy.py", line 466, in save_checkpoint
+    self.checkpoint_io.save_checkpoint(checkpoint, filepath, storage_options=storage_options)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/plugins/io/torch_io.py", line 59, in save_checkpoint
+    _atomic_save(checkpoint, path)
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/cloud_io.py", line 74, in _atomic_save
+    f.write(bytesbuffer.getvalue())
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/fsspec/implementations/local.py", line 354, in write
+    return self.f.write(*args, **kwargs)
+OSError: [Errno 122] Disk quota exceeded
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.028 MB of 0.028 MB uploaded (0.000 MB deduped)wandb: \ 0.028 MB of 0.028 MB uploaded (0.000 MB deduped)wandb: | 0.028 MB of 0.028 MB uploaded (0.000 MB deduped)wandb: / 0.028 MB of 0.028 MB uploaded (0.000 MB deduped)wandb: - 0.028 MB of 0.028 MB uploaded (0.000 MB deduped)wandb: \ 0.028 MB of 0.028 MB uploaded (0.000 MB deduped)wandb: | 0.028 MB of 0.028 MB uploaded (0.000 MB deduped)wandb: / 0.028 MB of 0.028 MB uploaded (0.000 MB deduped)wandb: - 0.028 MB of 0.028 MB uploaded (0.000 MB deduped)wandb: \ 0.028 MB of 0.028 MB uploaded (0.000 MB deduped)wandb: | 0.028 MB of 0.028 MB uploaded (0.000 MB deduped)wandb: 
+wandb: Run history:
+wandb:               epoch ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:    train_loss_epoch █▅▄▃▃▃▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:     train_loss_step █▅▆▇▃▃▄▄▇▂▄▃▂▃▂▃▂▂▃▂▂▆▂▂▂▂▁▂▂▂▂▁▂▄▁▄▂▁▁▃
+wandb: trainer/global_step ▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:            val_loss █▆▄▅▃▅▃▂▃▂▄▂▂▃▂▃▁▂▂▂▂▁▃▂▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:               epoch 31
+wandb:    train_loss_epoch 0.05093
+wandb:     train_loss_step 0.08111
+wandb: trainer/global_step 107199
+wandb:            val_loss 0.09037
+wandb: 
+wandb: 🚀 View run efficientnet_b4.ra2_in1k at: https://wandb.ai/luka_borut/borut_pretrain/runs/oubrbomc
+wandb: ️⚡ View job at https://wandb.ai/luka_borut/borut_pretrain/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjExMTU4NTkxMQ==/version_details/v1
+wandb: Synced 6 W&B file(s), 0 media file(s), 2 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20231031_132219-oubrbomc/logs
+srun: error: gn42: task 0: Exited with exit code 1
+[E ProcessGroupNCCL.cpp:474] [Rank 6] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800020 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:474] [Rank 1] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800927 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:474] [Rank 3] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800916 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:474] [Rank 5] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800995 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:474] [Rank 7] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800758 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:488] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[E ProcessGroupNCCL.cpp:494] To avoid data inconsistency, we are taking the entire process down.
+[E ProcessGroupNCCL.cpp:474] [Rank 4] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800998 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:474] [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800914 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:915] [Rank 3] NCCL watchdog thread terminated with exception: [Rank 3] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800916 milliseconds before timing out.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  [Rank 3] NCCL watchdog thread terminated with exception: [Rank 3] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800916 milliseconds before timing out.
+Fatal Python error: Aborted
+
+Thread 0x00007fc41927c700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fc438afd700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fc479d32700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fc46d760700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fc472762700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fc43daff700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fc443302700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fc46cf5f700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fc3e8e25700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fc4429a2700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007fc465f5d700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007fc46375c700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007fc46a75e700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007fc40b5d4700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 324 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 607 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fc51b8b0140 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2050 in all_reduce
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 47 in wrapper
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 161 in _sync_ddp
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 111 in _sync_ddp_if_available
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 324 in reduce
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 220 in update
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torchmetrics/metric.py", line 446 in wrapped_func
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 262 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 421 in update_metrics
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 407 in log
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 493 in log
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 199 in training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/overrides/base.py", line 90 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527 in _call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518 in _wrapped_call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1357 in _run_ddp_forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1521 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527 in _call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518 in _wrapped_call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 330 in training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 293 in _call_strategy_hook
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 315 in _training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 128 in closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115 in decorate_context
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 142 in __call__
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 103 in _wrap_closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/adamw.py", line 153 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 76 in _use_grad
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 373 in wrapper
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 116 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/strategy.py", line 231 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 257 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/optimizer.py", line 161 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 1270 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 145 in _call_lightning_module_hook
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 266 in _optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 188 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 219 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 133 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 355 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 202 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1023 in _run_stage
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 980 in _run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571 in _fit_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93 in launch
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42 in _call_and_handle_interrupt
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532 in fit
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 627 in main
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 703 in <module>
+
+Extension modules: numpy.core._multiarray_umath, numpy.core._multiarray_tests, numpy.linalg._umath_linalg, numpy.fft._pocketfft_internal, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, torch._C, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special, PIL._imaging, PIL._imagingft, av._core, av.logging, av.bytesource, av.buffer, av.audio.format, av.enum, av.error, av.utils, av.option, av.descriptor, av.container.pyio, av.dictionary, av.format, av.stream, av.container.streams, av.sidedata.motionvectors, av.sidedata.sidedata, av.packet, av.container.input, av.container.output, av.container.core, av.codec.context, av.video.format, av.video.reformatter, av.plane, av.video.plane, av.video.frame, av.video.stream, av.codec.codec, av.frame, av.audio.layout, av.audio.plane, av.audio.frame, av.audio.stream, av.audio.fifo, av.filter.pad, av.filter.link, av.filter.context, av.filter.graph, av.filter.filter, av.audio.resampler, skimage._shared.geometry, yaml._yaml, scipy._lib._ccallback_c, scipy.sparse._sparsetools, _csparsetools, scipy.sparse._csparsetools, scipy.sparse.linalg._isolve._iterative, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg.cython_lapack, scipy.linalg._cythonized_array_utils, scipy.linalg._solve_toeplitz, scipy.linalg._decomp_lu_cython, scipy.linalg._matfuncs_sqrtm_triu, scipy.linalg.cython_blas, scipy.linalg._matfuncs_expm, scipy.linalg._decomp_update, scipy.linalg._flinalg, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpack, scipy.sparse.csgraph._tools, scipy.sparse.csgraph._shortest_path, scipy.sparse.csgraph._traversal, scipy.sparse.csgraph._min_spanning_tree, scipy.sparse.csgraph._flow, scipy.sparse.csgraph._matching, scipy.sparse.csgraph._reordering, scipy.spatial._ckdtree, scipy._lib.messagestream, scipy.spatial._qhull, scipy.spatial._voronoi, scipy.spatial._distance_wrap, scipy.spatial._hausdorff, scipy.special._ufuncs_cxx, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, scipy.special._ellip_harm_2, scipy.spatial.transform._rotation, skimage.draw._draw, skimage.transform._hough_transform, scipy.interpolate._fitpack, scipy.interpolate.dfitpack, scipy.optimize._minpack2, scipy.optimize._group_columns, scipy.optimize._trlib._trlib, numpy.linalg.lapack_lite, scipy.optimize._lbfgsb, _moduleTNC, scipy.optimize._moduleTNC, scipy.optimize._cobyla, scipy.optimize._slsqp, scipy.optimize._minpack, scipy.optimize._lsq.givens_elimination, scipy.optimize._zeros, scipy.optimize.__nnls, scipy.optimize._highs.cython.src._highs_wrapper, scipy.optimize._highs._highs_wrapper, scipy.optimize._highs.cython.src._highs_constants, scipy.optimize._highs._highs_constants, scipy.linalg._interpolative, scipy.optimize._bglu_dense, scipy.optimize._lsap, scipy.optimize._direct, scipy.interpolate._bspl, scipy.interpolate._ppoly, scipy.interpolate.interpnd, scipy.interpolate._rbfinterp_pythran, scipy.interpolate._rgi_cython, scipy._lib._uarray._uarray, scipy.ndimage._nd_image, _ni_label, scipy.ndimage._ni_label, skimage.transform._warps_cy, skimage.measure._find_contours_cy, skimage.measure._marching_cubes_lewiner_cy, skimage.measure._moments_cy, scipy.signal._sigtools, scipy.signal._max_len_seq_inner, scipy.signal._upfirdn_apply, scipy.signal._spline, scipy.integrate._odepack, scipy.integrate._quadpack, scipy.integrate._vode, scipy.integrate._dop, scipy.integrate._lsoda, scipy.signal._sosfilt, scipy.signal._spectral, scipy.special.cython_special, scipy.stats._stats, scipy.stats.beta_ufunc, scipy.stats._boost.beta_ufunc, scipy.stats.binom_ufunc, scipy.stats._boost.binom_ufunc, scipy.stats.nbinom_ufunc, scipy.stats._boost.nbinom_ufunc, scipy.stats.hypergeom_ufunc, scipy.stats._boost.hypergeom_ufunc, scipy.stats.ncf_ufunc, scipy.stats._boost.ncf_ufunc, scipy.stats.ncx2_ufunc, scipy.stats._boost.ncx2_ufunc, scipy.stats.nct_ufunc, scipy.stats._boost.nct_ufunc, scipy.stats.skewnorm_ufunc, scipy.stats._boost.skewnorm_ufunc, scipy.stats.invgauss_ufunc, scipy.stats._boost.invgauss_ufunc, scipy.stats._biasedurn, scipy.stats._levy_stable.levyst, scipy.stats._stats_pythran, scipy.stats._statlib, scipy.stats._sobol, scipy.stats._qmc_cy, scipy.stats._mvn, scipy.stats._rcont.rcont, scipy.signal._peak_finding_utils, skimage.measure._pnpoly, skimage.measure._ccomp, skimage.transform._radon_transform, sklearn.__check_build._check_build, psutil._psutil_linux, psutil._psutil_posix, sklearn.utils._isfinite, sklearn.utils.murmurhash, sklearn.utils._openmp_helpers, sklearn.utils._logistic_sigmoid, sklearn.utils.sparsefuncs_fast, sklearn.preprocessing._csr_polynomial_expansion, sklearn.preprocessing._target_encoder_fast, sklearn.utils._random, sklearn.utils._seq_dataset, sklearn.metrics.cluster._expected_mutual_info_fast, sklearn.metrics._dist_metrics, sklearn.metrics._pairwise_distances_reduction._datasets_pair, sklearn.utils._cython_blas, sklearn.metrics._pairwise_distances_reduction._base, sklearn.metrics._pairwise_distances_reduction._middle_term_computer, sklearn.utils._heap, sklearn.utils._sorting, sklearn.metrics._pairwise_distances_reduction._argkmin, sklearn.metrics._pairwise_distances_reduction._argkmin_classmode, sklearn.utils._vector_sentinel, sklearn.metrics._pairwise_distances_reduction._radius_neighbors, sklearn.metrics._pairwise_fast, sklearn.linear_model._cd_fast, sklearn._loss._loss, sklearn.utils.arrayfuncs, sklearn.svm._liblinear, sklearn.svm._libsvm, sklearn.svm._libsvm_sparse, sklearn.utils._weight_vector, sklearn.linear_model._sgd_fast, sklearn.linear_model._sag_fast, sklearn.decomposition._online_lda_fast, sklearn.decomposition._cdnmf_fast, google._upb._message, matplotlib._c_internal_utils, matplotlib._path, kiwisolver._cext, matplotlib._image (total: 224)
+srun: error: gn42: task 3: Aborted (core dumped)
+[E ProcessGroupNCCL.cpp:488] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[E ProcessGroupNCCL.cpp:494] To avoid data inconsistency, we are taking the entire process down.
+[E ProcessGroupNCCL.cpp:915] [Rank 1] NCCL watchdog thread terminated with exception: [Rank 1] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800927 milliseconds before timing out.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  [Rank 1] NCCL watchdog thread terminated with exception: [Rank 1] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800927 milliseconds before timing out.
+Fatal Python error: Aborted
+
+Thread 0x00007fef417fe700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fefeaf45700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007feff374a700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fefaaae3700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fefebf47700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fef40ffd700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fef987d5700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fef11fff700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007feff0f49700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fefbe2ea700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007fefc12ec700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007fefc0aeb700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007fefc1aed700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007fef8b20f700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 324 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 607 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff09a097140 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2050 in all_reduce
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 47 in wrapper
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 161 in _sync_ddp
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 111 in _sync_ddp_if_available
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 324 in reduce
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 220 in update
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torchmetrics/metric.py", line 446 in wrapped_func
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 262 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 421 in update_metrics
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 407 in log
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 493 in log
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 199 in training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/overrides/base.py", line 90 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527 in _call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518 in _wrapped_call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1357 in _run_ddp_forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1521 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527 in _call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518 in _wrapped_call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 330 in training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 293 in _call_strategy_hook
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 315 in _training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 128 in closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115 in decorate_context
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 142 in __call__
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 103 in _wrap_closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/adamw.py", line 153 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 76 in _use_grad
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 373 in wrapper
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 116 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/strategy.py", line 231 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 257 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/optimizer.py", line 161 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 1270 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 145 in _call_lightning_module_hook
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 266 in _optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 188 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 219 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 133 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 355 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 202 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1023 in _run_stage
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 980 in _run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571 in _fit_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93 in launch
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42 in _call_and_handle_interrupt
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532 in fit
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 627 in main
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 703 in <module>
+
+Extension modules: numpy.core._multiarray_umath, numpy.core._multiarray_tests, numpy.linalg._umath_linalg, numpy.fft._pocketfft_internal, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, torch._C, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special, PIL._imaging, PIL._imagingft, av._core, av.logging, av.bytesource, av.buffer, av.audio.format, av.enum, av.error, av.utils, av.option, av.descriptor, av.container.pyio, av.dictionary, av.format, av.stream, av.container.streams, av.sidedata.motionvectors, av.sidedata.sidedata, av.packet, av.container.input, av.container.output, av.container.core, av.codec.context, av.video.format, av.video.reformatter, av.plane, av.video.plane, av.video.frame, av.video.stream, av.codec.codec, av.frame, av.audio.layout, av.audio.plane, av.audio.frame, av.audio.stream, av.audio.fifo, av.filter.pad, av.filter.link, av.filter.context, av.filter.graph, av.filter.filter, av.audio.resampler, skimage._shared.geometry, yaml._yaml, scipy._lib._ccallback_c, scipy.sparse._sparsetools, _csparsetools, scipy.sparse._csparsetools, scipy.sparse.linalg._isolve._iterative, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg.cython_lapack, scipy.linalg._cythonized_array_utils, scipy.linalg._solve_toeplitz, scipy.linalg._decomp_lu_cython, scipy.linalg._matfuncs_sqrtm_triu, scipy.linalg.cython_blas, scipy.linalg._matfuncs_expm, scipy.linalg._decomp_update, scipy.linalg._flinalg, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpack, scipy.sparse.csgraph._tools, scipy.sparse.csgraph._shortest_path, scipy.sparse.csgraph._traversal, scipy.sparse.csgraph._min_spanning_tree, scipy.sparse.csgraph._flow, scipy.sparse.csgraph._matching, scipy.sparse.csgraph._reordering, scipy.spatial._ckdtree, scipy._lib.messagestream, scipy.spatial._qhull, scipy.spatial._voronoi, scipy.spatial._distance_wrap, scipy.spatial._hausdorff, scipy.special._ufuncs_cxx, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, scipy.special._ellip_harm_2, scipy.spatial.transform._rotation, skimage.draw._draw, skimage.transform._hough_transform, scipy.interpolate._fitpack, scipy.interpolate.dfitpack, scipy.optimize._minpack2, scipy.optimize._group_columns, scipy.optimize._trlib._trlib, numpy.linalg.lapack_lite, scipy.optimize._lbfgsb, _moduleTNC, scipy.optimize._moduleTNC, scipy.optimize._cobyla, scipy.optimize._slsqp, scipy.optimize._minpack, scipy.optimize._lsq.givens_elimination, scipy.optimize._zeros, scipy.optimize.__nnls, scipy.optimize._highs.cython.src._highs_wrapper, scipy.optimize._highs._highs_wrapper, scipy.optimize._highs.cython.src._highs_constants, scipy.optimize._highs._highs_constants, scipy.linalg._interpolative, scipy.optimize._bglu_dense, scipy.optimize._lsap, scipy.optimize._direct, scipy.interpolate._bspl, scipy.interpolate._ppoly, scipy.interpolate.interpnd, scipy.interpolate._rbfinterp_pythran, scipy.interpolate._rgi_cython, scipy._lib._uarray._uarray, scipy.ndimage._nd_image, _ni_label, scipy.ndimage._ni_label, skimage.transform._warps_cy, skimage.measure._find_contours_cy, skimage.measure._marching_cubes_lewiner_cy, skimage.measure._moments_cy, scipy.signal._sigtools, scipy.signal._max_len_seq_inner, scipy.signal._upfirdn_apply, scipy.signal._spline, scipy.integrate._odepack, scipy.integrate._quadpack, scipy.integrate._vode, scipy.integrate._dop, scipy.integrate._lsoda, scipy.signal._sosfilt, scipy.signal._spectral, scipy.special.cython_special, scipy.stats._stats, scipy.stats.beta_ufunc, scipy.stats._boost.beta_ufunc, scipy.stats.binom_ufunc, scipy.stats._boost.binom_ufunc, scipy.stats.nbinom_ufunc, scipy.stats._boost.nbinom_ufunc, scipy.stats.hypergeom_ufunc, scipy.stats._boost.hypergeom_ufunc, scipy.stats.ncf_ufunc, scipy.stats._boost.ncf_ufunc, scipy.stats.ncx2_ufunc, scipy.stats._boost.ncx2_ufunc, scipy.stats.nct_ufunc, scipy.stats._boost.nct_ufunc, scipy.stats.skewnorm_ufunc, scipy.stats._boost.skewnorm_ufunc, scipy.stats.invgauss_ufunc, scipy.stats._boost.invgauss_ufunc, scipy.stats._biasedurn, scipy.stats._levy_stable.levyst, scipy.stats._stats_pythran, scipy.stats._statlib, scipy.stats._sobol, scipy.stats._qmc_cy, scipy.stats._mvn, scipy.stats._rcont.rcont, scipy.signal._peak_finding_utils, skimage.measure._pnpoly, skimage.measure._ccomp, skimage.transform._radon_transform, sklearn.__check_build._check_build, psutil._psutil_linux, psutil._psutil_posix, sklearn.utils._isfinite, sklearn.utils.murmurhash, sklearn.utils._openmp_helpers, sklearn.utils._logistic_sigmoid, sklearn.utils.sparsefuncs_fast, sklearn.preprocessing._csr_polynomial_expansion, sklearn.preprocessing._target_encoder_fast, sklearn.utils._random, sklearn.utils._seq_dataset, sklearn.metrics.cluster._expected_mutual_info_fast, sklearn.metrics._dist_metrics, sklearn.metrics._pairwise_distances_reduction._datasets_pair, sklearn.utils._cython_blas, sklearn.metrics._pairwise_distances_reduction._base, sklearn.metrics._pairwise_distances_reduction._middle_term_computer, sklearn.utils._heap, sklearn.utils._sorting, sklearn.metrics._pairwise_distances_reduction._argkmin, sklearn.metrics._pairwise_distances_reduction._argkmin_classmode, sklearn.utils._vector_sentinel, sklearn.metrics._pairwise_distances_reduction._radius_neighbors, sklearn.metrics._pairwise_fast, sklearn.linear_model._cd_fast, sklearn._loss._loss, sklearn.utils.arrayfuncs, sklearn.svm._liblinear, sklearn.svm._libsvm, sklearn.svm._libsvm_sparse, sklearn.utils._weight_vector, sklearn.linear_model._sgd_fast, sklearn.linear_model._sag_fast, sklearn.decomposition._online_lda_fast, sklearn.decomposition._cdnmf_fast, google._upb._message, matplotlib._c_internal_utils, matplotlib._path, kiwisolver._cext, matplotlib._image (total: 224)
+[E ProcessGroupNCCL.cpp:488] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[E ProcessGroupNCCL.cpp:494] To avoid data inconsistency, we are taking the entire process down.
+[E ProcessGroupNCCL.cpp:915] [Rank 2] NCCL watchdog thread terminated with exception: [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800914 milliseconds before timing out.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  [Rank 2] NCCL watchdog thread terminated with exception: [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800914 milliseconds before timing out.
+Fatal Python error: Aborted
+
+Thread 0x00007f065f4fc700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f067ab44700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f06b86d8700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f06b1fd4700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f05d6989700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f06117fe700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f06b2fd6700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f0610ffd700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f06bf7a7700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f0681278700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f068891c700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f0683a79700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f06b17d3700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f0652795700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 324 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 607 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f0761826140 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2050 in all_reduce
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 47 in wrapper
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 161 in _sync_ddp
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 111 in _sync_ddp_if_available
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 324 in reduce
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 220 in update
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torchmetrics/metric.py", line 446 in wrapped_func
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 262 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 421 in update_metrics
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 407 in log
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 493 in log
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 199 in training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/overrides/base.py", line 90 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527 in _call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518 in _wrapped_call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1357 in _run_ddp_forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1521 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527 in _call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518 in _wrapped_call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 330 in training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 293 in _call_strategy_hook
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 315 in _training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 128 in closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115 in decorate_context
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 142 in __call__
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 103 in _wrap_closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/adamw.py", line 153 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 76 in _use_grad
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 373 in wrapper
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 116 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/strategy.py", line 231 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 257 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/optimizer.py", line 161 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 1270 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 145 in _call_lightning_module_hook
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 266 in _optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 188 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 219 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 133 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 355 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 202 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1023 in _run_stage
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 980 in _run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571 in _fit_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93 in launch
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42 in _call_and_handle_interrupt
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532 in fit
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 627 in main
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 703 in <module>
+
+Extension modules: numpy.core._multiarray_umath, numpy.core._multiarray_tests, numpy.linalg._umath_linalg, numpy.fft._pocketfft_internal, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, torch._C, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special, PIL._imaging, PIL._imagingft, av._core, av.logging, av.bytesource, av.buffer, av.audio.format, av.enum, av.error, av.utils, av.option, av.descriptor, av.container.pyio, av.dictionary, av.format, av.stream, av.container.streams, av.sidedata.motionvectors, av.sidedata.sidedata, av.packet, av.container.input, av.container.output, av.container.core, av.codec.context, av.video.format, av.video.reformatter, av.plane, av.video.plane, av.video.frame, av.video.stream, av.codec.codec, av.frame, av.audio.layout, av.audio.plane, av.audio.frame, av.audio.stream, av.audio.fifo, av.filter.pad, av.filter.link, av.filter.context, av.filter.graph, av.filter.filter, av.audio.resampler, skimage._shared.geometry, yaml._yaml, scipy._lib._ccallback_c, scipy.sparse._sparsetools, _csparsetools, scipy.sparse._csparsetools, scipy.sparse.linalg._isolve._iterative, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg.cython_lapack, scipy.linalg._cythonized_array_utils, scipy.linalg._solve_toeplitz, scipy.linalg._decomp_lu_cython, scipy.linalg._matfuncs_sqrtm_triu, scipy.linalg.cython_blas, scipy.linalg._matfuncs_expm, scipy.linalg._decomp_update, scipy.linalg._flinalg, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpack, scipy.sparse.csgraph._tools, scipy.sparse.csgraph._shortest_path, scipy.sparse.csgraph._traversal, scipy.sparse.csgraph._min_spanning_tree, scipy.sparse.csgraph._flow, scipy.sparse.csgraph._matching, scipy.sparse.csgraph._reordering, scipy.spatial._ckdtree, scipy._lib.messagestream, scipy.spatial._qhull, scipy.spatial._voronoi, scipy.spatial._distance_wrap, scipy.spatial._hausdorff, scipy.special._ufuncs_cxx, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, scipy.special._ellip_harm_2, scipy.spatial.transform._rotation, skimage.draw._draw, skimage.transform._hough_transform, scipy.interpolate._fitpack, scipy.interpolate.dfitpack, scipy.optimize._minpack2, scipy.optimize._group_columns, scipy.optimize._trlib._trlib, numpy.linalg.lapack_lite, scipy.optimize._lbfgsb, _moduleTNC, scipy.optimize._moduleTNC, scipy.optimize._cobyla, scipy.optimize._slsqp, scipy.optimize._minpack, scipy.optimize._lsq.givens_elimination, scipy.optimize._zeros, scipy.optimize.__nnls, scipy.optimize._highs.cython.src._highs_wrapper, scipy.optimize._highs._highs_wrapper, scipy.optimize._highs.cython.src._highs_constants, scipy.optimize._highs._highs_constants, scipy.linalg._interpolative, scipy.optimize._bglu_dense, scipy.optimize._lsap, scipy.optimize._direct, scipy.interpolate._bspl, scipy.interpolate._ppoly, scipy.interpolate.interpnd, scipy.interpolate._rbfinterp_pythran, scipy.interpolate._rgi_cython, scipy._lib._uarray._uarray, scipy.ndimage._nd_image, _ni_label, scipy.ndimage._ni_label, skimage.transform._warps_cy, skimage.measure._find_contours_cy, skimage.measure._marching_cubes_lewiner_cy, skimage.measure._moments_cy, scipy.signal._sigtools, scipy.signal._max_len_seq_inner, scipy.signal._upfirdn_apply, scipy.signal._spline, scipy.integrate._odepack, scipy.integrate._quadpack, scipy.integrate._vode, scipy.integrate._dop, scipy.integrate._lsoda, scipy.signal._sosfilt, scipy.signal._spectral, scipy.special.cython_special, scipy.stats._stats, scipy.stats.beta_ufunc, scipy.stats._boost.beta_ufunc, scipy.stats.binom_ufunc, scipy.stats._boost.binom_ufunc, scipy.stats.nbinom_ufunc, scipy.stats._boost.nbinom_ufunc, scipy.stats.hypergeom_ufunc, scipy.stats._boost.hypergeom_ufunc, scipy.stats.ncf_ufunc, scipy.stats._boost.ncf_ufunc, scipy.stats.ncx2_ufunc, scipy.stats._boost.ncx2_ufunc, scipy.stats.nct_ufunc, scipy.stats._boost.nct_ufunc, scipy.stats.skewnorm_ufunc, scipy.stats._boost.skewnorm_ufunc, scipy.stats.invgauss_ufunc, scipy.stats._boost.invgauss_ufunc, scipy.stats._biasedurn, scipy.stats._levy_stable.levyst, scipy.stats._stats_pythran, scipy.stats._statlib, scipy.stats._sobol, scipy.stats._qmc_cy, scipy.stats._mvn, scipy.stats._rcont.rcont, scipy.signal._peak_finding_utils, skimage.measure._pnpoly, skimage.measure._ccomp, skimage.transform._radon_transform, sklearn.__check_build._check_build, psutil._psutil_linux, psutil._psutil_posix, sklearn.utils._isfinite, sklearn.utils.murmurhash, sklearn.utils._openmp_helpers, sklearn.utils._logistic_sigmoid, sklearn.utils.sparsefuncs_fast, sklearn.preprocessing._csr_polynomial_expansion, sklearn.preprocessing._target_encoder_fast, sklearn.utils._random, sklearn.utils._seq_dataset, sklearn.metrics.cluster._expected_mutual_info_fast, sklearn.metrics._dist_metrics, sklearn.metrics._pairwise_distances_reduction._datasets_pair, sklearn.utils._cython_blas, sklearn.metrics._pairwise_distances_reduction._base, sklearn.metrics._pairwise_distances_reduction._middle_term_computer, sklearn.utils._heap, sklearn.utils._sorting, sklearn.metrics._pairwise_distances_reduction._argkmin, sklearn.metrics._pairwise_distances_reduction._argkmin_classmode, sklearn.utils._vector_sentinel, sklearn.metrics._pairwise_distances_reduction._radius_neighbors, sklearn.metrics._pairwise_fast, sklearn.linear_model._cd_fast, sklearn._loss._loss, sklearn.utils.arrayfuncs, sklearn.svm._liblinear, sklearn.svm._libsvm, sklearn.svm._libsvm_sparse, sklearn.utils._weight_vector, sklearn.linear_model._sgd_fast, sklearn.linear_model._sag_fast, sklearn.decomposition._online_lda_fast, sklearn.decomposition._cdnmf_fast, google._upb._message, matplotlib._c_internal_utils, matplotlib._path, kiwisolver._cext, matplotlib._image (total: 224)
+[E ProcessGroupNCCL.cpp:488] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[E ProcessGroupNCCL.cpp:494] To avoid data inconsistency, we are taking the entire process down.
+srun: error: gn42: tasks 1-2: Aborted (core dumped)
+[E ProcessGroupNCCL.cpp:488] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[E ProcessGroupNCCL.cpp:494] To avoid data inconsistency, we are taking the entire process down.
+[E ProcessGroupNCCL.cpp:488] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[E ProcessGroupNCCL.cpp:494] To avoid data inconsistency, we are taking the entire process down.
+[E ProcessGroupNCCL.cpp:488] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[E ProcessGroupNCCL.cpp:494] To avoid data inconsistency, we are taking the entire process down.
+[E ProcessGroupNCCL.cpp:915] [Rank 7] NCCL watchdog thread terminated with exception: [Rank 7] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800758 milliseconds before timing out.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  [Rank 7] NCCL watchdog thread terminated with exception: [Rank 7] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800758 milliseconds before timing out.
+Fatal Python error: Aborted
+
+Thread 0x00007f73ff9ab700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f7403d47700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f74381a5700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f743d9a8700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+[E ProcessGroupNCCL.cpp:915] [Rank 4] NCCL watchdog thread terminated with exception: [Rank 4] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800998 milliseconds before timing out.
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f743b1a7700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f7434e0b700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f74009ad700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  [Rank 4] NCCL watchdog thread terminated with exception: [Rank 4] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800998 milliseconds before timing out.
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f73917fe700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f73e48cd700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f7408d49700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f740d54a700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f740dd4b700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f740e54c700 (most recent call first):
+  <no Python frame>
+
+Fatal Python error: Aborted
+
+Thread 0x00007ff92b435700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+Thread 0x00007f73d6725700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 324 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 607 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f74e6af6140 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/autograd/__init__.py", line 251 in backward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/_tensor.py", line 491 in backward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 1058 in backward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 69 in backward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/strategy.py", line 205 in backward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 293 in _call_strategy_hook
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 237 in backward_fn
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 137 in closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115 in decorate_context
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 142 in __call__
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 103 in _wrap_closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/adamw.py", line 153 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 76 in _use_grad
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 373 in wrapper
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 116 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/strategy.py", line 231 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 257 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/optimizer.py", line 161 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 1270 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 145 in _call_lightning_module_hook
+
+Thread 0x00007ff965096700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff971b68700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff96d09a700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff930c38700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 266 in _optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 188 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 219 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 133 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 355 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 202 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1023 in _run_stage
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 980 in _run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571 in _fit_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93 in launch
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42 in _call_and_handle_interrupt
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532 in fit
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 627 in main
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 703 in <module>
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff962895700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8b9fff700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff968098700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff8dcbfb700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff935c3a700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007ff93a43b700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007ff93ac3c700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007ff93b43d700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007ff8fedab700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 324 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 607 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ff91017e700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 324 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 607 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007ffa139e7140 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/autograd/__init__.py", line 251 in backward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/_tensor.py", line 491 in backward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 1058 in backward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 69 in backward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/strategy.py", line 205 in backward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 293 in _call_strategy_hook
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 237 in backward_fn
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 137 in closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115 in decorate_context
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 142 in __call__
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 103 in _wrap_closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/adamw.py", line 153 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 76 in _use_grad
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 373 in wrapper
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 116 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/strategy.py", line 231 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 257 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/optimizer.py", line 161 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 1270 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 145 in _call_lightning_module_hook
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 266 in _optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 188 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 219 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 133 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 355 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 202 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1023 in _run_stage
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 980 in _run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571 in _fit_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93 in launch
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42 in _call_and_handle_interrupt
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532 in fit
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 627 in main
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 703 in <module>
+Extension modules: numpy.core._multiarray_umath, numpy.core._multiarray_tests, numpy.linalg._umath_linalg, numpy.fft._pocketfft_internal, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, torch._C, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special, PIL._imaging, PIL._imagingft, av._core, av.logging, av.bytesource, av.buffer, av.audio.format, av.enum, av.error, av.utils, av.option, av.descriptor, av.container.pyio, av.dictionary, av.format, av.stream, av.container.streams, av.sidedata.motionvectors, av.sidedata.sidedata, av.packet, av.container.input, av.container.output, av.container.core, av.codec.context, av.video.format, av.video.reformatter, av.plane, av.video.plane, av.video.frame, av.video.stream, av.codec.codec, av.frame, av.audio.layout, av.audio.plane, av.audio.frame, av.audio.stream, av.
+audio.fifo, av.filter.pad, av.filter.link, av.filter.context, av.filter.graph, av.filter.filter, av.audio.resampler, skimage._shared.geometry, yaml._yaml, scipy._lib._ccallback_c, scipy.sparse._sparsetools, _csparsetools, scipy.sparse._csparsetools, scipy.sparse.linalg._isolve._iterative, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg.cython_lapack, scipy.linalg._cythonized_array_utils, scipy.linalg._solve_toeplitz, scipy.linalg._decomp_lu_cython, scipy.linalg._matfuncs_sqrtm_triu, scipy.linalg.cython_blas, scipy.linalg._matfuncs_expm, scipy.linalg._decomp_update, scipy.linalg._flinalg, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpack, scipy.sparse.csgraph._tools, scipy.sparse.csgraph._shortest_path, scipy.sparse.csgraph._traversal, scipy.sparse.csgraph._min_spanning_tree, scipy.sparse.csgraph._flow, scipy.sparse.csgraph._matching, scipy.sparse.csgraph._reordering, scipy.spatial._ckdtree, scipy._lib.messagestream, scipy.spatial._qhull, scipy.spatial._voronoi, scipy.spatial._distance_wrap, scipy.spatial._hausdorff, scipy.special._ufuncs_cxx, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, scipy.special._ellip_harm_2, scipy.spatial.transform._rotation, skimage.draw._draw, skimage.transform._hough_transform, scipy.interpolate._fitpack, scipy.interpolate.dfitpack, scipy.optimize._minpack2, scipy.optimize._group_columns, scipy.optimize._trlib._trlib, numpy.linalg.lapack_lite, scipy.optimize._lbfgsb, _moduleTNC, scipy.optimize._moduleTNC, scipy.optimize._cobyla, scipy.optimize._slsqp, scipy.optimize._minpack, scipy.optimize._lsq.givens_elimination, scipy.optimize._zeros, scipy.optimize.__nnls, scipy.optimize._highs.cython.src._highs_wrapper, scipy.optimize._highs._highs_wrapper, scipy.optimize._highs.cython.src._highs_constants, scipy.optimize._highs._highs_constants, scipy.linalg._interpolative, scipy.optimize._bglu_dense, scipy.optimize._lsap, scipy.optimize._direct, scipy.interpolate._bspl, scipy.interpolate._ppoly, scipy.interpolate.interpnd, scipy.interpExtension modules: numpy.core._multiarray_umath, numpy.core._multiarray_tests, numpy.linalg._umath_linalg, numpy.fft._pocketfft_internal, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, torch._C, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special, PIL._imaging, PIL._imagingft, av._core, av.logging, av.bytesource, av.buffer, av.audio.format, av.enum, av.error, av.utils, av.option, av.descriptor, av.container.pyio, av.dictionary, av.format, av.stream, av.container.streams, av.sidedata.motionvectors, av.sidedata.sidedata, av.packet, av.container.input, av.container.output, av.container.core, av.codec.context, av.video.format, av.video.reformatter, av.plane, av.video.plane, av.video.frame, av.video.stream, av.codec.codec, av.frame, av.audio.layout, av.audio.plane, av.audio.frame, av.audio.stream, av.olate._rbfinterp_pythran, scipy.interpolate._rgi_cython, scipy._lib._uarray._uarray, scipy.ndimage._nd_image, _ni_label, scipy.ndimage._ni_label, skimage.transform._warps_cy, skimage.measure._find_contours_cy, skimage.measure._marching_cubes_lewiner_cy, skimage.measure._moments_cy, scipy.signal._sigtools, scipy.signal._max_len_seq_inner, scipy.signal._upfirdn_apply, scipy.signal._spline, scipy.integrate._odepack, scipy.integrate._quadpack, scipy.integrate._vode, scipy.integrate._dop, scipy.integrate._lsoda, scipy.signal._sosfilt, scipy.signal._spectral, scipy.special.cython_special, scipy.stats._stats, scipy.stats.beta_ufunc, scipy.stats._boost.beta_ufunc, scipy.stats.binom_ufunc, scipy.stats._boost.binom_ufunc, scipy.stats.nbinom_ufunc, scipy.stats._boost.nbinom_ufunc, scipy.stats.hypergeom_ufunc, scipy.stats._boost.hypergeom_ufunc, scipy.stats.ncf_ufunc, scipy.stats._boost.ncf_ufunc, scipy.stats.ncx2_ufunc, scipy.stats._boost.ncx2_ufunc, scipy.stats.nct_ufunc, scipy.stats._boost.nct_ufunc, scipy.stats.skewnorm_ufunc, scipy.stats._boost.skewnorm_ufunc, scipy.stats.invgauss_ufunc, scipy.stats._boost.invgauss_ufunc, scipy.stats._biasedurn, scipy.stats._levy_stable.levyst, scipy.stats._stats_pythran, scipy.stats._statlib, scipy.stats._sobol, scipy.stats._qmc_cy, scipy.stats._mvn, scipy.stats._rcont.rcont, scipy.signal._peak_finding_utils, skimage.measure._pnpoly, skimage.measure._ccomp, skimage.transform._radon_transform, sklearn.__check_build._check_build, psutil._psutil_linux, psutil._psutil_posix, sklearn.utils._isfinite, sklearn.utils.murmurhash, sklearn.utils._openmp_helpers, sklearn.utils._logistic_sigmoid, sklearn.utils.sparsefuncs_fast, sklearn.preprocessing._csr_polynomial_expansion, sklearn.preprocessing._target_encoder_fast, sklearn.utils._random, sklearn.utils._seq_dataset, sklearn.metrics.cluster._expected_mutual_info_fast, sklearn.metrics._dist_metrics, sklearn.metrics._pairwise_distances_reduction._datasets_pair, sklearn.utils._cython_blas, sklearn.metrics._pairwise_distances_reduction._base, sklearnaudio.fifo, av.filter.pad, av.filter.link, av.filter.context, av.filter.graph, av.filter.filter, av.audio.resampler, skimage._shared.geometry, yaml._yaml, scipy._lib._ccallback_c, scipy.sparse._sparsetools, _csparsetools, scipy.sparse._csparsetools, scipy.sparse.linalg._isolve._iterative, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg.cython_lapack, scipy.linalg._cythonized_array_utils, scipy.linalg._solve_toeplitz, scipy.linalg._decomp_lu_cython, scipy.linalg._matfuncs_sqrtm_triu, scipy.linalg.cython_blas, scipy.linalg._matfuncs_expm, scipy.linalg._decomp_update, scipy.linalg._flinalg, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpack, scipy.sparse.csgraph._tools, scipy.sparse.csgraph._shortest_path, scipy.sparse.csgraph._traversal, scipy.sparse.csgraph._min_spanning_tree, scipy.sparse.csgraph._flow, scipy.sparse.csgraph._matching, scipy.sparse.csgraph._reordering, scipy.spatial._ckdtree, scipy._lib.messagestream, scipy.spatial._qhull, scipy.spatial._voronoi, scipy.spatial._distance_wrap, scipy.spatial._hausdorff, scipy.special._ufuncs_cxx, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, scipy.special._ellip_harm_2, scipy.spatial.transform._rotation, skimage.draw._draw, skimage.transform._hough_transform, scipy.interpolate._fitpack, scipy.interpolate.dfitpack, scipy.optimize._minpack2, scipy.optimize._group_columns, scipy.optimize._trlib._trlib, numpy.linalg.lapack_lite, scipy.optimize._lbfgsb, _moduleTNC, scipy.optimize._moduleTNC, scipy.optimize._cobyla, scipy.optimize._slsqp, scipy.optimize._minpack, scipy.optimize._lsq.givens_elimination, scipy.optimize._zeros, scipy.optimize.__nnls, scipy.optimize._highs.cython.src._highs_wrapper, scipy.optimize._highs._highs_wrapper, scipy.optimize._highs.cython.src._highs_constants, scipy.optimize._highs._highs_constants, scipy.linalg._interpolative, scipy.optimize._bglu_dense, scipy.optimize._lsap, scipy.optimize._direct, scipy.interpolate._bspl, scipy.interpolate._ppoly, scipy.interpolate.interpnd, scipy.interp.metrics._pairwise_distances_reduction._middle_term_computer, sklearn.utils._heap, sklearn.utils._sorting, sklearn.metrics._pairwise_distances_reduction._argkmin, sklearn.metrics._pairwise_distances_reduction._argkmin_classmode, sklearn.utils._vector_sentinel, sklearn.metrics._pairwise_distances_reduction._radius_neighbors, sklearn.metrics._pairwise_fast, sklearn.linear_model._cd_fast, sklearn._loss._loss, sklearn.utils.arrayfuncs, sklearn.svm._liblinear, sklearn.svm._libsvm, sklearn.svm._libsvm_sparse, sklearn.utils._weight_vector, sklearn.linear_model._sgd_fast, sklearn.linear_model._sag_fast, sklearn.decomposition._online_lda_fast, sklearn.decomposition._cdnmf_fast, google._upb._message, matplotlib._c_internal_utils, matplotlib._path, kiwisolver._cext, matplotlib._image (total: 224)
+olate._rbfinterp_pythran, scipy.interpolate._rgi_cython, scipy._lib._uarray._uarray, scipy.ndimage._nd_image, _ni_label, scipy.ndimage._ni_label, skimage.transform._warps_cy, skimage.measure._find_contours_cy, skimage.measure._marching_cubes_lewiner_cy, skimage.measure._moments_cy, scipy.signal._sigtools, scipy.signal._max_len_seq_inner, scipy.signal._upfirdn_apply, scipy.signal._spline, scipy.integrate._odepack, scipy.integrate._quadpack, scipy.integrate._vode, scipy.integrate._dop, scipy.integrate._lsoda, scipy.signal._sosfilt, scipy.signal._spectral, scipy.special.cython_special, scipy.stats._stats, scipy.stats.beta_ufunc, scipy.stats._boost.beta_ufunc, scipy.stats.binom_ufunc, scipy.stats._boost.binom_ufunc, scipy.stats.nbinom_ufunc, scipy.stats._boost.nbinom_ufunc, scipy.stats.hypergeom_ufunc, scipy.stats._boost.hypergeom_ufunc, scipy.stats.ncf_ufunc, scipy.stats._boost.ncf_ufunc, scipy.stats.ncx2_ufunc, scipy.stats._boost.ncx2_ufunc, scipy.stats.nct_ufunc, scipy.stats._boost.nct_ufunc, scipy.stats.skewnorm_ufunc, scipy.stats._boost.skewnorm_ufunc, scipy.stats.invgauss_ufunc, scipy.stats._boost.invgauss_ufunc, scipy.stats._biasedurn, scipy.stats._levy_stable.levyst, scipy.stats._stats_pythran, scipy.stats._statlib, scipy.stats._sobol, scipy.stats._qmc_cy, scipy.stats._mvn, scipy.stats._rcont.rcont, scipy.signal._peak_finding_utils, skimage.measure._pnpoly, skimage.measure._ccomp, skimage.transform._radon_transform, sklearn.__check_build._check_build, psutil._psutil_linux, psutil._psutil_posix, sklearn.utils._isfinite, sklearn.utils.murmurhash, sklearn.utils._openmp_helpers, sklearn.utils._logistic_sigmoid, sklearn.utils.sparsefuncs_fast, sklearn.preprocessing._csr_polynomial_expansion, sklearn.preprocessing._target_encoder_fast, sklearn.utils._random, sklearn.utils._seq_dataset, sklearn.metrics.cluster._expected_mutual_info_fast, sklearn.metrics._dist_metrics, sklearn.metrics._pairwise_distances_reduction._datasets_pair, sklearn.utils._cython_blas, sklearn.metrics._pairwise_distances_reduction._base, sklearn.metrics._pairwise_distances_reduction._middle_term_computer, sklearn.utils._heap, sklearn.utils._sorting, sklearn.metrics._pairwise_distances_reduction._argkmin, sklearn.metrics._pairwise_distances_reduction._argkmin_classmode, sklearn.utils._vector_sentinel, sklearn.metrics._pairwise_distances_reduction._radius_neighbors, sklearn.metrics._pairwise_fast, sklearn.linear_model._cd_fast, sklearn._loss._loss, sklearn.utils.arrayfuncs, sklearn.svm._liblinear, sklearn.svm._libsvm, sklearn.svm._libsvm_sparse, sklearn.utils._weight_vector, sklearn.linear_model._sgd_fast, sklearn.linear_model._sag_fast, sklearn.decomposition._online_lda_fast, sklearn.decomposition._cdnmf_fast, google._upb._message, matplotlib._c_internal_utils, matplotlib._path, kiwisolver._cext, matplotlib._image (total: 224)
+[E ProcessGroupNCCL.cpp:915] [Rank 6] NCCL watchdog thread terminated with exception: [Rank 6] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800020 milliseconds before timing out.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  [Rank 6] NCCL watchdog thread terminated with exception: [Rank 6] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800020 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:915] [Rank 5] NCCL watchdog thread terminated with exception: [Rank 5] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800995 milliseconds before timing out.
+Fatal Python error: Aborted
+
+Thread 0x00007f9ef4ffd700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f9f9be50700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  [Rank 5] NCCL watchdog thread terminated with exception: [Rank 5] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=857944, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=1800000) ran for 1800995 milliseconds before timing out.
+Fatal Python error: Aborted
+
+Thread 0x00007f45e0ffd700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f9fa4d85700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f9fd49e2700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f45e1fff700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f463b70f700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f9fd39e0700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f9eedfff700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f9fd41e1700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f465d3e1700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f4694841700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f465fbe2700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f9f3cbfb700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f9ef5fff700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f468f23f700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f45e8a25700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 320 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 231 in _feed
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f465abe0700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/selectors.py", line 416 in select
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 931 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 424 in _poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f9fa9586700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f9fa9d87700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f9faa588700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f9fd31df700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f9f72761700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 324 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 607 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007fa082b32140 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2050 in all_reduce
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 47 in wrapper
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 161 in _sync_ddp
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 111 in _sync_ddp_if_available
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 324 in reduce
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 220 in update
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torchmetrics/metric.py", line 446 in wrapped_func
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 262 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/connection.py", line 257 in poll
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/multiprocessing/queues.py", line 113 in get
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 31 in do_one_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 54 in _pin_memory_loop
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 953 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f46643e3700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f4664be4700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f46653e5700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f468da3c700 (most recent call first):
+  <no Python frame>
+
+Thread 0x00007f462d567700 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 324 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 607 in wait
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/threading.py", line 973 in _bootstrap
+
+Thread 0x00007f473d98f140 (most recent call first):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 2050 in all_reduce
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 47 in wrapper
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 161 in _sync_ddp
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/lightning_fabric/utilities/distributed.py", line 111 in _sync_ddp_if_available
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 324 in reduce
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 220 in update
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torchmetrics/metric.py", line 446 in wrapped_func
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 262 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 421 in update_metrics
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 407 in log
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 493 in log
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 199 in training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/overrides/base.py", line 90 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527 in _call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 421 in update_metrics
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 407 in log
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 493 in log
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 199 in training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/overrides/base.py", line 90 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527 in _call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518 in _wrapped_call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1357 in _run_ddp_forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1521 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527 in _call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518 in _wrapped_call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 330 in training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 293 in _call_strategy_hook
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 315 in _training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 128 in closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115 in decorate_context
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 142 in __call__
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 103 in _wrap_closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/adamw.py", line 153 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 76 in _use_grad
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 373 in wrapper
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 116 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/strategy.py", line 231 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 257 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/optimizer.py", line 161 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 1270 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518 in _wrapped_call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1357 in _run_ddp_forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1521 in forward
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527 in _call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518 in _wrapped_call_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 330 in training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 293 in _call_strategy_hook
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 315 in _training_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 128 in closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115 in decorate_context
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 142 in __call__
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 103 in _wrap_closure
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/adamw.py", line 153 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 76 in _use_grad
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/optim/optimizer.py", line 373 in wrapper
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 116 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/strategy.py", line 231 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/ddp.py", line 257 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/optimizer.py", line 161 in step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/core/module.py", line 1270 in optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 145 in _call_lightning_module_hook
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 266 in _optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 188 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 219 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 133 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 355 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 145 in _call_lightning_module_hook
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 266 in _optimizer_step
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 188 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 219 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 133 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 355 in advance
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 202 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1023 in _run_stage
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 980 in _run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571 in _fit_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93 in launch
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42 in _call_and_handle_interrupt
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532 in fit
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 627 in main
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 703 in <module>
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py", line 202 in run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1023 in _run_stage
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 980 in _run
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 571 in _fit_impl
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 93 in launch
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 42 in _call_and_handle_interrupt
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 532 in fit
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 627 in main
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 703 in <module>
+
+
+Extension modules: numpy.core._multiarray_umath, numpy.core._multiarray_tests, numpy.linalg._umath_linalg, numpy.fft._pocketfft_internal, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, torch._C, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special, PIL._imaging, PIL._imagingft, av._core, av.logging, av.bytesource, av.buffer, av.audio.format, av.enum, av.error, av.utils, av.option, av.descriptor, av.container.pyio, av.dictionary, av.format, av.stream, av.container.streams, av.sidedata.motionvectors, av.sidedata.sidedata, av.packet, av.container.input, av.container.output, av.container.core, av.codec.context, av.video.format, av.video.reformatter, av.plane, av.video.plane, av.video.frame, av.video.stream, av.codec.codec, av.frame, av.audio.layout, av.audio.plane, av.audio.frame, av.audio.stream, av.Extension modules: numpy.core._multiarray_umath, numpy.core._multiarray_tests, numpy.linalg._umath_linalg, numpy.fft._pocketfft_internal, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, torch._C, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special, PIL._imaging, PIL._imagingft, av._core, av.logging, av.bytesource, av.buffer, av.audio.format, av.enum, av.error, av.utils, av.option, av.descriptor, av.container.pyio, av.dictionary, av.format, av.stream, av.container.streams, av.sidedata.motionvectors, av.sidedata.sidedata, av.packet, av.container.input, av.container.output, av.container.core, av.codec.context, av.video.format, av.video.reformatter, av.plane, av.video.plane, av.video.frame, av.video.stream, av.codec.codec, av.frame, av.audio.layout, av.audio.plane, av.audio.frame, av.audio.stream, av.audio.fifo, av.filter.pad, av.filter.link, av.filter.context, av.filter.graph, av.filter.filter, av.audio.resampler, skimage._shared.geometry, yaml._yaml, scipy._lib._ccallback_c, scipy.sparse._sparsetools, _csparsetools, scipy.sparse._csparsetools, scipy.sparse.linalg._isolve._iterative, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg.cython_lapack, scipy.linalg._cythonized_array_utils, scipy.linalg._solve_toeplitz, scipy.linalg._decomp_lu_cython, scipy.linalg._matfuncs_sqrtm_triu, scipy.linalg.cython_blas, scipy.linalg._matfuncs_expm, scipy.linalg._decomp_update, scipy.linalg._flinalg, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpack, scipy.sparse.csgraph._tools, scipy.sparse.csgraph._shortest_path, scipy.sparse.csgraph._traversal, scipy.sparse.csgraph._min_spanning_tree, scipy.sparse.csgraph._flow, scipy.sparse.csgraph._matching, scipy.sparse.csgraph._reordering, scipy.spatial._ckdtree, scipy._lib.messagestream, scipy.spatial._qhull, scipy.spatial._voronoi, scipy.spaaudio.fifo, av.filter.pad, av.filter.link, av.filter.context, av.filter.graph, av.filter.filter, av.audio.resampler, skimage._shared.geometry, yaml._yaml, scipy._lib._ccallback_c, scipy.sparse._sparsetools, _csparsetools, scipy.sparse._csparsetools, scipy.sparse.linalg._isolve._iterative, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg.cython_lapack, scipy.linalg._cythonized_array_utils, scipy.linalg._solve_toeplitz, scipy.linalg._decomp_lu_cython, scipy.linalg._matfuncs_sqrtm_triu, scipy.linalg.cython_blas, scipy.linalg._matfuncs_expm, scipy.linalg._decomp_update, scipy.linalg._flinalg, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpack, scipy.sparse.csgraph._tools, scipy.sparse.csgraph._shortest_path, scipy.sparse.csgraph._traversal, scipy.sparse.csgraph._min_spanning_tree, scipy.sparse.csgraph._flow, scipy.sparse.csgraph._matching, scipy.sparse.csgraph._reordering, scipy.spatial._ckdtree, scipy._lib.messagestream, scipy.spatial._qhull, scipy.spatial._voronoi, scipy.spatial._distance_wrap, scipy.spatial._hausdorff, scipy.special._ufuncs_cxx, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, scipy.special._ellip_harm_2, scipy.spatial.transform._rotation, skimage.draw._draw, skimage.transform._hough_transform, scipy.interpolate._fitpack, scipy.interpolate.dfitpack, scipy.optimize._minpack2, scipy.optimize._group_columns, scipy.optimize._trlib._trlib, numpy.linalg.lapack_lite, scipy.optimize._lbfgsb, _moduleTNC, scipy.optimize._moduleTNC, scipy.optimize._cobyla, scipy.optimize._slsqp, scipy.optimize._minpack, scipy.optimize._lsq.givens_elimination, scipy.optimize._zeros, scipy.optimize.__nnls, scipy.optimize._highs.cython.src._highs_wrapper, scipy.optimize._highs._highs_wrapper, scipy.optimize._highs.cython.src._highs_constants, scipy.optimize._highs._highs_constants, scipy.linalg._interpolative, scipy.optimize._bglu_dense, scipy.optimize._lsap, scipy.optimize._direct, scipy.interpolate._bspl, scipy.interpolate._ppoly, scipy.interpolate.interpnd, scipy.interptial._distance_wrap, scipy.spatial._hausdorff, scipy.special._ufuncs_cxx, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, scipy.special._ellip_harm_2, scipy.spatial.transform._rotation, skimage.draw._draw, skimage.transform._hough_transform, scipy.interpolate._fitpack, scipy.interpolate.dfitpack, scipy.optimize._minpack2, scipy.optimize._group_columns, scipy.optimize._trlib._trlib, numpy.linalg.lapack_lite, scipy.optimize._lbfgsb, _moduleTNC, scipy.optimize._moduleTNC, scipy.optimize._cobyla, scipy.optimize._slsqp, scipy.optimize._minpack, scipy.optimize._lsq.givens_elimination, scipy.optimize._zeros, scipy.optimize.__nnls, scipy.optimize._highs.cython.src._highs_wrapper, scipy.optimize._highs._highs_wrapper, scipy.optimize._highs.cython.src._highs_constants, scipy.optimize._highs._highs_constants, scipy.linalg._interpolative, scipy.optimize._bglu_dense, scipy.optimize._lsap, scipy.optimize._direct, scipy.interpolate._bspl, scipy.interpolate._ppoly, scipy.interpolate.interpnd, scipy.interpolate._rbfinterp_pythran, scipy.interpolate._rgi_cython, scipy._lib._uarray._uarray, scipy.ndimage._nd_image, _ni_label, scipy.ndimage._ni_label, skimage.transform._warps_cy, skimage.measure._find_contours_cy, skimage.measure._marching_cubes_lewiner_cy, skimage.measure._moments_cy, scipy.signal._sigtools, scipy.signal._max_len_seq_inner, scipy.signal._upfirdn_apply, scipy.signal._spline, scipy.integrate._odepack, scipy.integrate._quadpack, scipy.integrate._vode, scipy.integrate._dop, scipy.integrate._lsoda, scipy.signal._sosfilt, scipy.signal._spectral, scipy.special.cython_special, scipy.stats._stats, scipy.stats.beta_ufunc, scipy.stats._boost.beta_ufunc, scipy.stats.binom_ufunc, scipy.stats._boost.binom_ufunc, scipy.stats.nbinom_ufunc, scipy.stats._boost.nbinom_ufunc, scipy.stats.hypergeom_ufunc, scipy.stats._boost.hypergeom_ufunc, scipy.stats.ncf_ufunc, scipy.stats._boost.ncf_ufunc, scipy.stats.ncx2_ufunc, scipy.stats._boost.ncx2_ufunc, scipy.stats.nct_ufunc, scipy.stats._boost.nct_ufunc, scipy.stats.skewnorm_ufunc, scipy.stats._boost.skewnorm_ufunc, scipy.stats.invgauss_ufunc, scipy.stats._boost.invgauss_ufunc, scipy.stats._biasedurn, scipy.stats._levy_stable.levyst, scipy.stats._stats_pythran, scipy.stats._statlib, scipy.stats._sobol, scipy.stats._qmc_cy, scipy.stats._mvn, scipy.stats._rcont.rcont, scipy.signal._peak_finding_utils, skimage.measure._pnpoly, skimage.measure._ccomp, skimage.transform._radon_transform, sklearn.__check_build._check_build, psutil._psutil_linux, psutil._psutil_posix, sklearn.utils._isfinite, sklearn.utils.murmurhash, sklearn.utils._openmp_helpers, sklearn.utils._logistic_sigmoid, sklearn.utils.sparsefuncs_fast, sklearn.preprocessing._csr_polynomial_expansion, sklearn.preprocessing._target_encoder_fast, sklearn.utils._random, sklearn.utils._seq_dataset, sklearn.metrics.cluster._expected_mutual_info_fast, sklearn.metrics._dist_metrics, sklearn.metrics._pairwise_distances_reduction._datasets_pair, sklearn.utils._cython_blas, sklearn.metrics._pairwise_distances_reduction._base, sklearnolate._rbfinterp_pythran, scipy.interpolate._rgi_cython, scipy._lib._uarray._uarray, scipy.ndimage._nd_image, _ni_label, scipy.ndimage._ni_label, skimage.transform._warps_cy, skimage.measure._find_contours_cy, skimage.measure._marching_cubes_lewiner_cy, skimage.measure._moments_cy, scipy.signal._sigtools, scipy.signal._max_len_seq_inner, scipy.signal._upfirdn_apply, scipy.signal._spline, scipy.integrate._odepack, scipy.integrate._quadpack, scipy.integrate._vode, scipy.integrate._dop, scipy.integrate._lsoda, scipy.signal._sosfilt, scipy.signal._spectral, scipy.special.cython_special, scipy.stats._stats, scipy.stats.beta_ufunc, scipy.stats._boost.beta_ufunc, scipy.stats.binom_ufunc, scipy.stats._boost.binom_ufunc, scipy.stats.nbinom_ufunc, scipy.stats._boost.nbinom_ufunc, scipy.stats.hypergeom_ufunc, scipy.stats._boost.hypergeom_ufunc, scipy.stats.ncf_ufunc, scipy.stats._boost.ncf_ufunc, scipy.stats.ncx2_ufunc, scipy.stats._boost.ncx2_ufunc, scipy.stats.nct_ufunc, scipy.stats._boost.nct_ufunc, scipy.stats.skewnorm_ufunc, scipy.stats._boost.skewnorm_ufunc, scipy.stats.invgauss_ufunc, scipy.stats._boost.invgauss_ufunc, scipy.stats._biasedurn, scipy.stats._levy_stable.levyst, scipy.stats._stats_pythran, scipy.stats._statlib, scipy.stats._sobol, scipy.stats._qmc_cy, scipy.stats._mvn, scipy.stats._rcont.rcont, scipy.signal._peak_finding_utils, skimage.measure._pnpoly, skimage.measure._ccomp, skimage.transform._radon_transform, sklearn.__check_build._check_build, psutil._psutil_linux, psutil._psutil_posix, sklearn.utils._isfinite, sklearn.utils.murmurhash, sklearn.utils._openmp_helpers, sklearn.utils._logistic_sigmoid, sklearn.utils.sparsefuncs_fast, sklearn.preprocessing._csr_polynomial_expansion, sklearn.preprocessing._target_encoder_fast, sklearn.utils._random, sklearn.utils._seq_dataset, sklearn.metrics.cluster._expected_mutual_info_fast, sklearn.metrics._dist_metrics, sklearn.metrics._pairwise_distances_reduction._datasets_pair, sklearn.utils._cython_blas, sklearn.metrics._pairwise_distances_reduction._base, sklearn.metrics._pairwise_distances_reduction._middle_term_computer, sklearn.utils._heap, sklearn.utils._sorting, sklearn.metrics._pairwise_distances_reduction._argkmin, sklearn.metrics._pairwise_distances_reduction._argkmin_classmode, sklearn.utils._vector_sentinel, sklearn.metrics._pairwise_distances_reduction._radius_neighbors, sklearn.metrics._pairwise_fast, sklearn.linear_model._cd_fast, sklearn._loss._loss, sklearn.utils.arrayfuncs, sklearn.svm._liblinear, sklearn.svm._libsvm, sklearn.svm._libsvm_sparse, sklearn.utils._weight_vector, sklearn.linear_model._sgd_fast, sklearn.linear_model._sag_fast, sklearn.decomposition._online_lda_fast, sklearn.decomposition._cdnmf_fast, google._upb._message, matplotlib._c_internal_utils, matplotlib._path, kiwisolver._cext, matplotlib._image (total: 224)
+.metrics._pairwise_distances_reduction._middle_term_computer, sklearn.utils._heap, sklearn.utils._sorting, sklearn.metrics._pairwise_distances_reduction._argkmin, sklearn.metrics._pairwise_distances_reduction._argkmin_classmode, sklearn.utils._vector_sentinel, sklearn.metrics._pairwise_distances_reduction._radius_neighbors, sklearn.metrics._pairwise_fast, sklearn.linear_model._cd_fast, sklearn._loss._loss, sklearn.utils.arrayfuncs, sklearn.svm._liblinear, sklearn.svm._libsvm, sklearn.svm._libsvm_sparse, sklearn.utils._weight_vector, sklearn.linear_model._sgd_fast, sklearn.linear_model._sag_fast, sklearn.decomposition._online_lda_fast, sklearn.decomposition._cdnmf_fast, google._upb._message, matplotlib._c_internal_utils, matplotlib._path, kiwisolver._cext, matplotlib._image (total: 224)
+srun: error: gn45: tasks 4-7: Aborted (core dumped)

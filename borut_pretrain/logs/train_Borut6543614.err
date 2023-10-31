@@ -1,0 +1,245 @@
+wandb: Starting wandb agent 🕵️
+2023-10-30 13:17:17,056 - wandb.wandb_agent - INFO - Running runs: []
+2023-10-30 13:17:17,557 - wandb.wandb_agent - INFO - Agent received command: run
+2023-10-30 13:17:17,557 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 8
+	model_name: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+	num_epochs: 10
+2023-10-30 13:17:17,559 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 "-p gpu" --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --batch_size=8 --model_name=eva02_large_patch14_448.mim_m38m_ft_in22k_in1k --num_epochs=10 --devices 0 1 2 3 --num_nodes 2
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+[rank: 5] Global seed set to 1126
+[rank: 6] Global seed set to 1126
+2023-10-30 13:17:22,569 - wandb.wandb_agent - INFO - Running runs: ['bt9h5m6q']
+[rank: 7] Global seed set to 1126
+[rank: 4] Global seed set to 1126
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[rank: 0] Global seed set to 1126
+[rank: 1] Global seed set to 1126
+[rank: 3] Global seed set to 1126
+[rank: 2] Global seed set to 1126
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231030_131723-bt9h5m6q
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🧹 View sweep at https://wandb.ai/luka_borut/borut_pretrain/sweeps/bdjtkdfk
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/bt9h5m6q
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+srun: error: gn18: task 6: Exited with exit code 1
+srun: error: gn18: task 5: Exited with exit code 1
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+srun: error: gn15: task 2: Exited with exit code 1
+IndexError: list index out of range
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+srun: error: gn15: task 1: Exited with exit code 1
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+srun: error: gn18: task 4: Exited with exit code 1
+srun: error: gn15: task 3: Exited with exit code 1
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+IndexError: list index out of range
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+IndexError: list index out of range
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+IndexError: list index out of range
+srun: error: gn15: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+IndexError: list index out of range
+srun: error: gn18: task 7: Exited with exit code 1
+2023-10-30 13:17:38,047 - wandb.wandb_agent - INFO - Cleaning up finished run: bt9h5m6q
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: \ 0.003 MB of 0.003 MB uploaded (0.000 MB deduped)wandb: 🚀 View run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k at: https://wandb.ai/luka_borut/borut_pretrain/runs/bt9h5m6q
+wandb: Synced 3 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20231030_131723-bt9h5m6q/logs
+2023-10-30 13:17:43,247 - wandb.wandb_agent - INFO - Agent received command: run
+2023-10-30 13:17:43,312 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 16
+	model_name: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+	num_epochs: 10
+2023-10-30 13:17:43,341 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 "-p gpu" --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --batch_size=16 --model_name=eva02_large_patch14_448.mim_m38m_ft_in22k_in1k --num_epochs=10 --devices 0 1 2 3 --num_nodes 2
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+[rank: 4] Global seed set to 1126
+[rank: 5] Global seed set to 1126
+[rank: 6] Global seed set to 1126
+[rank: 7] Global seed set to 1126
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[rank: 3] Global seed set to 1126
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[rank: 1] Global seed set to 1126
+[rank: 0] Global seed set to 1126
+[rank: 2] Global seed set to 1126
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+2023-10-30 13:17:48,393 - wandb.wandb_agent - INFO - Running runs: ['qa0ro213']
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231030_131749-qa0ro213
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🧹 View sweep at https://wandb.ai/luka_borut/borut_pretrain/sweeps/bdjtkdfk
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/qa0ro213
+/ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+srun: error: gn18: task 6: Exited with exit code 1
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+IndexError: list index out of range
+srun: error: gn18: task 7: Exited with exit code 1
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+srun: error: gn15: task 2: Exited with exit code 1
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+Traceback (most recent call last):
+srun: error: gn15: task 3: Exited with exit code 1
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    main()
+IndexError: list index out of range
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+IndexError: list index out of range
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+srun: error: gn15: task 1: Exited with exit code 1
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 700, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in main
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 448, in <listcomp>
+    real_indexes = [j for j in indexes if dataset_labels[j] == 0]
+IndexError: list index out of range
+srun: error: gn18: task 5: Exited with exit code 1
+srun: error: gn18: task 4: Exited with exit code 1
+wandb: - 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: \ 0.000 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: | 0.003 MB of 0.003 MB uploaded (0.000 MB deduped)wandb: 🚀 View run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k at: https://wandb.ai/luka_borut/borut_pretrain/runs/qa0ro213
+wandb: Synced 3 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20231030_131749-qa0ro213/logs
+srun: error: gn15: task 0: Exited with exit code 1
+2023-10-30 13:18:03,893 - wandb.wandb_agent - INFO - Cleaning up finished run: qa0ro213
+2023-10-30 13:18:04,377 - wandb.wandb_agent - INFO - Agent received command: exit
+2023-10-30 13:18:04,378 - wandb.wandb_agent - INFO - Received exit command. Killing runs and quitting.
+wandb: Terminating and syncing runs. Press ctrl-c to kill.

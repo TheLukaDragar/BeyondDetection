@@ -1,0 +1,302 @@
+wandb: Starting wandb agent 🕵️
+2023-10-23 21:47:40,100 - wandb.wandb_agent - INFO - Running runs: []
+2023-10-23 21:47:40,660 - wandb.wandb_agent - INFO - Agent received command: run
+2023-10-23 21:47:40,660 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 8
+	model_name: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+	num_epochs: 40
+2023-10-23 21:47:40,662 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 "-p gpu" --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --batch_size=8 --model_name=eva02_large_patch14_448.mim_m38m_ft_in22k_in1k --num_epochs=40 --devices 0 1 2 3 --num_nodes 2
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+2023-10-23 21:47:45,671 - wandb.wandb_agent - INFO - Running runs: ['27kur3o9']
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+srun: error: gn40: tasks 1-3: Exited with exit code 1
+srun: error: gn50: tasks 4-7: Exited with exit code 1
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231023_214928-27kur3o9
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🧹 View sweep at https://wandb.ai/luka_borut/borut_pretrain/sweeps/lzxw77j8
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/27kur3o9
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+srun: error: gn40: task 0: Exited with exit code 1
+2023-10-23 21:49:34,615 - wandb.wandb_agent - INFO - Cleaning up finished run: 27kur3o9
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: \ 0.000 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: 🚀 View run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k at: https://wandb.ai/luka_borut/borut_pretrain/runs/27kur3o9
+wandb: Synced 3 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20231023_214928-27kur3o9/logs
+2023-10-23 21:49:40,155 - wandb.wandb_agent - INFO - Agent received command: run
+2023-10-23 21:49:40,155 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 8
+	model_name: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+	num_epochs: 60
+2023-10-23 21:49:40,157 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 "-p gpu" --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --batch_size=8 --model_name=eva02_large_patch14_448.mim_m38m_ft_in22k_in1k --num_epochs=60 --devices 0 1 2 3 --num_nodes 2
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+2023-10-23 21:49:45,165 - wandb.wandb_agent - INFO - Running runs: ['ebyhaq3o']
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+srun: error: gn50: tasks 6-7: Exited with exit code 1
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+srun: error: gn50: tasks 4-5: Exited with exit code 1
+srun: error: gn40: tasks 1,3: Exited with exit code 1
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+srun: error: gn40: task 2: Exited with exit code 1
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231023_214946-ebyhaq3o
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🧹 View sweep at https://wandb.ai/luka_borut/borut_pretrain/sweeps/lzxw77j8
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/ebyhaq3o
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: \ 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: | 0.000 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: / 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: 🚀 View run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k at: https://wandb.ai/luka_borut/borut_pretrain/runs/ebyhaq3o
+wandb: Synced 3 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20231023_214946-ebyhaq3o/logs
+srun: error: gn40: task 0: Exited with exit code 1
+2023-10-23 21:49:55,495 - wandb.wandb_agent - INFO - Cleaning up finished run: ebyhaq3o
+2023-10-23 21:49:55,833 - wandb.wandb_agent - INFO - Agent received command: run
+2023-10-23 21:49:55,833 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 16
+	model_name: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+	num_epochs: 40
+2023-10-23 21:49:55,835 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 "-p gpu" --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --batch_size=16 --model_name=eva02_large_patch14_448.mim_m38m_ft_in22k_in1k --num_epochs=40 --devices 0 1 2 3 --num_nodes 2
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+srun: error: gn50: task 7: Exited with exit code 1
+srun: error: gn50: tasks 4-6: Exited with exit code 1
+2023-10-23 21:50:00,843 - wandb.wandb_agent - INFO - Running runs: ['4ewidsde']
+srun: error: gn40: tasks 1-3: Exited with exit code 1
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231023_215001-4ewidsde
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🧹 View sweep at https://wandb.ai/luka_borut/borut_pretrain/sweeps/lzxw77j8
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/4ewidsde
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: \ 0.000 MB of 0.000 MB uploaded (0.000 MB deduped)wandb: | 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: 🚀 View run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k at: https://wandb.ai/luka_borut/borut_pretrain/runs/4ewidsde
+wandb: Synced 3 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20231023_215001-4ewidsde/logs
+srun: error: gn40: task 0: Exited with exit code 1
+2023-10-23 21:50:11,257 - wandb.wandb_agent - INFO - Cleaning up finished run: 4ewidsde
+2023-10-23 21:50:11,693 - wandb.wandb_agent - INFO - Agent received command: run
+2023-10-23 21:50:11,813 - wandb.wandb_agent - INFO - Agent starting run with config:
+	batch_size: 16
+	model_name: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+	num_epochs: 60
+2023-10-23 21:50:11,859 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 "-p gpu" --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --batch_size=16 --model_name=eva02_large_patch14_448.mim_m38m_ft_in22k_in1k --num_epochs=60 --devices 0 1 2 3 --num_nodes 2
+srun: error: WARNING: Multiple leaf switches contain nodes: gn[01-60]
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+srun: error: gn50: tasks 6-7: Exited with exit code 1
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+2023-10-23 21:50:17,007 - wandb.wandb_agent - INFO - Running runs: ['mdnrh6kg']
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+srun: error: gn50: tasks 4-5: Exited with exit code 1
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+srun: error: gn40: tasks 1-3: Exited with exit code 1
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+wandb: Currently logged in as: thelukadragar (luka_borut). Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.8
+wandb: Run data is saved locally in ./wandb/run-20231023_215017-mdnrh6kg
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+wandb: ⭐️ View project at https://wandb.ai/luka_borut/borut_pretrain
+wandb: 🧹 View sweep at https://wandb.ai/luka_borut/borut_pretrain/sweeps/lzxw77j8
+wandb: 🚀 View run at https://wandb.ai/luka_borut/borut_pretrain/runs/mdnrh6kg
+Traceback (most recent call last):
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 461, in <module>
+    main()
+  File "/ceph/hpc/data/st2207-pgp-users/ldragar/BeyondDetection/borut_pretrain/pretrain_timm.py", line 278, in main
+    resolution = model.default_cfg['input_size'][1]
+UnboundLocalError: local variable 'model' referenced before assignment
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+slurmstepd: error: *** JOB 6088401 ON gn40 CANCELLED AT 2023-10-23T21:50:20 ***

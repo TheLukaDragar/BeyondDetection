@@ -1,0 +1,810 @@
+start
+imports done
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:32:43]
+start
+imports done
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:32:43]
+start
+imports done
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:32:43]
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:32:43]
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:32:43]
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:32:43]
+[2023-10-29 11:32:43 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:32:43]
+start
+imports done
+[2023-10-29 11:32:45 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-29 11:32:45 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:32:45]
+gn46:1701037:1701037 [0] NCCL INFO Bootstrap : Using ib0:10.210.4.30<0>
+gn46:1701037:1701037 [0] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn46:1701037:1701037 [0] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn46:1701037:1701037 [0] NCCL INFO cudaDriverVersion 12020
+NCCL version 2.17.1+cuda12.1
+loading train_labels from cache
+[2023-10-29 11:32:44], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:32:54] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 1701038
+parent_pid 1701027
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+1 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+loading train_labels from cache
+[2023-10-29 11:32:45], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:32:52] All Train videos Number: 10
+batch_size = 8
+setting env variable for wandb run id
+init trainer
+made dir /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/c49jt9gj
+0 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+loading train_labels from cache
+[2023-10-29 11:32:44], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:32:52] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 1701039
+parent_pid 1701027
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+2 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+loading train_labels from cache
+[2023-10-29 11:32:44], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:32:52] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 1701040
+parent_pid 1701027
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+3 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+loading train_labels from cache
+[2023-10-29 11:32:44], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:32:52] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 1928656
+parent_pid 1928644
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+6 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+loading train_labels from cache
+[2023-10-29 11:32:44], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:32:52] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 1928654
+parent_pid 1928644
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+4 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+loading train_labels from cache
+[2023-10-29 11:32:44], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:32:52] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 1928655
+parent_pid 1928644
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+5 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+loading train_labels from cache
+[2023-10-29 11:32:44], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:32:52] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 1928657
+parent_pid 1928644
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+7 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+Training: 0it [00:00, ?it/s]Training:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 0:   0%|          | 0/1 [00:00<?, ?it/s] Adjusting learning rate of group 0 to 4.5000e-05.
+Epoch 0: 100%|██████████| 1/1 [00:03<00:00,  3.57s/it]Epoch 0: 100%|██████████| 1/1 [00:03<00:00,  3.57s/it, v_num=t9gj, train_loss_step=0.693]gn46:1701037:1701789 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.30<0>
+gn46:1701037:1701789 [0] NCCL INFO Using network IB
+gn46:1701037:1701789 [0] NCCL INFO Channel 00/04 :    0   3   2   5   4   7   6   1
+gn46:1701037:1701789 [0] NCCL INFO Channel 01/04 :    0   3   6   5   4   7   2   1
+gn46:1701037:1701789 [0] NCCL INFO Channel 02/04 :    0   3   2   5   4   7   6   1
+gn46:1701037:1701789 [0] NCCL INFO Channel 03/04 :    0   3   6   5   4   7   2   1
+gn46:1701037:1701789 [0] NCCL INFO Trees [0] -1/-1/-1->0->3 [1] 1/-1/-1->0->2 [2] -1/-1/-1->0->3 [3] 1/-1/-1->0->2
+gn46:1701037:1701789 [0] NCCL INFO P2P Chunksize set to 131072
+gn46:1701037:1701789 [0] NCCL INFO Channel 00/0 : 0[3000] -> 3[c4000] via P2P/IPC/read
+gn46:1701037:1701789 [0] NCCL INFO Channel 01/0 : 0[3000] -> 3[c4000] via P2P/IPC/read
+gn46:1701037:1701789 [0] NCCL INFO Channel 02/0 : 0[3000] -> 3[c4000] via P2P/IPC/read
+gn46:1701037:1701789 [0] NCCL INFO Channel 03/0 : 0[3000] -> 3[c4000] via P2P/IPC/read
+gn46:1701037:1701789 [0] NCCL INFO Connected all rings
+gn46:1701037:1701789 [0] NCCL INFO Channel 01/0 : 0[3000] -> 1[44000] via P2P/IPC/read
+gn46:1701037:1701789 [0] NCCL INFO Channel 03/0 : 0[3000] -> 1[44000] via P2P/IPC/read
+gn46:1701037:1701789 [0] NCCL INFO Channel 01/0 : 0[3000] -> 2[84000] via P2P/IPC/read
+gn46:1701037:1701789 [0] NCCL INFO Channel 03/0 : 0[3000] -> 2[84000] via P2P/IPC/read
+gn46:1701037:1701789 [0] NCCL INFO Connected all trees
+gn46:1701037:1701789 [0] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn46:1701037:1701789 [0] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn46:1701037:1701789 [0] NCCL INFO comm 0xb4e1050 rank 0 nranks 8 cudaDev 0 busId 3000 commId 0xf4c780ae2548efff - Init COMPLETE
+gn46:1701039:1701039 [2] NCCL INFO cudaDriverVersion 12020
+gn46:1701039:1701039 [2] NCCL INFO Bootstrap : Using ib0:10.210.4.30<0>
+gn46:1701039:1701039 [2] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn46:1701039:1701039 [2] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn46:1701039:1701790 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.30<0>
+gn46:1701039:1701790 [2] NCCL INFO Using network IB
+gn46:1701039:1701790 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 0/6/-1->2->-1 [2] 3/-1/-1->2->1 [3] 0/-1/-1->2->6
+gn46:1701039:1701790 [2] NCCL INFO P2P Chunksize set to 131072
+gn46:1701039:1701790 [2] NCCL INFO Channel 01/0 : 7[c4000] -> 2[84000] [receive] via NET/IB/1/GDRDMA
+gn46:1701039:1701790 [2] NCCL INFO Channel 03/0 : 7[c4000] -> 2[84000] [receive] via NET/IB/1/GDRDMA
+gn46:1701039:1701790 [2] NCCL INFO Channel 00/0 : 2[84000] -> 5[44000] [send] via NET/IB/0(1)/GDRDMA
+gn46:1701039:1701790 [2] NCCL INFO Channel 02/0 : 2[84000] -> 5[44000] [send] via NET/IB/0(1)/GDRDMA
+gn46:1701039:1701790 [2] NCCL INFO Channel 01/0 : 2[84000] -> 1[44000] via P2P/IPC/read
+gn46:1701039:1701790 [2] NCCL INFO Channel 03/0 : 2[84000] -> 1[44000] via P2P/IPC/read
+gn46:1701039:1701790 [2] NCCL INFO Connected all rings
+gn46:1701039:1701790 [2] NCCL INFO Channel 00/0 : 2[84000] -> 3[c4000] via P2P/IPC/read
+gn46:1701039:1701790 [2] NCCL INFO Channel 02/0 : 2[84000] -> 3[c4000] via P2P/IPC/read
+gn46:1701039:1701790 [2] NCCL INFO Channel 01/0 : 6[84000] -> 2[84000] [receive] via NET/IB/1/GDRDMA
+gn46:1701039:1701790 [2] NCCL INFO Channel 03/0 : 6[84000] -> 2[84000] [receive] via NET/IB/1/GDRDMA
+gn46:1701039:1701790 [2] NCCL INFO Channel 01/0 : 2[84000] -> 6[84000] [send] via NET/IB/1/GDRDMA
+gn46:1701039:1701790 [2] NCCL INFO Channel 03/0 : 2[84000] -> 6[84000] [send] via NET/IB/1/GDRDMA
+gn46:1701039:1701790 [2] NCCL INFO Channel 01/0 : 2[84000] -> 0[3000] via P2P/IPC/read
+gn46:1701039:1701790 [2] NCCL INFO Channel 03/0 : 2[84000] -> 0[3000] via P2P/IPC/read
+gn46:1701039:1701790 [2] NCCL INFO Channel 00/0 : 2[84000] -> 1[44000] via P2P/IPC/read
+gn46:1701039:1701790 [2] NCCL INFO Channel 02/0 : 2[84000] -> 1[44000] via P2P/IPC/read
+gn46:1701039:1701790 [2] NCCL INFO Connected all trees
+gn46:1701039:1701790 [2] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn46:1701039:1701790 [2] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn46:1701039:1701790 [2] NCCL INFO comm 0xb0e2e70 rank 2 nranks 8 cudaDev 2 busId 84000 commId 0xf4c780ae2548efff - Init COMPLETE
+gn60:1928657:1928657 [3] NCCL INFO cudaDriverVersion 12020
+gn60:1928657:1928657 [3] NCCL INFO Bootstrap : Using ib0:10.210.4.44<0>
+gn60:1928657:1928657 [3] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn60:1928657:1928657 [3] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn60:1928657:1929369 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.44<0>
+gn60:1928657:1929369 [3] NCCL INFO Using network IB
+gn60:1928657:1929369 [3] NCCL INFO Trees [0] 4/-1/-1->7->6 [1] -1/-1/-1->7->5 [2] 4/-1/-1->7->6 [3] -1/-1/-1->7->5
+gn60:1928657:1929369 [3] NCCL INFO P2P Chunksize set to 131072
+gn60:1928657:1929369 [3] NCCL INFO Channel 01/0 : 7[c4000] -> 2[84000] [send] via NET/IB/1(6)/GDRDMA
+gn60:1928657:1929369 [3] NCCL INFO Channel 03/0 : 7[c4000] -> 2[84000] [send] via NET/IB/1(6)/GDRDMA
+gn60:1928657:1929369 [3] NCCL INFO Channel 00/0 : 7[c4000] -> 6[84000] via P2P/IPC/read
+gn46:1701040:1701040 [3] NCCL INFO cudaDriverVersion 12020
+gn46:1701040:1701040 [3] NCCL INFO Bootstrap : Using ib0:10.210.4.30<0>
+gn46:1701040:1701040 [3] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn46:1701040:1701040 [3] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn46:1701040:1701791 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.30<0>
+gn46:1701040:1701791 [3] NCCL INFO Using network IB
+gn46:1701040:1701791 [3] NCCL INFO Trees [0] 0/-1/-1->3->2 [1] -1/-1/-1->3->1 [2] 0/-1/-1->3->2 [3] -1/-1/-1->3->1
+gn46:1701040:1701791 [3] NCCL INFO P2P Chunksize set to 131072
+gn46:1701040:1701791 [3] NCCL INFO Channel 01/0 : 3[c4000] -> 6[84000] [send] via NET/IB/1(2)/GDRDMA
+gn46:1701040:1701791 [3] NCCL INFO Channel 03/0 : 3[c4000] -> 6[84000] [send] via NET/IB/1(2)/GDRDMA
+gn46:1701040:1701791 [3] NCCL INFO Channel 00/0 : 3[c4000] -> 2[84000] via P2P/IPC/read
+gn46:1701040:1701791 [3] NCCL INFO Channel 02/0 : 3[c4000] -> 2[84000] via P2P/IPC/read
+gn46:1701040:1701791 [3] NCCL INFO Connected all rings
+gn46:1701040:1701791 [3] NCCL INFO Channel 00/0 : 3[c4000] -> 0[3000] via P2P/IPC/read
+gn46:1701040:1701791 [3] NCCL INFO Channel 02/0 : 3[c4000] -> 0[3000] via P2P/IPC/read
+gn46:1701040:1701791 [3] NCCL INFO Channel 01/0 : 3[c4000] -> 1[44000] via P2P/IPC/read
+gn46:1701040:1701791 [3] NCCL INFO Channel 03/0 : 3[c4000] -> 1[44000] via P2P/IPC/read
+gn46:1701040:1701791 [3] NCCL INFO Connected all trees
+gn46:1701040:1701791 [3] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn46:1701040:1701791 [3] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn46:1701040:1701791 [3] NCCL INFO comm 0x9708200 rank 3 nranks 8 cudaDev 3 busId c4000 commId 0xf4c780ae2548efff - Init COMPLETE
+gn60:1928657:1929369 [3] NCCL INFO Channel 02/0 : 7[c4000] -> 6[84000] via P2P/IPC/read
+gn60:1928657:1929369 [3] NCCL INFO Connected all rings
+gn60:1928657:1929369 [3] NCCL INFO Channel 00/0 : 7[c4000] -> 4[3000] via P2P/IPC/read
+gn60:1928657:1929369 [3] NCCL INFO Channel 02/0 : 7[c4000] -> 4[3000] via P2P/IPC/read
+gn60:1928657:1929369 [3] NCCL INFO Channel 01/0 : 7[c4000] -> 5[44000] via P2P/IPC/read
+gn60:1928657:1929369 [3] NCCL INFO Channel 03/0 : 7[c4000] -> 5[44000] via P2P/IPC/read
+gn60:1928657:1929369 [3] NCCL INFO Connected all trees
+gn60:1928657:1929369 [3] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn60:1928657:1929369 [3] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn60:1928657:1929369 [3] NCCL INFO comm 0xaf728c0 rank 7 nranks 8 cudaDev 3 busId c4000 commId 0xf4c780ae2548efff - Init COMPLETE
+gn46:1701038:1701038 [1] NCCL INFO cudaDriverVersion 12020
+gn46:1701038:1701038 [1] NCCL INFO Bootstrap : Using ib0:10.210.4.30<0>
+gn46:1701038:1701038 [1] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn46:1701038:1701038 [1] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn46:1701038:1701792 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.30<0>
+gn46:1701038:1701792 [1] NCCL INFO Using network IB
+gn46:1701038:1701792 [1] NCCL INFO Trees [0] 2/5/-1->1->-1 [1] 3/-1/-1->1->0 [2] 2/-1/-1->1->5 [3] 3/-1/-1->1->0
+gn46:1701038:1701792 [1] NCCL INFO P2P Chunksize set to 131072
+gn46:1701038:1701792 [1] NCCL INFO Channel 00/0 : 6[84000] -> 1[44000] [receive] via NET/IB/0/GDRDMA
+gn46:1701038:1701792 [1] NCCL INFO Channel 02/0 : 6[84000] -> 1[44000] [receive] via NET/IB/0/GDRDMA
+gn46:1701038:1701792 [1] NCCL INFO Channel 00/0 : 1[44000] -> 0[3000] via P2P/IPC/read
+gn60:1928654:1928654 [0] NCCL INFO cudaDriverVersion 12020
+gn60:1928654:1928654 [0] NCCL INFO Bootstrap : Using ib0:10.210.4.44<0>
+gn60:1928654:1928654 [0] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn60:1928654:1928654 [0] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn60:1928654:1929372 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.44<0>
+gn60:1928654:1929372 [0] NCCL INFO Using network IB
+gn60:1928654:1929372 [0] NCCL INFO Trees [0] -1/-1/-1->4->7 [1] 5/-1/-1->4->6 [2] -1/-1/-1->4->7 [3] 5/-1/-1->4->6
+gn60:1928654:1929372 [0] NCCL INFO P2P Chunksize set to 131072
+gn60:1928654:1929372 [0] NCCL INFO Channel 00/0 : 4[3000] -> 7[c4000] via P2P/IPC/read
+gn60:1928654:1929372 [0] NCCL INFO Channel 01/0 : 4[3000] -> 7[c4000] via P2P/IPC/read
+gn60:1928654:1929372 [0] NCCL INFO Channel 02/0 : 4[3000] -> 7[c4000] via P2P/IPC/read
+gn46:1701038:1701792 [1] NCCL INFO Channel 01/0 : 1[44000] -> 0[3000] via P2P/IPC/read
+gn46:1701038:1701792 [1] NCCL INFO Channel 02/0 : 1[44000] -> 0[3000] via P2P/IPC/read
+gn46:1701038:1701792 [1] NCCL INFO Channel 03/0 : 1[44000] -> 0[3000] via P2P/IPC/read
+gn46:1701038:1701792 [1] NCCL INFO Connected all rings
+gn46:1701038:1701792 [1] NCCL INFO Channel 00/0 : 1[44000] -> 2[84000] via P2P/IPC/read
+gn46:1701038:1701792 [1] NCCL INFO Channel 02/0 : 1[44000] -> 2[84000] via P2P/IPC/read
+gn46:1701038:1701792 [1] NCCL INFO Channel 01/0 : 1[44000] -> 3[c4000] via P2P/IPC/read
+gn46:1701038:1701792 [1] NCCL INFO Channel 03/0 : 1[44000] -> 3[c4000] via P2P/IPC/read
+gn46:1701038:1701792 [1] NCCL INFO Channel 00/0 : 5[44000] -> 1[44000] [receive] via NET/IB/0/GDRDMA
+gn46:1701038:1701792 [1] NCCL INFO Channel 02/0 : 5[44000] -> 1[44000] [receive] via NET/IB/0/GDRDMA
+gn46:1701038:1701792 [1] NCCL INFO Channel 00/0 : 1[44000] -> 5[44000] [send] via NET/IB/0/GDRDMA
+gn60:1928654:1929372 [0] NCCL INFO Channel 03/0 : 4[3000] -> 7[c4000] via P2P/IPC/read
+gn60:1928654:1929372 [0] NCCL INFO Connected all rings
+gn60:1928654:1929372 [0] NCCL INFO Channel 01/0 : 4[3000] -> 5[44000] via P2P/IPC/read
+gn60:1928654:1929372 [0] NCCL INFO Channel 03/0 : 4[3000] -> 5[44000] via P2P/IPC/read
+gn60:1928654:1929372 [0] NCCL INFO Channel 01/0 : 4[3000] -> 6[84000] via P2P/IPC/read
+gn60:1928654:1929372 [0] NCCL INFO Channel 03/0 : 4[3000] -> 6[84000] via P2P/IPC/read
+gn60:1928654:1929372 [0] NCCL INFO Connected all trees
+gn60:1928654:1929372 [0] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn60:1928654:1929372 [0] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn60:1928654:1929372 [0] NCCL INFO comm 0xb1d8850 rank 4 nranks 8 cudaDev 0 busId 3000 commId 0xf4c780ae2548efff - Init COMPLETE
+gn46:1701038:1701792 [1] NCCL INFO Channel 02/0 : 1[44000] -> 5[44000] [send] via NET/IB/0/GDRDMA
+gn46:1701038:1701792 [1] NCCL INFO Connected all trees
+gn46:1701038:1701792 [1] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn46:1701038:1701792 [1] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn46:1701038:1701792 [1] NCCL INFO comm 0xb4fef40 rank 1 nranks 8 cudaDev 1 busId 44000 commId 0xf4c780ae2548efff - Init COMPLETE
+gn60:1928656:1928656 [2] NCCL INFO cudaDriverVersion 12020
+gn60:1928656:1928656 [2] NCCL INFO Bootstrap : Using ib0:10.210.4.44<0>
+gn60:1928656:1928656 [2] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn60:1928656:1928656 [2] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn60:1928656:1929370 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.44<0>
+gn60:1928656:1929370 [2] NCCL INFO Using network IB
+gn60:1928656:1929370 [2] NCCL INFO Trees [0] 7/-1/-1->6->5 [1] 4/-1/-1->6->2 [2] 7/-1/-1->6->5 [3] 4/2/-1->6->-1
+gn60:1928656:1929370 [2] NCCL INFO P2P Chunksize set to 131072
+gn60:1928656:1929370 [2] NCCL INFO Channel 01/0 : 3[c4000] -> 6[84000] [receive] via NET/IB/1/GDRDMA
+gn60:1928656:1929370 [2] NCCL INFO Channel 03/0 : 3[c4000] -> 6[84000] [receive] via NET/IB/1/GDRDMA
+gn60:1928656:1929370 [2] NCCL INFO Channel 00/0 : 6[84000] -> 1[44000] [send] via NET/IB/0(5)/GDRDMA
+gn60:1928656:1929370 [2] NCCL INFO Channel 02/0 : 6[84000] -> 1[44000] [send] via NET/IB/0(5)/GDRDMA
+gn60:1928656:1929370 [2] NCCL INFO Channel 01/0 : 6[84000] -> 5[44000] via P2P/IPC/read
+gn60:1928656:1929370 [2] NCCL INFO Channel 03/0 : 6[84000] -> 5[44000] via P2P/IPC/read
+gn60:1928656:1929370 [2] NCCL INFO Connected all rings
+gn60:1928656:1929370 [2] NCCL INFO Channel 00/0 : 6[84000] -> 7[c4000] via P2P/IPC/read
+gn60:1928656:1929370 [2] NCCL INFO Channel 02/0 : 6[84000] -> 7[c4000] via P2P/IPC/read
+gn60:1928656:1929370 [2] NCCL INFO Channel 01/0 : 2[84000] -> 6[84000] [receive] via NET/IB/1/GDRDMA
+gn60:1928656:1929370 [2] NCCL INFO Channel 03/0 : 2[84000] -> 6[84000] [receive] via NET/IB/1/GDRDMA
+gn60:1928656:1929370 [2] NCCL INFO Channel 01/0 : 6[84000] -> 2[84000] [send] via NET/IB/1/GDRDMA
+gn60:1928656:1929370 [2] NCCL INFO Channel 03/0 : 6[84000] -> 2[84000] [send] via NET/IB/1/GDRDMA
+gn60:1928656:1929370 [2] NCCL INFO Channel 01/0 : 6[84000] -> 4[3000] via P2P/IPC/read
+gn60:1928656:1929370 [2] NCCL INFO Channel 03/0 : 6[84000] -> 4[3000] via P2P/IPC/read
+gn60:1928656:1929370 [2] NCCL INFO Channel 00/0 : 6[84000] -> 5[44000] via P2P/IPC/read
+gn60:1928656:1929370 [2] NCCL INFO Channel 02/0 : 6[84000] -> 5[44000] via P2P/IPC/read
+gn60:1928656:1929370 [2] NCCL INFO Connected all trees
+gn60:1928656:1929370 [2] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn60:1928656:1929370 [2] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn60:1928656:1929370 [2] NCCL INFO comm 0x362c5ea0 rank 6 nranks 8 cudaDev 2 busId 84000 commId 0xf4c780ae2548efff - Init COMPLETE
+gn60:1928655:1928655 [1] NCCL INFO cudaDriverVersion 12020
+gn60:1928655:1928655 [1] NCCL INFO Bootstrap : Using ib0:10.210.4.44<0>
+gn60:1928655:1928655 [1] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn60:1928655:1928655 [1] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn60:1928655:1929371 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.44<0>
+gn60:1928655:1929371 [1] NCCL INFO Using network IB
+gn60:1928655:1929371 [1] NCCL INFO Trees [0] 6/-1/-1->5->1 [1] 7/-1/-1->5->4 [2] 6/1/-1->5->-1 [3] 7/-1/-1->5->4
+gn60:1928655:1929371 [1] NCCL INFO P2P Chunksize set to 131072
+gn60:1928655:1929371 [1] NCCL INFO Channel 00/0 : 2[84000] -> 5[44000] [receive] via NET/IB/0/GDRDMA
+gn60:1928655:1929371 [1] NCCL INFO Channel 02/0 : 2[84000] -> 5[44000] [receive] via NET/IB/0/GDRDMA
+gn60:1928655:1929371 [1] NCCL INFO Channel 00/0 : 5[44000] -> 4[3000] via P2P/IPC/read
+gn60:1928655:1929371 [1] NCCL INFO Channel 01/0 : 5[44000] -> 4[3000] via P2P/IPC/read
+gn60:1928655:1929371 [1] NCCL INFO Channel 02/0 : 5[44000] -> 4[3000] via P2P/IPC/read
+gn60:1928655:1929371 [1] NCCL INFO Channel 03/0 : 5[44000] -> 4[3000] via P2P/IPC/read
+gn60:1928655:1929371 [1] NCCL INFO Connected all rings
+gn60:1928655:1929371 [1] NCCL INFO Channel 00/0 : 5[44000] -> 6[84000] via P2P/IPC/read
+gn60:1928655:1929371 [1] NCCL INFO Channel 02/0 : 5[44000] -> 6[84000] via P2P/IPC/read
+gn60:1928655:1929371 [1] NCCL INFO Channel 01/0 : 5[44000] -> 7[c4000] via P2P/IPC/read
+gn60:1928655:1929371 [1] NCCL INFO Channel 03/0 : 5[44000] -> 7[c4000] via P2P/IPC/read
+gn60:1928655:1929371 [1] NCCL INFO Channel 00/0 : 1[44000] -> 5[44000] [receive] via NET/IB/0/GDRDMA
+gn60:1928655:1929371 [1] NCCL INFO Channel 02/0 : 1[44000] -> 5[44000] [receive] via NET/IB/0/GDRDMA
+gn60:1928655:1929371 [1] NCCL INFO Channel 00/0 : 5[44000] -> 1[44000] [send] via NET/IB/0/GDRDMA
+gn60:1928655:1929371 [1] NCCL INFO Channel 02/0 : 5[44000] -> 1[44000] [send] via NET/IB/0/GDRDMA
+gn60:1928655:1929371 [1] NCCL INFO Connected all trees
+gn60:1928655:1929371 [1] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn60:1928655:1929371 [1] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn60:1928655:1929371 [1] NCCL INFO comm 0x9bf1a60 rank 5 nranks 8 cudaDev 1 busId 44000 commId 0xf4c780ae2548efff - Init COMPLETE
+Adjusting learning rate of group 0 to 4.5000e-05.
+Adjusting learning rate of group 0 to 4.5000e-05.
+Adjusting learning rate of group 0 to 4.5000e-05.
+Adjusting learning rate of group 0 to 4.5000e-05.
+Adjusting learning rate of group 0 to 4.5000e-05.
+Adjusting learning rate of group 0 to 4.5000e-05.
+Adjusting learning rate of group 0 to 4.5000e-05.
+Epoch 0: 100%|██████████| 1/1 [00:03<00:00,  3.58s/it, v_num=t9gj, train_loss_step=0.693, train_loss_epoch=0.693]Epoch 0:   0%|          | 0/1 [00:00<?, ?it/s, v_num=t9gj, train_loss_step=0.693, train_loss_epoch=0.693]        Epoch 1:   0%|          | 0/1 [00:00<?, ?it/s, v_num=t9gj, train_loss_step=0.693, train_loss_epoch=0.693]Adjusting learning rate of group 0 to 4.0500e-05.
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+gn46:1701040:1701803 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+gn60:1928656:1929383 [2] NCCL INFO [Service thread] Connection closed by localRank 3
+gn46:1701039:1701806 [2] NCCL INFO [Service thread] Connection closed by localRank 3
+gn60:1928655:1929384 [1] NCCL INFO [Service thread] Connection closed by localRank 3
+gn46:1701038:1701804 [1] NCCL INFO [Service thread] Connection closed by localRank 3
+gn46:1701038:1701804 [1] NCCL INFO [Service thread] Connection closed by localRank 2
+gn46:1701039:1701806 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+gn46:1701039:1701806 [2] NCCL INFO [Service thread] Connection closed by localRank 1
+gn46:1701038:1701804 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+gn60:1928657:1929385 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+gn60:1928655:1929384 [1] NCCL INFO [Service thread] Connection closed by localRank 2
+gn60:1928655:1929384 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+gn60:1928656:1929383 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+gn60:1928656:1929383 [2] NCCL INFO [Service thread] Connection closed by localRank 0
+gn60:1928656:1929383 [2] NCCL INFO [Service thread] Connection closed by localRank 1
+gn60:1928654:1929382 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+gn60:1928655:1929384 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+gn60:1928656:1928656 [2] NCCL INFO comm 0x362c5ea0 rank 6 nranks 8 cudaDev 2 busId 84000 - Abort COMPLETE
+gn46:1701040:1701040 [3] NCCL INFO comm 0x9708200 rank 3 nranks 8 cudaDev 3 busId c4000 - Abort COMPLETE
+gn60:1928657:1928657 [3] NCCL INFO comm 0xaf728c0 rank 7 nranks 8 cudaDev 3 busId c4000 - Abort COMPLETE
+gn60:1928654:1928654 [0] NCCL INFO comm 0xb1d8850 rank 4 nranks 8 cudaDev 0 busId 3000 - Abort COMPLETE
+gn60:1928655:1928655 [1] NCCL INFO comm 0x9bf1a60 rank 5 nranks 8 cudaDev 1 busId 44000 - Abort COMPLETE
+Epoch 1: 100%|██████████| 1/1 [00:00<00:00,  1.85it/s, v_num=t9gj, train_loss_step=0.693, train_loss_epoch=0.693]Epoch 1: 100%|██████████| 1/1 [00:00<00:00,  1.70it/s, v_num=t9gj, train_loss_step=0.705, train_loss_epoch=0.693]Epoch 1: 100%|██████████| 1/1 [00:00<00:00,  1.70it/s, v_num=t9gj, train_loss_step=0.705, train_loss_epoch=0.705]Epoch 1: 100%|██████████| 1/1 [00:04<00:00,  4.21s/it, v_num=t9gj, train_loss_step=0.705, train_loss_epoch=0.705]
+saving last checkpoint
+saving model 2
+gn46:1701038:1701804 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+gn46:1701039:1701806 [2] NCCL INFO [Service thread] Connection closed by localRank 0
+gn46:1701037:1701805 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+gn46:1701039:1701039 [2] NCCL INFO comm 0xb0e2e70 rank 2 nranks 8 cudaDev 2 busId 84000 - Abort COMPLETE
+gn46:1701038:1701038 [1] NCCL INFO comm 0xb4fef40 rank 1 nranks 8 cudaDev 1 busId 44000 - Abort COMPLETE
+gn46:1701037:1701037 [0] NCCL INFO comm 0xb4e1050 rank 0 nranks 8 cudaDev 0 busId 3000 - Abort COMPLETE
+start
+imports done
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:33:32]
+start
+imports done
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:33:32]
+start
+imports done
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:33:32]
+start
+imports done
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:33:32]
+start
+imports done
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:33:32]
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:33:32]
+start
+imports done
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-29 11:33:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:33:32]
+start
+imports done
+[2023-10-29 11:33:34 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-29 11:33:34 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-29 11:33:34]
+gn46:1703992:1703992 [0] NCCL INFO Bootstrap : Using ib0:10.210.4.30<0>
+gn46:1703992:1703992 [0] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn46:1703992:1703992 [0] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn46:1703992:1703992 [0] NCCL INFO cudaDriverVersion 12020
+NCCL version 2.17.1+cuda12.1
+loading train_labels from cache
+[2023-10-29 11:33:32], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:33:40] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+pid 1703995
+parent_pid 1703982
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=16, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+3 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+loading train_labels from cache
+[2023-10-29 11:33:34], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:33:39] All Train videos Number: 10
+batch_size = 16
+setting env variable for wandb run id
+init trainer
+made dir /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/yq3gplrq
+0 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+loading train_labels from cache
+[2023-10-29 11:33:33], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:33:39] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+pid 1703993
+parent_pid 1703982
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=16, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+1 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+loading train_labels from cache
+[2023-10-29 11:33:32], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:33:38] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+pid 1931531
+parent_pid 1931519
+loading train_labels from cache
+[2023-10-29 11:33:32], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:33:38] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+pid 1703994
+parent_pid 1703982
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=16, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+6 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=16, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+2 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+loading train_labels from cache
+[2023-10-29 11:33:32], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:33:37] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+pid 1931532
+parent_pid 1931519
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=16, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+7 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+loading train_labels from cache
+[2023-10-29 11:33:32], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:33:39] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+pid 1931529
+parent_pid 1931519
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=16, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+4 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+loading train_labels from cache
+[2023-10-29 11:33:32], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-29 11:33:40] All Train videos Number: 10
+batch_size = 16
+no wandb run id this is a copy of model with DDP
+pid 1931530
+parent_pid 1931519
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=16, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+5 8 8
+Adjusting learning rate of group 0 to 5.0000e-05.
+Training: 0it [00:00, ?it/s]Training:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 0:   0%|          | 0/1 [00:00<?, ?it/s] Adjusting learning rate of group 0 to 4.5000e-05.
+Epoch 0: 100%|██████████| 1/1 [00:00<00:00,  1.17it/s]Epoch 0: 100%|██████████| 1/1 [00:00<00:00,  1.16it/s, v_num=plrq, train_loss_step=0.693]gn46:1703992:1704319 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.30<0>
+gn46:1703992:1704319 [0] NCCL INFO Using network IB
+gn46:1703992:1704319 [0] NCCL INFO Channel 00/04 :    0   3   2   5   4   7   6   1
+gn46:1703992:1704319 [0] NCCL INFO Channel 01/04 :    0   3   6   5   4   7   2   1
+gn46:1703992:1704319 [0] NCCL INFO Channel 02/04 :    0   3   2   5   4   7   6   1
+gn46:1703992:1704319 [0] NCCL INFO Channel 03/04 :    0   3   6   5   4   7   2   1
+gn46:1703992:1704319 [0] NCCL INFO Trees [0] -1/-1/-1->0->3 [1] 1/-1/-1->0->2 [2] -1/-1/-1->0->3 [3] 1/-1/-1->0->2
+gn46:1703992:1704319 [0] NCCL INFO P2P Chunksize set to 131072
+gn46:1703992:1704319 [0] NCCL INFO Channel 00/0 : 0[3000] -> 3[c4000] via P2P/IPC/read
+gn46:1703992:1704319 [0] NCCL INFO Channel 01/0 : 0[3000] -> 3[c4000] via P2P/IPC/read
+gn46:1703992:1704319 [0] NCCL INFO Channel 02/0 : 0[3000] -> 3[c4000] via P2P/IPC/read
+gn46:1703992:1704319 [0] NCCL INFO Channel 03/0 : 0[3000] -> 3[c4000] via P2P/IPC/read
+gn46:1703992:1704319 [0] NCCL INFO Connected all rings
+gn46:1703992:1704319 [0] NCCL INFO Channel 01/0 : 0[3000] -> 1[44000] via P2P/IPC/read
+gn46:1703992:1704319 [0] NCCL INFO Channel 03/0 : 0[3000] -> 1[44000] via P2P/IPC/read
+gn46:1703992:1704319 [0] NCCL INFO Channel 01/0 : 0[3000] -> 2[84000] via P2P/IPC/read
+gn46:1703992:1704319 [0] NCCL INFO Channel 03/0 : 0[3000] -> 2[84000] via P2P/IPC/read
+gn46:1703992:1704319 [0] NCCL INFO Connected all trees
+gn46:1703992:1704319 [0] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn46:1703992:1704319 [0] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn46:1703992:1704319 [0] NCCL INFO comm 0xaef0e60 rank 0 nranks 8 cudaDev 0 busId 3000 commId 0x79571dc5c5ede763 - Init COMPLETE
+gn46:1703995:1703995 [3] NCCL INFO cudaDriverVersion 12020
+gn46:1703995:1703995 [3] NCCL INFO Bootstrap : Using ib0:10.210.4.30<0>
+gn46:1703995:1703995 [3] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn46:1703995:1703995 [3] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn46:1703995:1704322 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.30<0>
+gn46:1703995:1704322 [3] NCCL INFO Using network IB
+gn46:1703995:1704322 [3] NCCL INFO Trees [0] 0/-1/-1->3->2 [1] -1/-1/-1->3->1 [2] 0/-1/-1->3->2 [3] -1/-1/-1->3->1
+gn46:1703995:1704322 [3] NCCL INFO P2P Chunksize set to 131072
+gn46:1703995:1704322 [3] NCCL INFO Channel 01/0 : 3[c4000] -> 6[84000] [send] via NET/IB/1(2)/GDRDMA
+gn46:1703995:1704322 [3] NCCL INFO Channel 03/0 : 3[c4000] -> 6[84000] [send] via NET/IB/1(2)/GDRDMA
+gn46:1703995:1704322 [3] NCCL INFO Channel 00/0 : 3[c4000] -> 2[84000] via P2P/IPC/read
+gn46:1703995:1704322 [3] NCCL INFO Channel 02/0 : 3[c4000] -> 2[84000] via P2P/IPC/read
+gn46:1703995:1704322 [3] NCCL INFO Connected all rings
+gn46:1703995:1704322 [3] NCCL INFO Channel 00/0 : 3[c4000] -> 0[3000] via P2P/IPC/read
+gn46:1703995:1704322 [3] NCCL INFO Channel 02/0 : 3[c4000] -> 0[3000] via P2P/IPC/read
+gn46:1703995:1704322 [3] NCCL INFO Channel 01/0 : 3[c4000] -> 1[44000] via P2P/IPC/read
+gn46:1703995:1704322 [3] NCCL INFO Channel 03/0 : 3[c4000] -> 1[44000] via P2P/IPC/read
+gn46:1703995:1704322 [3] NCCL INFO Connected all trees
+gn46:1703995:1704322 [3] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn46:1703995:1704322 [3] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn46:1703995:1704322 [3] NCCL INFO comm 0x368a3e20 rank 3 nranks 8 cudaDev 3 busId c4000 commId 0x79571dc5c5ede763 - Init COMPLETE
+gn46:1703993:1703993 [1] NCCL INFO cudaDriverVersion 12020
+gn46:1703993:1703993 [1] NCCL INFO Bootstrap : Using ib0:10.210.4.30<0>
+gn46:1703993:1703993 [1] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn46:1703993:1703993 [1] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn46:1703993:1704321 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.30<0>
+gn46:1703993:1704321 [1] NCCL INFO Using network IB
+gn46:1703993:1704321 [1] NCCL INFO Trees [0] 2/5/-1->1->-1 [1] 3/-1/-1->1->0 [2] 2/-1/-1->1->5 [3] 3/-1/-1->1->0
+gn46:1703993:1704321 [1] NCCL INFO P2P Chunksize set to 131072
+gn46:1703993:1704321 [1] NCCL INFO Channel 00/0 : 6[84000] -> 1[44000] [receive] via NET/IB/0/GDRDMA
+gn46:1703993:1704321 [1] NCCL INFO Channel 02/0 : 6[84000] -> 1[44000] [receive] via NET/IB/0/GDRDMA
+gn46:1703993:1704321 [1] NCCL INFO Channel 00/0 : 1[44000] -> 0[3000] via P2P/IPC/read
+gn46:1703993:1704321 [1] NCCL INFO Channel 01/0 : 1[44000] -> 0[3000] via P2P/IPC/read
+gn46:1703993:1704321 [1] NCCL INFO Channel 02/0 : 1[44000] -> 0[3000] via P2P/IPC/read
+gn46:1703993:1704321 [1] NCCL INFO Channel 03/0 : 1[44000] -> 0[3000] via P2P/IPC/read
+gn46:1703993:1704321 [1] NCCL INFO Connected all rings
+gn46:1703993:1704321 [1] NCCL INFO Channel 00/0 : 1[44000] -> 2[84000] via P2P/IPC/read
+gn46:1703993:1704321 [1] NCCL INFO Channel 02/0 : 1[44000] -> 2[84000] via P2P/IPC/read
+gn46:1703993:1704321 [1] NCCL INFO Channel 01/0 : 1[44000] -> 3[c4000] via P2P/IPC/read
+gn46:1703993:1704321 [1] NCCL INFO Channel 03/0 : 1[44000] -> 3[c4000] via P2P/IPC/read
+gn46:1703993:1704321 [1] NCCL INFO Channel 00/0 : 5[44000] -> 1[44000] [receive] via NET/IB/0/GDRDMA
+gn46:1703993:1704321 [1] NCCL INFO Channel 02/0 : 5[44000] -> 1[44000] [receive] via NET/IB/0/GDRDMA
+gn46:1703993:1704321 [1] NCCL INFO Channel 00/0 : 1[44000] -> 5[44000] [send] via NET/IB/0/GDRDMA
+gn46:1703993:1704321 [1] NCCL INFO Channel 02/0 : 1[44000] -> 5[44000] [send] via NET/IB/0/GDRDMA
+gn46:1703993:1704321 [1] NCCL INFO Connected all trees
+gn46:1703993:1704321 [1] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn46:1703993:1704321 [1] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn46:1703993:1704321 [1] NCCL INFO comm 0x3050cd80 rank 1 nranks 8 cudaDev 1 busId 44000 commId 0x79571dc5c5ede763 - Init COMPLETE
+gn60:1931529:1931529 [0] NCCL INFO cudaDriverVersion 12020
+gn60:1931529:1931529 [0] NCCL INFO Bootstrap : Using ib0:10.210.4.44<0>
+gn60:1931529:1931529 [0] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn60:1931529:1931529 [0] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn60:1931529:1931807 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.44<0>
+gn60:1931529:1931807 [0] NCCL INFO Using network IB
+gn60:1931529:1931807 [0] NCCL INFO Trees [0] -1/-1/-1->4->7 [1] 5/-1/-1->4->6 [2] -1/-1/-1->4->7 [3] 5/-1/-1->4->6
+gn60:1931529:1931807 [0] NCCL INFO P2P Chunksize set to 131072
+gn60:1931529:1931807 [0] NCCL INFO Channel 00/0 : 4[3000] -> 7[c4000] via P2P/IPC/read
+gn60:1931529:1931807 [0] NCCL INFO Channel 01/0 : 4[3000] -> 7[c4000] via P2P/IPC/read
+gn60:1931529:1931807 [0] NCCL INFO Channel 02/0 : 4[3000] -> 7[c4000] via P2P/IPC/read
+gn46:1703994:1703994 [2] NCCL INFO cudaDriverVersion 12020
+gn46:1703994:1703994 [2] NCCL INFO Bootstrap : Using ib0:10.210.4.30<0>
+gn46:1703994:1703994 [2] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn46:1703994:1703994 [2] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn46:1703994:1704320 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.30<0>
+gn46:1703994:1704320 [2] NCCL INFO Using network IB
+gn46:1703994:1704320 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 0/6/-1->2->-1 [2] 3/-1/-1->2->1 [3] 0/-1/-1->2->6
+gn46:1703994:1704320 [2] NCCL INFO P2P Chunksize set to 131072
+gn46:1703994:1704320 [2] NCCL INFO Channel 01/0 : 7[c4000] -> 2[84000] [receive] via NET/IB/1/GDRDMA
+gn46:1703994:1704320 [2] NCCL INFO Channel 03/0 : 7[c4000] -> 2[84000] [receive] via NET/IB/1/GDRDMA
+gn46:1703994:1704320 [2] NCCL INFO Channel 00/0 : 2[84000] -> 5[44000] [send] via NET/IB/0(1)/GDRDMA
+gn46:1703994:1704320 [2] NCCL INFO Channel 02/0 : 2[84000] -> 5[44000] [send] via NET/IB/0(1)/GDRDMA
+gn46:1703994:1704320 [2] NCCL INFO Channel 01/0 : 2[84000] -> 1[44000] via P2P/IPC/read
+gn46:1703994:1704320 [2] NCCL INFO Channel 03/0 : 2[84000] -> 1[44000] via P2P/IPC/read
+gn46:1703994:1704320 [2] NCCL INFO Connected all rings
+gn46:1703994:1704320 [2] NCCL INFO Channel 00/0 : 2[84000] -> 3[c4000] via P2P/IPC/read
+gn46:1703994:1704320 [2] NCCL INFO Channel 02/0 : 2[84000] -> 3[c4000] via P2P/IPC/read
+gn46:1703994:1704320 [2] NCCL INFO Channel 01/0 : 6[84000] -> 2[84000] [receive] via NET/IB/1/GDRDMA
+gn46:1703994:1704320 [2] NCCL INFO Channel 03/0 : 6[84000] -> 2[84000] [receive] via NET/IB/1/GDRDMA
+gn46:1703994:1704320 [2] NCCL INFO Channel 01/0 : 2[84000] -> 6[84000] [send] via NET/IB/1/GDRDMA
+gn46:1703994:1704320 [2] NCCL INFO Channel 03/0 : 2[84000] -> 6[84000] [send] via NET/IB/1/GDRDMA
+gn46:1703994:1704320 [2] NCCL INFO Channel 01/0 : 2[84000] -> 0[3000] via P2P/IPC/read
+gn46:1703994:1704320 [2] NCCL INFO Channel 03/0 : 2[84000] -> 0[3000] via P2P/IPC/read
+gn46:1703994:1704320 [2] NCCL INFO Channel 00/0 : 2[84000] -> 1[44000] via P2P/IPC/read
+gn46:1703994:1704320 [2] NCCL INFO Channel 02/0 : 2[84000] -> 1[44000] via P2P/IPC/read
+gn46:1703994:1704320 [2] NCCL INFO Connected all trees
+gn46:1703994:1704320 [2] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn46:1703994:1704320 [2] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn46:1703994:1704320 [2] NCCL INFO comm 0xb475470 rank 2 nranks 8 cudaDev 2 busId 84000 commId 0x79571dc5c5ede763 - Init COMPLETE
+gn60:1931529:1931807 [0] NCCL INFO Channel 03/0 : 4[3000] -> 7[c4000] via P2P/IPC/read
+gn60:1931529:1931807 [0] NCCL INFO Connected all rings
+gn60:1931529:1931807 [0] NCCL INFO Channel 01/0 : 4[3000] -> 5[44000] via P2P/IPC/read
+gn60:1931529:1931807 [0] NCCL INFO Channel 03/0 : 4[3000] -> 5[44000] via P2P/IPC/read
+gn60:1931529:1931807 [0] NCCL INFO Channel 01/0 : 4[3000] -> 6[84000] via P2P/IPC/read
+gn60:1931529:1931807 [0] NCCL INFO Channel 03/0 : 4[3000] -> 6[84000] via P2P/IPC/read
+gn60:1931529:1931807 [0] NCCL INFO Connected all trees
+gn60:1931529:1931807 [0] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn60:1931529:1931807 [0] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn60:1931529:1931807 [0] NCCL INFO comm 0x9ba1ac0 rank 4 nranks 8 cudaDev 0 busId 3000 commId 0x79571dc5c5ede763 - Init COMPLETE
+gn60:1931530:1931530 [1] NCCL INFO cudaDriverVersion 12020
+gn60:1931530:1931530 [1] NCCL INFO Bootstrap : Using ib0:10.210.4.44<0>
+gn60:1931530:1931530 [1] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn60:1931530:1931530 [1] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn60:1931530:1931808 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.44<0>
+gn60:1931530:1931808 [1] NCCL INFO Using network IB
+gn60:1931530:1931808 [1] NCCL INFO Trees [0] 6/-1/-1->5->1 [1] 7/-1/-1->5->4 [2] 6/1/-1->5->-1 [3] 7/-1/-1->5->4
+gn60:1931530:1931808 [1] NCCL INFO P2P Chunksize set to 131072
+gn60:1931530:1931808 [1] NCCL INFO Channel 00/0 : 2[84000] -> 5[44000] [receive] via NET/IB/0/GDRDMA
+gn60:1931530:1931808 [1] NCCL INFO Channel 02/0 : 2[84000] -> 5[44000] [receive] via NET/IB/0/GDRDMA
+gn60:1931530:1931808 [1] NCCL INFO Channel 00/0 : 5[44000] -> 4[3000] via P2P/IPC/read
+gn60:1931530:1931808 [1] NCCL INFO Channel 01/0 : 5[44000] -> 4[3000] via P2P/IPC/read
+gn60:1931530:1931808 [1] NCCL INFO Channel 02/0 : 5[44000] -> 4[3000] via P2P/IPC/read
+gn60:1931530:1931808 [1] NCCL INFO Channel 03/0 : 5[44000] -> 4[3000] via P2P/IPC/read
+gn60:1931530:1931808 [1] NCCL INFO Connected all rings
+gn60:1931530:1931808 [1] NCCL INFO Channel 00/0 : 5[44000] -> 6[84000] via P2P/IPC/read
+gn60:1931530:1931808 [1] NCCL INFO Channel 02/0 : 5[44000] -> 6[84000] via P2P/IPC/read
+gn60:1931530:1931808 [1] NCCL INFO Channel 01/0 : 5[44000] -> 7[c4000] via P2P/IPC/read
+gn60:1931530:1931808 [1] NCCL INFO Channel 03/0 : 5[44000] -> 7[c4000] via P2P/IPC/read
+gn60:1931530:1931808 [1] NCCL INFO Channel 00/0 : 1[44000] -> 5[44000] [receive] via NET/IB/0/GDRDMA
+gn60:1931530:1931808 [1] NCCL INFO Channel 02/0 : 1[44000] -> 5[44000] [receive] via NET/IB/0/GDRDMA
+gn60:1931530:1931808 [1] NCCL INFO Channel 00/0 : 5[44000] -> 1[44000] [send] via NET/IB/0/GDRDMA
+gn60:1931530:1931808 [1] NCCL INFO Channel 02/0 : 5[44000] -> 1[44000] [send] via NET/IB/0/GDRDMA
+gn60:1931530:1931808 [1] NCCL INFO Connected all trees
+gn60:1931530:1931808 [1] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn60:1931530:1931808 [1] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn60:1931530:1931808 [1] NCCL INFO comm 0xaeff720 rank 5 nranks 8 cudaDev 1 busId 44000 commId 0x79571dc5c5ede763 - Init COMPLETE
+gn60:1931532:1931532 [3] NCCL INFO cudaDriverVersion 12020
+gn60:1931532:1931532 [3] NCCL INFO Bootstrap : Using ib0:10.210.4.44<0>
+gn60:1931532:1931532 [3] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn60:1931532:1931532 [3] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn60:1931532:1931805 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.44<0>
+gn60:1931532:1931805 [3] NCCL INFO Using network IB
+gn60:1931532:1931805 [3] NCCL INFO Trees [0] 4/-1/-1->7->6 [1] -1/-1/-1->7->5 [2] 4/-1/-1->7->6 [3] -1/-1/-1->7->5
+gn60:1931532:1931805 [3] NCCL INFO P2P Chunksize set to 131072
+gn60:1931532:1931805 [3] NCCL INFO Channel 01/0 : 7[c4000] -> 2[84000] [send] via NET/IB/1(6)/GDRDMA
+gn60:1931532:1931805 [3] NCCL INFO Channel 03/0 : 7[c4000] -> 2[84000] [send] via NET/IB/1(6)/GDRDMA
+gn60:1931532:1931805 [3] NCCL INFO Channel 00/0 : 7[c4000] -> 6[84000] via P2P/IPC/read
+gn60:1931532:1931805 [3] NCCL INFO Channel 02/0 : 7[c4000] -> 6[84000] via P2P/IPC/read
+gn60:1931532:1931805 [3] NCCL INFO Connected all rings
+gn60:1931532:1931805 [3] NCCL INFO Channel 00/0 : 7[c4000] -> 4[3000] via P2P/IPC/read
+gn60:1931532:1931805 [3] NCCL INFO Channel 02/0 : 7[c4000] -> 4[3000] via P2P/IPC/read
+gn60:1931532:1931805 [3] NCCL INFO Channel 01/0 : 7[c4000] -> 5[44000] via P2P/IPC/read
+gn60:1931532:1931805 [3] NCCL INFO Channel 03/0 : 7[c4000] -> 5[44000] via P2P/IPC/read
+gn60:1931532:1931805 [3] NCCL INFO Connected all trees
+gn60:1931532:1931805 [3] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn60:1931532:1931805 [3] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn60:1931532:1931805 [3] NCCL INFO comm 0xa7c76e0 rank 7 nranks 8 cudaDev 3 busId c4000 commId 0x79571dc5c5ede763 - Init COMPLETE
+gn60:1931531:1931531 [2] NCCL INFO cudaDriverVersion 12020
+gn60:1931531:1931531 [2] NCCL INFO Bootstrap : Using ib0:10.210.4.44<0>
+gn60:1931531:1931531 [2] NCCL INFO NET/Plugin : Plugin load (libnccl-net.so) returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory
+gn60:1931531:1931531 [2] NCCL INFO NET/Plugin : No plugin found, using internal implementation
+gn60:1931531:1931806 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:10.210.4.44<0>
+gn60:1931531:1931806 [2] NCCL INFO Using network IB
+gn60:1931531:1931806 [2] NCCL INFO Trees [0] 7/-1/-1->6->5 [1] 4/-1/-1->6->2 [2] 7/-1/-1->6->5 [3] 4/2/-1->6->-1
+gn60:1931531:1931806 [2] NCCL INFO P2P Chunksize set to 131072
+gn60:1931531:1931806 [2] NCCL INFO Channel 01/0 : 3[c4000] -> 6[84000] [receive] via NET/IB/1/GDRDMA
+gn60:1931531:1931806 [2] NCCL INFO Channel 03/0 : 3[c4000] -> 6[84000] [receive] via NET/IB/1/GDRDMA
+gn60:1931531:1931806 [2] NCCL INFO Channel 00/0 : 6[84000] -> 1[44000] [send] via NET/IB/0(5)/GDRDMA
+gn60:1931531:1931806 [2] NCCL INFO Channel 02/0 : 6[84000] -> 1[44000] [send] via NET/IB/0(5)/GDRDMA
+gn60:1931531:1931806 [2] NCCL INFO Channel 01/0 : 6[84000] -> 5[44000] via P2P/IPC/read
+gn60:1931531:1931806 [2] NCCL INFO Channel 03/0 : 6[84000] -> 5[44000] via P2P/IPC/read
+gn60:1931531:1931806 [2] NCCL INFO Connected all rings
+gn60:1931531:1931806 [2] NCCL INFO Channel 00/0 : 6[84000] -> 7[c4000] via P2P/IPC/read
+gn60:1931531:1931806 [2] NCCL INFO Channel 02/0 : 6[84000] -> 7[c4000] via P2P/IPC/read
+gn60:1931531:1931806 [2] NCCL INFO Channel 01/0 : 2[84000] -> 6[84000] [receive] via NET/IB/1/GDRDMA
+gn60:1931531:1931806 [2] NCCL INFO Channel 03/0 : 2[84000] -> 6[84000] [receive] via NET/IB/1/GDRDMA
+gn60:1931531:1931806 [2] NCCL INFO Channel 01/0 : 6[84000] -> 2[84000] [send] via NET/IB/1/GDRDMA
+gn60:1931531:1931806 [2] NCCL INFO Channel 03/0 : 6[84000] -> 2[84000] [send] via NET/IB/1/GDRDMA
+gn60:1931531:1931806 [2] NCCL INFO Channel 01/0 : 6[84000] -> 4[3000] via P2P/IPC/read
+gn60:1931531:1931806 [2] NCCL INFO Channel 03/0 : 6[84000] -> 4[3000] via P2P/IPC/read
+gn60:1931531:1931806 [2] NCCL INFO Channel 00/0 : 6[84000] -> 5[44000] via P2P/IPC/read
+gn60:1931531:1931806 [2] NCCL INFO Channel 02/0 : 6[84000] -> 5[44000] via P2P/IPC/read
+gn60:1931531:1931806 [2] NCCL INFO Connected all trees
+gn60:1931531:1931806 [2] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+gn60:1931531:1931806 [2] NCCL INFO 4 coll channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+gn60:1931531:1931806 [2] NCCL INFO comm 0x9f8bfc0 rank 6 nranks 8 cudaDev 2 busId 84000 commId 0x79571dc5c5ede763 - Init COMPLETE
+Adjusting learning rate of group 0 to 4.5000e-05.
+Adjusting learning rate of group 0 to 4.5000e-05.
+Adjusting learning rate of group 0 to 4.5000e-05.
+Adjusting learning rate of group 0 to 4.5000e-05.
+Adjusting learning rate of group 0 to 4.5000e-05.
+Adjusting learning rate of group 0 to 4.5000e-05.
+Adjusting learning rate of group 0 to 4.5000e-05.
+Epoch 0: 100%|██████████| 1/1 [00:00<00:00,  1.16it/s, v_num=plrq, train_loss_step=0.693, train_loss_epoch=0.693]Epoch 0:   0%|          | 0/1 [00:00<?, ?it/s, v_num=plrq, train_loss_step=0.693, train_loss_epoch=0.693]        Epoch 1:   0%|          | 0/1 [00:00<?, ?it/s, v_num=plrq, train_loss_step=0.693, train_loss_epoch=0.693]Adjusting learning rate of group 0 to 4.0500e-05.
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+Adjusting learning rate of group 0 to 4.0500e-05.
+saving last checkpoint
+gn46:1703994:1704337 [2] NCCL INFO [Service thread] Connection closed by localRank 1
+gn46:1703993:1704335 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+gn46:1703993:1704335 [1] NCCL INFO [Service thread] Connection closed by localRank 2
+gn60:1931530:1931820 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+gn60:1931531:1931819 [2] NCCL INFO [Service thread] Connection closed by localRank 0
+gn46:1703995:1704334 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+gn46:1703994:1704337 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+gn46:1703994:1704337 [2] NCCL INFO [Service thread] Connection closed by localRank 3
+gn46:1703993:1704335 [1] NCCL INFO [Service thread] Connection closed by localRank 3
+gn60:1931530:1931820 [1] NCCL INFO [Service thread] Connection closed by localRank 2
+gn60:1931530:1931820 [1] NCCL INFO [Service thread] Connection closed by localRank 3
+gn60:1931531:1931819 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+gn60:1931531:1931819 [2] NCCL INFO [Service thread] Connection closed by localRank 3
+gn60:1931531:1931819 [2] NCCL INFO [Service thread] Connection closed by localRank 1
+gn60:1931529:1931817 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+gn60:1931530:1931820 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+gn60:1931532:1931818 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+gn60:1931531:1931531 [2] NCCL INFO comm 0x9f8bfc0 rank 6 nranks 8 cudaDev 2 busId 84000 - Abort COMPLETE
+gn46:1703995:1703995 [3] NCCL INFO comm 0x368a3e20 rank 3 nranks 8 cudaDev 3 busId c4000 - Abort COMPLETE
+gn60:1931529:1931529 [0] NCCL INFO comm 0x9ba1ac0 rank 4 nranks 8 cudaDev 0 busId 3000 - Abort COMPLETE
+gn60:1931530:1931530 [1] NCCL INFO comm 0xaeff720 rank 5 nranks 8 cudaDev 1 busId 44000 - Abort COMPLETE
+gn60:1931532:1931532 [3] NCCL INFO comm 0xa7c76e0 rank 7 nranks 8 cudaDev 3 busId c4000 - Abort COMPLETE
+Epoch 1: 100%|██████████| 1/1 [00:00<00:00,  2.09it/s, v_num=plrq, train_loss_step=0.693, train_loss_epoch=0.693]Epoch 1: 100%|██████████| 1/1 [00:00<00:00,  1.90it/s, v_num=plrq, train_loss_step=0.688, train_loss_epoch=0.693]Epoch 1: 100%|██████████| 1/1 [00:00<00:00,  1.90it/s, v_num=plrq, train_loss_step=0.688, train_loss_epoch=0.688]Epoch 1: 100%|██████████| 1/1 [00:04<00:00,  4.06s/it, v_num=plrq, train_loss_step=0.688, train_loss_epoch=0.688]
+saving last checkpoint
+saving model 2
+gn46:1703993:1704335 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+gn46:1703994:1704337 [2] NCCL INFO [Service thread] Connection closed by localRank 0
+gn46:1703992:1704336 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+gn46:1703994:1703994 [2] NCCL INFO comm 0xb475470 rank 2 nranks 8 cudaDev 2 busId 84000 - Abort COMPLETE
+gn46:1703993:1703993 [1] NCCL INFO comm 0x3050cd80 rank 1 nranks 8 cudaDev 1 busId 44000 - Abort COMPLETE
+gn46:1703992:1703992 [0] NCCL INFO comm 0xaef0e60 rank 0 nranks 8 cudaDev 0 busId 3000 - Abort COMPLETE

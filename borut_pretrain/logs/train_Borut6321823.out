@@ -1,0 +1,180 @@
+start
+imports done
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 14:58:05]
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 14:58:05]
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 14:58:05]
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 14:58:05]
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 14:58:05]
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 14:58:05]
+[2023-10-27 14:58:05 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 14:58:05]
+start
+imports done
+[2023-10-27 14:58:07 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-27 14:58:07 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 14:58:07]
+loading train_labels from cache
+[2023-10-27 14:58:07], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-27 14:58:13] All Train videos Number: 10
+batch_size = 8
+setting env variable for wandb run id
+loading train_labels from cache
+[2023-10-27 14:58:05], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-27 14:58:13] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 273047
+parent_pid 273034
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+7 8 8
+loading train_labels from cache
+[2023-10-27 14:58:05], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-27 14:58:13] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 273044
+parent_pid 273034
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+4 8 8
+loading train_labels from cache
+[2023-10-27 14:58:05], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-27 14:58:13] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 273045
+parent_pid 273034
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+5 8 8
+loading train_labels from cache
+[2023-10-27 14:58:05], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-27 14:58:13] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 2277825
+parent_pid 2277813
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+2 8 8
+loading train_labels from cache
+[2023-10-27 14:58:05], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-27 14:58:13] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 2277824
+parent_pid 2277813
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+1 8 8
+loading train_labels from cache
+[2023-10-27 14:58:05], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-27 14:58:13] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 2277826
+parent_pid 2277813
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+3 8 8
+loading train_labels from cache
+[2023-10-27 14:58:05], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-27 14:58:15] All Train videos Number: 10
+batch_size = 8
+no wandb run id this is a copy of model with DDP
+pid 273046
+parent_pid 273034
+args Namespace(root_path_dfdc='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/DFDC/train_face_crop_png/20-frames-faces/train/', root_path='/ceph/hpc/data/st2207-pgp-users/DataBase/DeepFake/', save_path='/ceph/hpc/data/st2207-pgp-users/models_luka', model_name='eva02_large_patch14_448.mim_m38m_ft_in22k_in1k', gpu_id=0, num_class=2, class_name=['real', 'fake'], num_epochs=2, adjust_lr_iteration=30000, droprate=0.2, base_lr=5e-05, batch_size=8, val_batch_size=128, save_checkpoint_every_n_epochs=1, project_name='borut_pretrain', num_nodes=2, devices=[0, 1, 2, 3])
+init trainer
+6 8 8
+start
+imports done
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 15:28:32]
+start
+imports done
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 15:28:32]
+start
+imports done
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 15:28:32]
+start
+imports done
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 15:28:32]
+start
+imports done
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 15:28:32]
+start
+imports done
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 15:28:32]
+[2023-10-27 15:28:32 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 15:28:32]
+start
+imports done
+[2023-10-27 15:28:34 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 188): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-27 15:28:34 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 190): INFO [2023-10-27 15:28:34]
+loading train_labels from cache
+[2023-10-27 15:28:34], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+[2023-10-27 15:28:40] All Train videos Number: 10
+batch_size = 16
+setting env variable for wandb run id

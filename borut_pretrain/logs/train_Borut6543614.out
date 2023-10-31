@@ -1,0 +1,208 @@
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:22 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:22 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:22]
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:22 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:22 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:22]
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:22 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:22 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:22]
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:22 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:22 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:22]
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:23 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:23 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:23 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:23 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:23]
+[2023-10-30 13:17:23 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:23]
+[2023-10-30 13:17:23 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:23]
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:24 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:24]
+loading train_labels from cache
+[2023-10-30 13:17:22], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'FF++_HifiFace', 'dfdc', 'DeeperForensics-1.0', 'DFDGoogle', 'UADFV', 'DeepfakeTIMIT', 'Celeb-DF-v2', 'FaceForensics++'}
+Dataset constitution {'FF++_HifiFace': '0.47% (1000)', 'dfdc': '55.53% (119134)', 'DeeperForensics-1.0': '27.72% (59459)', 'DFDGoogle': '3.20% (6862)', 'UADFV': '0.05% (98)', 'DeepfakeTIMIT': '0.45% (960)', 'Celeb-DF-v2': '2.80% (6011)', 'FaceForensics++': '9.79% (21000)'}
+loading train_labels from cache
+[2023-10-30 13:17:22], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'FF++_HifiFace', 'DFDGoogle', 'dfdc', 'UADFV', 'DeepfakeTIMIT', 'DeeperForensics-1.0', 'Celeb-DF-v2', 'FaceForensics++'}
+Dataset constitution {'FF++_HifiFace': '0.47% (1000)', 'DFDGoogle': '3.20% (6862)', 'dfdc': '55.53% (119134)', 'UADFV': '0.05% (98)', 'DeepfakeTIMIT': '0.45% (960)', 'DeeperForensics-1.0': '27.72% (59459)', 'Celeb-DF-v2': '2.80% (6011)', 'FaceForensics++': '9.79% (21000)'}
+loading train_labels from cache
+[2023-10-30 13:17:23], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'Celeb-DF-v2', 'DFDGoogle', 'dfdc', 'DeeperForensics-1.0', 'FF++_HifiFace', 'FaceForensics++', 'UADFV', 'DeepfakeTIMIT'}
+Dataset constitution {'Celeb-DF-v2': '2.80% (6011)', 'DFDGoogle': '3.20% (6862)', 'dfdc': '55.53% (119134)', 'DeeperForensics-1.0': '27.72% (59459)', 'FF++_HifiFace': '0.47% (1000)', 'FaceForensics++': '9.79% (21000)', 'UADFV': '0.05% (98)', 'DeepfakeTIMIT': '0.45% (960)'}
+loading train_labels from cache
+[2023-10-30 13:17:23], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'dfdc', 'FaceForensics++', 'DeepfakeTIMIT', 'UADFV', 'DeeperForensics-1.0', 'FF++_HifiFace', 'DFDGoogle', 'Celeb-DF-v2'}
+Dataset constitution {'dfdc': '55.53% (119134)', 'FaceForensics++': '9.79% (21000)', 'DeepfakeTIMIT': '0.45% (960)', 'UADFV': '0.05% (98)', 'DeeperForensics-1.0': '27.72% (59459)', 'FF++_HifiFace': '0.47% (1000)', 'DFDGoogle': '3.20% (6862)', 'Celeb-DF-v2': '2.80% (6011)'}
+loading train_labels from cache
+[2023-10-30 13:17:22], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'DeeperForensics-1.0', 'UADFV', 'DFDGoogle', 'DeepfakeTIMIT', 'FaceForensics++', 'FF++_HifiFace', 'Celeb-DF-v2', 'dfdc'}
+Dataset constitution {'DeeperForensics-1.0': '27.72% (59459)', 'UADFV': '0.05% (98)', 'DFDGoogle': '3.20% (6862)', 'DeepfakeTIMIT': '0.45% (960)', 'FaceForensics++': '9.79% (21000)', 'FF++_HifiFace': '0.47% (1000)', 'Celeb-DF-v2': '2.80% (6011)', 'dfdc': '55.53% (119134)'}
+loading train_labels from cache
+[2023-10-30 13:17:23], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'dfdc', 'DeeperForensics-1.0', 'DeepfakeTIMIT', 'DFDGoogle', 'UADFV', 'Celeb-DF-v2', 'FaceForensics++', 'FF++_HifiFace'}
+Dataset constitution {'dfdc': '55.53% (119134)', 'DeeperForensics-1.0': '27.72% (59459)', 'DeepfakeTIMIT': '0.45% (960)', 'DFDGoogle': '3.20% (6862)', 'UADFV': '0.05% (98)', 'Celeb-DF-v2': '2.80% (6011)', 'FaceForensics++': '9.79% (21000)', 'FF++_HifiFace': '0.47% (1000)'}
+loading train_labels from cache
+[2023-10-30 13:17:24], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'FaceForensics++', 'UADFV', 'DFDGoogle', 'FF++_HifiFace', 'Celeb-DF-v2', 'DeepfakeTIMIT', 'dfdc', 'DeeperForensics-1.0'}
+Dataset constitution {'FaceForensics++': '9.79% (21000)', 'UADFV': '0.05% (98)', 'DFDGoogle': '3.20% (6862)', 'FF++_HifiFace': '0.47% (1000)', 'Celeb-DF-v2': '2.80% (6011)', 'DeepfakeTIMIT': '0.45% (960)', 'dfdc': '55.53% (119134)', 'DeeperForensics-1.0': '27.72% (59459)'}
+loading train_labels from cache
+[2023-10-30 13:17:22], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'Celeb-DF-v2', 'dfdc', 'UADFV', 'FF++_HifiFace', 'DeepfakeTIMIT', 'DeeperForensics-1.0', 'FaceForensics++', 'DFDGoogle'}
+Dataset constitution {'Celeb-DF-v2': '2.80% (6011)', 'dfdc': '55.53% (119134)', 'UADFV': '0.05% (98)', 'FF++_HifiFace': '0.47% (1000)', 'DeepfakeTIMIT': '0.45% (960)', 'DeeperForensics-1.0': '27.72% (59459)', 'FaceForensics++': '9.79% (21000)', 'DFDGoogle': '3.20% (6862)'}
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:47 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:47 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:47]
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:47 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:47 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:47]
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:47 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:47 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:47]
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:47 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:47 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:47]
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:48 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:48 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:48]
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:48 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:48 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:48]
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:48 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:48 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:48]
+start
+imports done
+set random seed 1126
+[2023-10-30 13:17:49 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 275): INFO Start Training eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+[2023-10-30 13:17:49 eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](pretrain_timm.py 277): INFO [2023-10-30 13:17:49]
+loading train_labels from cache
+[2023-10-30 13:17:47], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'dfdc', 'DFDGoogle', 'FaceForensics++', 'FF++_HifiFace', 'UADFV', 'DeepfakeTIMIT', 'Celeb-DF-v2', 'DeeperForensics-1.0'}
+Dataset constitution {'dfdc': '55.53% (119134)', 'DFDGoogle': '3.20% (6862)', 'FaceForensics++': '9.79% (21000)', 'FF++_HifiFace': '0.47% (1000)', 'UADFV': '0.05% (98)', 'DeepfakeTIMIT': '0.45% (960)', 'Celeb-DF-v2': '2.80% (6011)', 'DeeperForensics-1.0': '27.72% (59459)'}
+loading train_labels from cache
+[2023-10-30 13:17:47], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'DeepfakeTIMIT', 'UADFV', 'DFDGoogle', 'dfdc', 'Celeb-DF-v2', 'FaceForensics++', 'DeeperForensics-1.0', 'FF++_HifiFace'}
+Dataset constitution {'DeepfakeTIMIT': '0.45% (960)', 'UADFV': '0.05% (98)', 'DFDGoogle': '3.20% (6862)', 'dfdc': '55.53% (119134)', 'Celeb-DF-v2': '2.80% (6011)', 'FaceForensics++': '9.79% (21000)', 'DeeperForensics-1.0': '27.72% (59459)', 'FF++_HifiFace': '0.47% (1000)'}
+loading train_labels from cache
+[2023-10-30 13:17:48], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'FaceForensics++', 'dfdc', 'DeeperForensics-1.0', 'Celeb-DF-v2', 'DFDGoogle', 'FF++_HifiFace', 'UADFV', 'DeepfakeTIMIT'}
+Dataset constitution {'FaceForensics++': '9.79% (21000)', 'dfdc': '55.53% (119134)', 'DeeperForensics-1.0': '27.72% (59459)', 'Celeb-DF-v2': '2.80% (6011)', 'DFDGoogle': '3.20% (6862)', 'FF++_HifiFace': '0.47% (1000)', 'UADFV': '0.05% (98)', 'DeepfakeTIMIT': '0.45% (960)'}
+loading train_labels from cache
+[2023-10-30 13:17:48], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'dfdc', 'Celeb-DF-v2', 'FaceForensics++', 'FF++_HifiFace', 'DFDGoogle', 'DeeperForensics-1.0', 'UADFV', 'DeepfakeTIMIT'}
+Dataset constitution {'dfdc': '55.53% (119134)', 'Celeb-DF-v2': '2.80% (6011)', 'FaceForensics++': '9.79% (21000)', 'FF++_HifiFace': '0.47% (1000)', 'DFDGoogle': '3.20% (6862)', 'DeeperForensics-1.0': '27.72% (59459)', 'UADFV': '0.05% (98)', 'DeepfakeTIMIT': '0.45% (960)'}
+loading train_labels from cache
+[2023-10-30 13:17:48], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'DFDGoogle', 'UADFV', 'dfdc', 'FF++_HifiFace', 'FaceForensics++', 'DeeperForensics-1.0', 'DeepfakeTIMIT', 'Celeb-DF-v2'}
+Dataset constitution {'DFDGoogle': '3.20% (6862)', 'UADFV': '0.05% (98)', 'dfdc': '55.53% (119134)', 'FF++_HifiFace': '0.47% (1000)', 'FaceForensics++': '9.79% (21000)', 'DeeperForensics-1.0': '27.72% (59459)', 'DeepfakeTIMIT': '0.45% (960)', 'Celeb-DF-v2': '2.80% (6011)'}
+loading train_labels from cache
+[2023-10-30 13:17:47], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'DeepfakeTIMIT', 'dfdc', 'FaceForensics++', 'UADFV', 'Celeb-DF-v2', 'FF++_HifiFace', 'DeeperForensics-1.0', 'DFDGoogle'}
+Dataset constitution {'DeepfakeTIMIT': '0.45% (960)', 'dfdc': '55.53% (119134)', 'FaceForensics++': '9.79% (21000)', 'UADFV': '0.05% (98)', 'Celeb-DF-v2': '2.80% (6011)', 'FF++_HifiFace': '0.47% (1000)', 'DeeperForensics-1.0': '27.72% (59459)', 'DFDGoogle': '3.20% (6862)'}
+loading train_labels from cache
+[2023-10-30 13:17:50], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'DFDGoogle', 'DeepfakeTIMIT', 'dfdc', 'Celeb-DF-v2', 'UADFV', 'FaceForensics++', 'FF++_HifiFace', 'DeeperForensics-1.0'}
+Dataset constitution {'DFDGoogle': '3.20% (6862)', 'DeepfakeTIMIT': '0.45% (960)', 'dfdc': '55.53% (119134)', 'Celeb-DF-v2': '2.80% (6011)', 'UADFV': '0.05% (98)', 'FaceForensics++': '9.79% (21000)', 'FF++_HifiFace': '0.47% (1000)', 'DeeperForensics-1.0': '27.72% (59459)'}
+loading train_labels from cache
+[2023-10-30 13:17:47], All Train videos: all:10, fake:8, ratio(FAKE/ALL):0.8
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+Using  {'dfdc', 'DeeperForensics-1.0', 'DFDGoogle', 'FaceForensics++', 'UADFV', 'FF++_HifiFace', 'Celeb-DF-v2', 'DeepfakeTIMIT'}
+Dataset constitution {'dfdc': '55.53% (119134)', 'DeeperForensics-1.0': '27.72% (59459)', 'DFDGoogle': '3.20% (6862)', 'FaceForensics++': '9.79% (21000)', 'UADFV': '0.05% (98)', 'FF++_HifiFace': '0.47% (1000)', 'Celeb-DF-v2': '2.80% (6011)', 'DeepfakeTIMIT': '0.45% (960)'}
