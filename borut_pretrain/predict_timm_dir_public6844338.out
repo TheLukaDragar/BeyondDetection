@@ -1,0 +1,133 @@
+start
+imports done
+wandb run oubrbomc
+model_name efficientnet_b4.ra2_in1k
+resolution 320
+Timm data_cfg {'input_size': (3, 320, 320), 'interpolation': 'bicubic', 'mean': (0.485, 0.456, 0.406), 'std': (0.229, 0.224, 0.225), 'crop_pct': 1.0, 'crop_mode': 'center'}
+using norm_std (0.229, 0.224, 0.225)
+using norm_mean (0.485, 0.456, 0.406)
+found ['/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=00-val_loss=0.46-train_loss=0.33.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=01-val_loss=0.35-train_loss=0.21.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=02-val_loss=0.26-train_loss=0.17.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=03-val_loss=0.29-train_loss=0.14.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=04-val_loss=0.21-train_loss=0.13.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=05-val_loss=0.29-train_loss=0.12.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=06-val_loss=0.18-train_loss=0.11.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=07-val_loss=0.13-train_loss=0.10.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=08-val_loss=0.20-train_loss=0.10.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=09-val_loss=0.12-train_loss=0.09.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=10-val_loss=0.21-train_loss=0.08.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=11-val_loss=0.14-train_loss=0.08.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=12-val_loss=0.11-train_loss=0.08.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=13-val_loss=0.19-train_loss=0.07.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=14-val_loss=0.10-train_loss=0.07.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=15-val_loss=0.18-train_loss=0.07.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=16-val_loss=0.08-train_loss=0.07.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=17-val_loss=0.13-train_loss=0.06.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=18-val_loss=0.10-train_loss=0.06.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=19-val_loss=0.13-train_loss=0.06.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=20-val_loss=0.10-train_loss=0.06.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=21-val_loss=0.08-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=22-val_loss=0.16-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=23-val_loss=0.10-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=24-val_loss=0.07-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=25-val_loss=0.09-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=26-val_loss=0.08-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=27-val_loss=0.09-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=28-val_loss=0.09-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=29-val_loss=0.07-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=30-val_loss=0.08-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=31-val_loss=0.16-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=32-val_loss=0.12-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=33-val_loss=0.08-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=34-val_loss=0.10-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=35-val_loss=0.07-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=36-val_loss=0.15-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=37-val_loss=0.11-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=38-val_loss=0.08-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=39-val_loss=0.09-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=40-val_loss=0.10-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=41-val_loss=0.08-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=42-val_loss=0.17-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=43-val_loss=0.14-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=44-val_loss=0.05-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=45-val_loss=0.11-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=46-val_loss=0.07-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=47-val_loss=0.16-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=48-val_loss=0.07-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=49-val_loss=0.12-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=50-val_loss=0.13-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=51-val_loss=0.07-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=52-val_loss=0.06-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=53-val_loss=0.16-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=54-val_loss=0.13-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=55-val_loss=0.16-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=56-val_loss=0.07-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=57-val_loss=0.09-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=58-val_loss=0.13-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=59-val_loss=0.10-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k_final.ckpt']
+epoch 00
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=00-val_loss=0.46-train_loss=0.33.ckpt is 0.775393
+new best_auc 0.7753927283920704
+epoch 01
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=01-val_loss=0.35-train_loss=0.21.ckpt is 0.849594
+new best_auc 0.8495935835608927
+epoch 02
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=02-val_loss=0.26-train_loss=0.17.ckpt is 0.852387
+new best_auc 0.8523872385151896
+epoch 03
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=03-val_loss=0.29-train_loss=0.14.ckpt is 0.833886
+epoch 04
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=04-val_loss=0.21-train_loss=0.13.ckpt is 0.870139
+new best_auc 0.8701385877039519
+epoch 05
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=05-val_loss=0.29-train_loss=0.12.ckpt is 0.832637
+epoch 06
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=06-val_loss=0.18-train_loss=0.11.ckpt is 0.849753
+epoch 07
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=07-val_loss=0.13-train_loss=0.10.ckpt is 0.838032
+epoch 08
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=08-val_loss=0.20-train_loss=0.10.ckpt is 0.850679
+epoch 09
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=09-val_loss=0.12-train_loss=0.09.ckpt is 0.853900
+epoch 10
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=10-val_loss=0.21-train_loss=0.08.ckpt is 0.840115
+epoch 11
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=11-val_loss=0.14-train_loss=0.08.ckpt is 0.848609
+epoch 12
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=12-val_loss=0.11-train_loss=0.08.ckpt is 0.820319
+epoch 13
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=13-val_loss=0.19-train_loss=0.07.ckpt is 0.829785
+epoch 14
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=14-val_loss=0.10-train_loss=0.07.ckpt is 0.821060
+epoch 15
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=15-val_loss=0.18-train_loss=0.07.ckpt is 0.813789
+epoch 16
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=16-val_loss=0.08-train_loss=0.07.ckpt is 0.825796
+epoch 17
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=17-val_loss=0.13-train_loss=0.06.ckpt is 0.820874
+epoch 18
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=18-val_loss=0.10-train_loss=0.06.ckpt is 0.818244
+epoch 19
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=19-val_loss=0.13-train_loss=0.06.ckpt is 0.802078
+epoch 20
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=20-val_loss=0.10-train_loss=0.06.ckpt is 0.827604
+epoch 21
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=21-val_loss=0.08-train_loss=0.05.ckpt is 0.809398
+epoch 22
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=22-val_loss=0.16-train_loss=0.05.ckpt is 0.814318
+epoch 23
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=23-val_loss=0.10-train_loss=0.05.ckpt is 0.816183
+epoch 24
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=24-val_loss=0.07-train_loss=0.05.ckpt is 0.812130
+epoch 25
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=25-val_loss=0.09-train_loss=0.05.ckpt is 0.808138
+epoch 26
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=26-val_loss=0.08-train_loss=0.05.ckpt is 0.810479
+epoch 27
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=27-val_loss=0.09-train_loss=0.05.ckpt is 0.810970
+epoch 28
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=28-val_loss=0.09-train_loss=0.05.ckpt is 0.809693
+epoch 29
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=29-val_loss=0.07-train_loss=0.05.ckpt is 0.808795
+epoch 30
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=30-val_loss=0.08-train_loss=0.05.ckpt is 0.822432
+epoch 31
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=31-val_loss=0.16-train_loss=0.05.ckpt is 0.804839
+epoch 32
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=32-val_loss=0.12-train_loss=0.05.ckpt is 0.814635
+epoch 33
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=33-val_loss=0.08-train_loss=0.05.ckpt is 0.812667
+epoch 34
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=34-val_loss=0.10-train_loss=0.05.ckpt is 0.815279
+epoch 35
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=35-val_loss=0.07-train_loss=0.05.ckpt is 0.824238
+epoch 36
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=36-val_loss=0.15-train_loss=0.05.ckpt is 0.816969
+epoch 37
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=37-val_loss=0.11-train_loss=0.05.ckpt is 0.820360
+epoch 38
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=38-val_loss=0.08-train_loss=0.05.ckpt is 0.823459
+epoch 39
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=39-val_loss=0.09-train_loss=0.05.ckpt is 0.822753
+epoch 40
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=40-val_loss=0.10-train_loss=0.05.ckpt is 0.816148
+epoch 41
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=41-val_loss=0.08-train_loss=0.05.ckpt is 0.815837
+epoch 42
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=42-val_loss=0.17-train_loss=0.05.ckpt is 0.821875
+epoch 43
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=43-val_loss=0.14-train_loss=0.05.ckpt is 0.829047
+epoch 44
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=44-val_loss=0.05-train_loss=0.05.ckpt is 0.824180
+epoch 45
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=45-val_loss=0.11-train_loss=0.05.ckpt is 0.832616
+epoch 46
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=46-val_loss=0.07-train_loss=0.05.ckpt is 0.812288
+epoch 47
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=47-val_loss=0.16-train_loss=0.05.ckpt is 0.810148
+epoch 48
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=48-val_loss=0.07-train_loss=0.05.ckpt is 0.809957
+epoch 49
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=49-val_loss=0.12-train_loss=0.05.ckpt is 0.821064
+epoch 50
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=50-val_loss=0.13-train_loss=0.05.ckpt is 0.809478
+epoch 51
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=51-val_loss=0.07-train_loss=0.05.ckpt is 0.807049
+epoch 52
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=52-val_loss=0.06-train_loss=0.05.ckpt is 0.825096
+epoch 53
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=53-val_loss=0.16-train_loss=0.05.ckpt is 0.797339
+epoch 54
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=54-val_loss=0.13-train_loss=0.05.ckpt is 0.833939
+epoch 55
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=55-val_loss=0.16-train_loss=0.05.ckpt is 0.809888
+epoch 56
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=56-val_loss=0.07-train_loss=0.05.ckpt is 0.807530
+epoch 57
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=57-val_loss=0.09-train_loss=0.05.ckpt is 0.813527
+epoch 58
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=58-val_loss=0.13-train_loss=0.05.ckpt is 0.816471
+epoch 59
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/efficientnet_b4.ra2_in1k/oubrbomc/efficientnet_b4.ra2_in1k-epoch=59-val_loss=0.10-train_loss=0.05.ckpt is 0.824542

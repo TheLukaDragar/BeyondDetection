@@ -108,7 +108,8 @@ def main():
     wandb.login()
 
     # Connect to the specified project
-    api = wandb.Api()
+    api = wandb.Api(timeout=30)
+    
 
     #get details of the run
     run = api.run(f"{project_name}/{run_id}")

@@ -36,6 +36,9 @@ from pytorch_lightning import LightningModule, LightningDataModule, Trainer,seed
 from pytorch_lightning.loggers import WandbLogger
 from pytorch_lightning.callbacks import LearningRateMonitor
 from pytorch_lightning.callbacks import ModelCheckpoint
+#tuner ptl
+from pytorch_lightning.tuner.tuning import Tuner
+
 
 import math
 
@@ -131,6 +134,12 @@ def parse_args():
     #resume_run_id for resuming run 
     parser.add_argument("--resume_run_id", type=str, default="None")
 
+    #args
+    parser.add_argument("--auto_lr_find", action="store_true", default=False)
+
+    # #auto batch size
+    # parser.add_argument("--auto_batch_size", action="store_true", default=False)
+
 
     args = parser.parse_args()
     print("args", args)
@@ -184,13 +193,13 @@ def load_txt(txt_path="./txt3", logger=None):
 
 
 class MyModel(LightningModule):
-    def __init__(self, model_name, num_class=2, base_lr=0.00005):
+    def __init__(self, model_name, num_class=2, learning_rate=0.00005):
         super(MyModel, self).__init__()
         self.model = timm.create_model(
             model_name, num_classes=num_class, pretrained=True
         )
         self.criterion = nn.CrossEntropyLoss()
-        self.base_lr = base_lr
+        self.learning_rate = learning_rate
 
     def forward(self, x):
         return self.model(x)
@@ -213,7 +222,7 @@ class MyModel(LightningModule):
 
     def configure_optimizers(self):
         optimizer = optim.AdamW(
-            filter(lambda p: p.requires_grad, self.parameters()), lr=self.base_lr
+            filter(lambda p: p.requires_grad, self.parameters()), lr=self.learning_rate
         )
         # scheduler = optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.9, verbose=True)
         scheduler = {
@@ -389,7 +398,7 @@ def main():
 
     # ptl
     model = MyModel(
-        model_name=args.model_name, num_class=args.num_class, base_lr=args.base_lr
+        model_name=args.model_name, num_class=args.num_class, learning_rate=args.base_lr
     )
     # get resolution from model
     resolution = model.model.pretrained_cfg["input_size"][
@@ -632,7 +641,7 @@ def main():
         else:
             print("no checkpoint found")
         
-
+    lr_monitor = LearningRateMonitor(logging_interval='step')
 
     trainer = Trainer(
         max_epochs=args.num_epochs,
@@ -641,8 +650,37 @@ def main():
         strategy="ddp",
         num_nodes=args.num_nodes,
         devices=args.devices,
-        callbacks=[checkpoint_callback],
+        callbacks=[checkpoint_callback,lr_monitor],
     )
+
+    if args.auto_lr_find:
+
+        #THIS DOESENT WORK YET!
+        print("running lr finder")
+        #base is 0.00005 which is 5e-5
+        lr_finder = Tuner(trainer).lr_find(model, min_lr=1e-8, max_lr=1e-4,datamodule=data_module)
+        print("lr",lr_finder.results["lr"])
+        print("loss",lr_finder.results["loss"])
+
+
+        # Plot with
+
+        #set lr
+        model.learning_rate = lr_finder.suggestion()
+        model.hparams.learning_rate = lr_finder.suggestion()
+        print("found best lr at ", lr_finder.suggestion())
+        wandb_logger.log_hyperparams(model.hparams)
+
+    
+
+
+    
+
+    
+
+
+
+
 
 
 
@@ -668,8 +706,9 @@ def main():
 
     if not args.resume_run_id == "None":
         print("using checkpoint", ckpt_path)
+        ckpt_path = os.path.abspath(ckpt_path)
 
-    trainer.fit(model, datamodule=data_module, ckpt_path=os.path.abspath(ckpt_path))
+    trainer.fit(model, datamodule=data_module, ckpt_path=ckpt_path)
     print("saving last checkpoint")
     trainer.save_checkpoint(
         "%s/%s/%s/%s_final.ckpt"

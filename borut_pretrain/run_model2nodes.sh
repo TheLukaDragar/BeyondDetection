@@ -34,4 +34,8 @@ model_name=$1
 #script is made to run on 1 node with 1 gpu
 # wandb agent $wandb_agent 
 
-srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 -p gpu --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --devices 0 1 2 3 --num_nodes 2 --batch_size 8 --num_epochs 60 --model_name $model_name
+#all other arguments are passed to the python script
+args=("$@")
+
+
+srun --nodes=2 --cpus-per-task=12 --gpus-per-node=4 -p gpu --ntasks-per-node=4 --exclusive python3 pretrain_timm.py --devices 0 1 2 3 --num_nodes 2 --batch_size 4 --num_epochs 60 --model_name $model_name ${args[@]:1} 
