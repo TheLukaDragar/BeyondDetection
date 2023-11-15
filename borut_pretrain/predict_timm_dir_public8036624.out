@@ -1,0 +1,15 @@
+start
+imports done
+wandb run 8e54zlh7
+model_name convnext_xlarge_384_in22ft1k
+resolution 384
+Timm data_cfg {'input_size': (3, 384, 384), 'interpolation': 'bicubic', 'mean': (0.485, 0.456, 0.406), 'std': (0.229, 0.224, 0.225), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.229, 0.224, 0.225)
+using norm_mean (0.485, 0.456, 0.406)
+found ['/ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=00-val_loss=0.08-train_loss=0.06.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=01-val_loss=0.07-train_loss=0.03.ckpt']
+epoch 00
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=00-val_loss=0.08-train_loss=0.06.ckpt is 0.829399
+new best_auc 0.8293986485263041
+epoch 01
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=01-val_loss=0.07-train_loss=0.03.ckpt is 0.874635
+new best_auc 0.8746347339259216

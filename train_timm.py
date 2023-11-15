@@ -279,7 +279,7 @@ if __name__ == "__main__":
         default="./DFGC-1st-2022-model/convnext_xlarge_384_in22ft1k_30.pth",
         help="DFGC1st convnext_xlarge_384_in22ft1k_30.pth file path",
     )
-    # parser.add_argument('--cp_save_dir', default='/d/hpc/projects/FRI/ldragar/checkpoints/', help='Path to save checkpoints.')
+    parser.add_argument('--cp_save_dir', default='./timm_models_images_cps/', help='Path to save checkpoints.')
     parser.add_argument(
         "--final_model_save_dir",
         default="./timm_models_images/",
@@ -524,9 +524,9 @@ if __name__ == "__main__":
     # save hyperparameters
     wandb_logger.log_hyperparams(model.hparams)
 
-    # checkpoint_callback = ModelCheckpoint(monitor='val_loss',
-    #                                     dirpath=cp_save_dir,
-    #                                     filename=f'{wandb_run_id}-{{epoch:02d}}-{{val_loss:.2f}}', mode='min', save_top_k=1)
+    checkpoint_callback = ModelCheckpoint(monitor='val_loss',
+                                    dirpath=args.cp_save_dir,
+                                        filename=f'{wandb_run_id}-{{epoch:02d}}-{{val_loss:.2f}}', mode='min', save_top_k=1)
 
     trainer = pl.Trainer(
         accelerator="gpu",
@@ -540,7 +540,7 @@ if __name__ == "__main__":
             #             mode="min",
             #             patience=4,
             #             ),
-            # checkpoint_callback
+            checkpoint_callback
         ],
         logger=wandb_logger,
         accumulate_grad_batches=args.accumulate_grad_batches,
@@ -576,12 +576,36 @@ if __name__ == "__main__":
         if not os.path.exists(model_path):
             os.makedirs(model_path)
         torch.save(model.state_dict(), os.path.join(model_path, f"{wandb_run_id}.pt"))
-        print(f"finished training, saved model to {model_path}")
+        print(f"finished training, saved last model to {model_path}")
+
+        #get best checkpoint
+        best_checkpoint_path = checkpoint_callback.best_model_path
+        print(f"best checkpoint is saved in path {best_checkpoint_path}")
+        # load best checkpoint
+
+    
+        #make a new model that is a copy of the old one but with the best checkpoint weights
+        best_model = TimmModel(
+            pretrained_backbone=args.pretrained_backbone,
+            model_name=args.model_name,
+            dropout=args.dropout,
+            loss=args.loss,
+            lr=args.lr,
+            drop_path_rate=args.drop_path_rate,
+            weight_decay=args.weight_decay,
+        )
+        best_model.load_state_dict(torch.load(best_checkpoint_path)["state_dict"])
+        print("loaded best checkpoint")
+
+        
 
         # PREDICTIONS
         model.eval()  # set the model to evaluation mode
 
+
+
         model = model.to("cuda:0")
+        best_model = best_model.to("cuda:1")
 
         stages = ["1", "2", "3"]
         # get wandb run id
@@ -591,12 +615,17 @@ if __name__ == "__main__":
             os.makedirs(resultsdir)
 
         scores = []
+        scores2 = []
+
 
         for stage in stages:
             name = "test_set" + stage + ".txt"
             test_labels = []
+            test_labels2 = []
             test_names = []
-            test_gt = []
+            test_names2 = []
+            test_gt= []
+            test_gt2 = []
 
             # use seq len
 
@@ -612,16 +641,27 @@ if __name__ == "__main__":
             with torch.no_grad():
                 for x, gt, nameee in ds:
                     x = x.unsqueeze(0).to(model.device)
-                    print("x.shape)", x.shape)
+                    x2 = x.clone().to(best_model.device)
+                    # print("x.shape)", x.shape)
                     y = model(x)
-                    print("y.shape", y.shape)
-                    print("y", y)
+                    y2 = best_model(x2)
+                    # print("y.shape", y.shape)
+                    # print("y", y)
                     y = y.cpu().numpy()
                     y = y[0][0]
+
+                    y2 = y2.cpu().numpy()
+                    y2 = y2[0][0]
+
 
                     test_gt.append(gt)
                     test_labels.append(y)
                     test_names.append(nameee)
+
+                    test_gt2.append(gt)
+                    test_labels2.append(y2)
+                    test_names2.append(nameee)
+
 
             # compute score for test set
             test_labels = torch.tensor(test_labels).to(model.device)
@@ -629,14 +669,34 @@ if __name__ == "__main__":
             test_names = np.array(test_names)
             test_labels = test_labels.view(-1)
 
+            test_labels2 = torch.tensor(test_labels2).to(best_model.device)
+            test_gt2 = torch.tensor(test_gt2).to(best_model.device)
+            test_names2 = np.array(test_names2)
+            test_labels2 = test_labels2.view(-1)
+
+
+
             plcc = model.pearson_corr_coef(test_labels, test_gt)
             spearman = model.spearman_corr_coef(test_labels, test_gt)
             mse_log = model.mse_log(test_labels, test_gt)
             rmse = torch.sqrt(mse_log)
 
+            plcc2 = best_model.pearson_corr_coef(test_labels2, test_gt2)
+            spearman2 = best_model.spearman_corr_coef(test_labels2, test_gt2)
+            mse_log2 = best_model.mse_log(test_labels2, test_gt2)
+            rmse2 = torch.sqrt(mse_log2)
+
+            
+
             print(f"test_set{stage}_plcc: {plcc}")
             print(f"test_set{stage}_spearman: {spearman}")
             print(f"test_set{stage}_rmse: {rmse}")
+
+            print(f"test_set{stage}_plcc_best_cp: {plcc2}")
+            print(f"test_set{stage}_spearman_best_cp: {spearman2}")
+            print(f"test_set{stage}_rmse_best_cp: {rmse2}")
+
+
 
             # save to wandb
             wandb.log({f"final_test_set{stage}_plcc": plcc})
@@ -644,7 +704,14 @@ if __name__ == "__main__":
             wandb.log({f"final_test_set{stage}_rmse": rmse})
             wandb.log({f"final_test_set{stage}_score": (plcc + spearman) / 2})
 
+            wandb.log({f"final_test_set{stage}_plcc_best_cp": plcc2})
+            wandb.log({f"final_test_set{stage}_spearman_best_cp": spearman2})
+            wandb.log({f"final_test_set{stage}_rmse_best_cp": rmse2})
+            wandb.log({f"final_test_set{stage}_score_best_cp": (plcc2 + spearman2) / 2})
+
+
             scores.append((plcc + spearman) / 2)
+            scores2.append((plcc2 + spearman2) / 2)
 
             print(f"predicted {len(test_labels)} labels for {name}")
             print(f"len test_names {len(test_names)}")
@@ -662,8 +729,21 @@ if __name__ == "__main__":
                 f"saved {len(test_labels)} predictions to {os.path.join(resultsdir, 'Test'+stage+'_preds.txt')}"
             )
 
+            with open(
+                os.path.join(resultsdir, "Test" + stage + "_preds_best_cp.txt"), "w"
+            ) as f:
+                for i in range(len(test_names2)):
+                    f.write(f"{test_names2[i]},{test_labels2[i]}\n")
+
+            print(
+                f"saved {len(test_labels2)} predictions to {os.path.join(resultsdir, 'Test'+stage+'_preds_best_cp.txt')}"
+            )
+ 
+
         print(f"final_score: {sum(scores)/3}")
+        print(f"final_score_best_cp: {sum(scores2)/3}")
         wandb.log({"final_final_score": sum(scores) / 3})
+        wandb.log({"final_final_score_best_cp": sum(scores2) / 3})
 
         print("done")
 

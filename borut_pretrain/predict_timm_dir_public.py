@@ -75,6 +75,10 @@ def parse_args():
     parser.add_argument("--gpu_id", type=int, default=0)
 
     parser.add_argument("--val_batch_size", type=int, default=24)
+
+    parser.add_argument("--from_epoch", type=int, default=0)
+
+
     args = parser.parse_args()
     return args
 
@@ -163,6 +167,10 @@ def main():
         files = files[-1:]
         print("files", files)
 
+
+    
+
+
     for trained in files:
         # pre_trained = os.path.join(args.pre_trained_dir, trained)
         pre_trained = trained
@@ -179,6 +187,13 @@ def main():
 
         # epoch = trained.split('_')[-1].split('.')[0]
         if epoch.isnumeric():
+
+            if args.from_epoch:
+                if int(epoch) < args.from_epoch:
+                    print("skipping", epoch)
+                    continue
+
+
             output_txt = args.output_txt[:-4] + "_" + epoch + ".txt"
         result_txt = open(output_txt, "w", encoding="utf-8")
 

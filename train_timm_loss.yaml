@@ -1,0 +1,131 @@
+project: BeyondDetection
+name: vega_train_timm_loss
+program: train_timm_loss.py
+
+
+command:
+  - ${env}
+  # - echo
+  - srun
+  - "--nodes=1"
+  - "--cpus-per-task=12"
+  - "--gpus=4"
+  - "-p gpu"
+  - "--ntasks-per-node=4"
+  - "--exclusive"
+  - python3
+  - ${program}
+  - ${args}
+  - "--devices"
+  - "0"
+  - "1"
+  - "2"
+  - "3"
+
+
+
+method: grid
+metric:
+  goal: minimize
+  name: val_loss
+
+parameters:
+  model_name:
+    values:
+      - convnext_xlarge_384_in22ft1k
+    distribution: categorical
+  batch_size:
+    values:
+      - 1
+    distribution: categorical
+    
+    
+  seq_len:
+    values:
+      - 16
+    distribution: categorical
+
+  accumulate_grad_batches:
+    values:
+      - 1
+    distribution: categorical
+
+  dropout:
+    distribution: categorical
+    values:
+      - 0.0
+      - 0.1
+
+  max_epochs:
+    values:
+      - 16
+      - 32
+      - 48
+      - 64
+    distribution: categorical
+
+  loss:
+    values:
+      - "rmse"
+      - "mae"
+    distribution: categorical
+
+  augmentation:
+    values:
+      - False
+    
+
+    distribution: categorical
+
+  augment_prob:
+    values:
+      - 0.0
+    distribution: categorical
+
+  drop_path_rate:
+    values:
+      - 0.0
+      - 0.2
+    distribution: categorical
+
+  val_split:
+    values:
+      - 0.1
+    distribution: categorical
+
+  weight_decay:
+    values:
+      - 0.01
+      - 0.1
+      - 0.001
+    distribution: categorical
+  
+  seed:
+    values:
+      - -1
+      - 1126
+    distribution: categorical
+
+  pretrained_backbone:
+    values:
+      # - "/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/ys59z47m/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=09-val_loss=0.09-train_loss=0.04.ckpt"
+      # - "./borut_models/convnext_xlarge_384_in22ft1k_30.pth"
+      - "/ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=15-val_loss=0.04-train_loss=0.01.ckpt"
+      
+    distribution: categorical
+
+
+  
+  
+
+
+
+  # devices:
+  #   value:
+  #     - [0,1,2,3]
+  #   distribution: constant
+
+  # dataset_root:
+  #   value:
+  #     - "/ceph/hpc/data/st2207-pgp-users/ldragar/dataset/"
+  #   distribution: constant

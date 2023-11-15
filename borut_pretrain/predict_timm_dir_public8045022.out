@@ -1,0 +1,27 @@
+start
+imports done
+wandb run 8e54zlh7
+model_name convnext_xlarge_384_in22ft1k
+resolution 384
+Timm data_cfg {'input_size': (3, 384, 384), 'interpolation': 'bicubic', 'mean': (0.485, 0.456, 0.406), 'std': (0.229, 0.224, 0.225), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.229, 0.224, 0.225)
+using norm_mean (0.485, 0.456, 0.406)
+found ['/ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=00-val_loss=0.08-train_loss=0.06.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=01-val_loss=0.07-train_loss=0.03.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=02-val_loss=0.05-train_loss=0.03.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=03-val_loss=0.06-train_loss=0.02.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=04-val_loss=0.04-train_loss=0.02.ckpt']
+epoch 00
+AUC@ROC: 0.8293986485263041, threshold:0.326796, EER: 0.27261761158021713, APCER:0.27141133896260555, BPCER:0.27090779127948533, ACER:0.27115956512104544
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=00-val_loss=0.08-train_loss=0.06.ckpt is 0.829399
+new best_auc 0.8293986485263041
+epoch 01
+AUC@ROC: 0.8746347339259216, threshold:0.064636, EER: 0.22677925211097708, APCER:0.2255729794933655, BPCER:0.22730521801286632, ACER:0.2264390987531159
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=01-val_loss=0.07-train_loss=0.03.ckpt is 0.874635
+new best_auc 0.8746347339259216
+epoch 02
+AUC@ROC: 0.8352144518185055, threshold:0.108325, EER: 0.24607961399276237, APCER:0.2448733413751508, BPCER:0.2437455325232309, ACER:0.24430943694919083
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=02-val_loss=0.05-train_loss=0.03.ckpt is 0.835214
+epoch 03
+AUC@ROC: 0.8837856783796112, threshold:0.221378, EER: 0.19782870928829915, APCER:0.19782870928829915, BPCER:0.19871336669049322, ACER:0.1982710379893962
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=03-val_loss=0.06-train_loss=0.02.ckpt is 0.883786
+new best_auc 0.8837856783796112
+epoch 04
+AUC@ROC: 0.8794783625388115, threshold:0.179044, EER: 0.2243667068757539, APCER:0.2243667068757539, BPCER:0.226590421729807, ACER:0.22547856430278046
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=04-val_loss=0.04-train_loss=0.02.ckpt is 0.879478

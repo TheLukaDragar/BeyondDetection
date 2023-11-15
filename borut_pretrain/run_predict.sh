@@ -23,4 +23,7 @@ conda activate  /ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env
 run_id=$1
 output_txt="./save_result/pred_"$run_id"_public.txt"
 
-srun python3 predict_timm_dir_public.py --run_id $run_id --output_txt $output_txt
+#capture orher arguments
+args=("$@")
+
+srun python3 predict_timm_dir_public.py --run_id $run_id --output_txt $output_txt ${args[@]:1}

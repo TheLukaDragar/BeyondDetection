@@ -24,7 +24,7 @@ command:
 
 
 
-method: random
+method: grid
 metric:
   goal: minimize
   name: val_loss
@@ -32,7 +32,7 @@ metric:
 parameters:
   model_name:
     values:
-      - swin_large_patch4_window12_384.ms_in22k_ft_in1k
+      - swinv2_large_window12to16_192to256.ms_in22k_ft_in1k
     distribution: categorical
   batch_size:
     values:
@@ -42,10 +42,7 @@ parameters:
     
   seq_len:
     values:
-      - 8
       - 16
-      - 32
-
     distribution: categorical
 
   accumulate_grad_batches:
@@ -76,6 +73,7 @@ parameters:
   augmentation:
     values:
       - False
+    
 
     distribution: categorical
 
@@ -110,8 +108,9 @@ parameters:
 
   pretrained_backbone:
     values:
-      - "/ceph/hpc/data/st2207-pgp-users/models_luka/swin_large_patch4_window12_384.ms_in22k_ft_in1k/swin_large_patch4_window12_384.ms_in22k_ft_in1k-epoch=12-train_loss=0.03.ckpt"
+      # - "/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/ys59z47m/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=09-val_loss=0.09-train_loss=0.04.ckpt"
       # - "./borut_models/convnext_xlarge_384_in22ft1k_30.pth"
+      
     distribution: categorical
 
 

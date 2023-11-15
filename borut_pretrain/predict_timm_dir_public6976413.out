@@ -18,3 +18,76 @@ AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch1
 epoch 03
 AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=03-val_loss=0.24-train_loss=0.08.ckpt is 0.886333
 epoch 04
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=04-val_loss=0.14-train_loss=0.08.ckpt is 0.854201
+epoch 05
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=05-val_loss=0.09-train_loss=0.07.ckpt is 0.904774
+epoch 06
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=06-val_loss=0.14-train_loss=0.07.ckpt is 0.829114
+epoch 07
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=07-val_loss=0.06-train_loss=0.06.ckpt is 0.901668
+epoch 08
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=08-val_loss=0.04-train_loss=0.06.ckpt is 0.842081
+epoch 09
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=09-val_loss=0.14-train_loss=0.06.ckpt is 0.792950
+epoch 10
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=10-val_loss=0.07-train_loss=0.06.ckpt is 0.883136
+epoch 11
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=11-val_loss=0.10-train_loss=0.05.ckpt is 0.872317
+epoch 12
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=12-val_loss=0.05-train_loss=0.04.ckpt is 0.892649
+epoch 13
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=13-val_loss=0.07-train_loss=0.03.ckpt is 0.903339
+epoch 14
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=14-val_loss=0.10-train_loss=0.03.ckpt is 0.897688
+epoch 15
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=15-val_loss=0.00-train_loss=0.03.ckpt is 0.891945
+epoch 16
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=16-val_loss=0.07-train_loss=0.03.ckpt is 0.893648
+epoch 17
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=17-val_loss=0.04-train_loss=0.03.ckpt is 0.891766
+epoch 18
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=18-val_loss=0.01-train_loss=0.03.ckpt is 0.886094
+epoch 19
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=19-val_loss=0.01-train_loss=0.02.ckpt is 0.887195
+epoch 20
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=20-val_loss=0.01-train_loss=0.03.ckpt is 0.887468
+epoch 21
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=21-val_loss=0.01-train_loss=0.02.ckpt is 0.887742
+epoch 22
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=22-val_loss=0.03-train_loss=0.02.ckpt is 0.887799
+epoch 23
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=23-val_loss=0.07-train_loss=0.02.ckpt is 0.887764
+epoch 24
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=24-val_loss=0.01-train_loss=0.03.ckpt is 0.887807
+epoch 25
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=25-val_loss=0.02-train_loss=0.02.ckpt is 0.887754
+epoch 26
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=26-val_loss=0.03-train_loss=0.03.ckpt is 0.887751
+epoch 27
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=27-val_loss=0.03-train_loss=0.02.ckpt is 0.887737
+epoch 28
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=28-val_loss=0.00-train_loss=0.03.ckpt is 0.887686
+epoch 29
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=29-val_loss=0.07-train_loss=0.02.ckpt is 0.887733
+epoch 30
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=30-val_loss=0.00-train_loss=0.03.ckpt is 0.887707
+epoch 31
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=31-val_loss=0.01-train_loss=0.02.ckpt is 0.887766
+epoch 32
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=32-val_loss=0.01-train_loss=0.02.ckpt is 0.887787
+epoch 33
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=33-val_loss=0.13-train_loss=0.02.ckpt is 0.887817
+epoch 34
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=34-val_loss=0.02-train_loss=0.02.ckpt is 0.887799
+epoch 35
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=35-val_loss=0.03-train_loss=0.02.ckpt is 0.887773
+epoch 36
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=36-val_loss=0.01-train_loss=0.03.ckpt is 0.887800
+epoch 37
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=37-val_loss=0.02-train_loss=0.02.ckpt is 0.887710
+epoch 38
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=38-val_loss=0.03-train_loss=0.02.ckpt is 0.887768
+epoch 39
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=39-val_loss=0.06-train_loss=0.03.ckpt is 0.887803
+epoch 40
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva_large_patch14_336.in22k_ft_in22k_in1k/0zylj5e0/eva_large_patch14_336.in22k_ft_in22k_in1k-epoch=40-val_loss=0.01-train_loss=0.02.ckpt is 0.887843

@@ -6,7 +6,7 @@ from sklearn.metrics import roc_auc_score
 from sklearn.metrics import roc_curve
 
 
-verbose = False
+verbose = True
 
 #load prediction_scores from pred.txt
 # aaflfhiktb.mp4, 0.0
