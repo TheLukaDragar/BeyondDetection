@@ -1,0 +1,120 @@
+start
+imports done
+wandb run qkpjz9ae
+model_name eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+resolution 448
+Timm data_cfg {'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+using norm_std (0.26862954, 0.26130258, 0.27577711)
+using norm_mean (0.48145466, 0.4578275, 0.40821073)
+found ['/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=00-val_loss=0.13-train_loss=0.07.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=01-val_loss=0.12-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=02-val_loss=0.12-train_loss=0.04.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=03-val_loss=0.10-train_loss=0.04.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=04-val_loss=0.08-train_loss=0.04.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=05-val_loss=0.10-train_loss=0.03.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=06-val_loss=0.06-train_loss=0.03.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=07-val_loss=0.07-train_loss=0.03.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=08-val_loss=0.08-train_loss=0.03.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=09-val_loss=0.08-train_loss=0.03.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=10-val_loss=0.04-train_loss=0.02.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=11-val_loss=0.02-train_loss=0.02.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=12-val_loss=0.04-train_loss=0.02.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=13-val_loss=0.03-train_loss=0.02.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=14-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=15-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=16-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=17-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=18-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=19-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=20-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=21-val_loss=0.06-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=22-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=23-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=24-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=25-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=26-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=27-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=28-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=29-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=30-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=31-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=32-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=33-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=34-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=35-val_loss=0.05-train_loss=0.01.ckpt']
+epoch 00
+AUC@ROC: 0.7992099302362276, threshold:0.333952, EER: 0.2955367913148372, APCER:0.2943305186972256, BPCER:0.2952108649035025, ACER:0.2947706918003641
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=00-val_loss=0.13-train_loss=0.07.ckpt is 0.799210
+new best_auc 0.7992099302362276
+epoch 01
+AUC@ROC: 0.8160132474428141, threshold:0.03417, EER: 0.2762364294330519, APCER:0.2750301568154403, BPCER:0.27519656897784134, ACER:0.2751133628966408
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=01-val_loss=0.12-train_loss=0.05.ckpt is 0.816013
+new best_auc 0.8160132474428141
+epoch 02
+AUC@ROC: 0.7945378872208393, threshold:0.186213, EER: 0.2617611580217129, APCER:0.2617611580217129, BPCER:0.26161543959971406, ACER:0.2616882988107135
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=02-val_loss=0.12-train_loss=0.04.ckpt is 0.794538
+epoch 03
+AUC@ROC: 0.8749981677417353, threshold:0.484125, EER: 0.218335343787696, APCER:0.21592279855247287, BPCER:0.21801286633309508, ACER:0.21696783244278398
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=03-val_loss=0.10-train_loss=0.04.ckpt is 0.874998
+new best_auc 0.8749981677417353
+epoch 04
+AUC@ROC: 0.7718584099792114, threshold:0.185402, EER: 0.3172496984318456, APCER:0.3172496984318456, BPCER:0.3187991422444603, ACER:0.3180244203381529
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=04-val_loss=0.08-train_loss=0.04.ckpt is 0.771858
+epoch 05
+AUC@ROC: 0.8128221002249583, threshold:0.383251, EER: 0.2882991556091677, APCER:0.2870928829915561, BPCER:0.28806290207290924, ACER:0.28757789253223265
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=05-val_loss=0.10-train_loss=0.03.ckpt is 0.812822
+epoch 06
+AUC@ROC: 0.8047636128166682, threshold:0.158412, EER: 0.27864897466827504, APCER:0.27864897466827504, BPCER:0.278770550393138, ACER:0.2787097625307065
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=06-val_loss=0.06-train_loss=0.03.ckpt is 0.804764
+epoch 07
+AUC@ROC: 0.758670461668726, threshold:0.146179, EER: 0.316043425814234, APCER:0.316043425814234, BPCER:0.315939957112223, ACER:0.3159916914632285
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=07-val_loss=0.07-train_loss=0.03.ckpt is 0.758670
+epoch 08
+AUC@ROC: 0.8091071427031716, threshold:0.431542, EER: 0.2750301568154403, APCER:0.2738238841978287, BPCER:0.27448177269478197, ACER:0.27415282844630534
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=08-val_loss=0.08-train_loss=0.03.ckpt is 0.809107
+epoch 09
+AUC@ROC: 0.7968870578760807, threshold:0.129301, EER: 0.2605548854041013, APCER:0.2605548854041013, BPCER:0.26161543959971406, ACER:0.2610851625019077
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=09-val_loss=0.08-train_loss=0.03.ckpt is 0.796887
+epoch 10
+AUC@ROC: 0.7980187468043262, threshold:0.097142, EER: 0.29674306393244876, APCER:0.29674306393244876, BPCER:0.29664045746962114, ACER:0.296691760701035
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=10-val_loss=0.04-train_loss=0.02.ckpt is 0.798019
+epoch 11
+AUC@ROC: 0.8133536706815396, threshold:0.104195, EER: 0.29071170084439085, APCER:0.28950542822677927, BPCER:0.2902072909220872, ACER:0.28985635957443323
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=11-val_loss=0.02-train_loss=0.02.ckpt is 0.813354
+epoch 12
+AUC@ROC: 0.8063044342374486, threshold:0.11244, EER: 0.2882991556091677, APCER:0.2882991556091677, BPCER:0.2894924946390279, ACER:0.2888958251240978
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=12-val_loss=0.04-train_loss=0.02.ckpt is 0.806304
+epoch 13
+AUC@ROC: 0.8233017552603057, threshold:0.110503, EER: 0.28347406513872137, APCER:0.2822677925211098, BPCER:0.28448892065761255, ACER:0.28337835658936117
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=13-val_loss=0.03-train_loss=0.02.ckpt is 0.823302
+epoch 14
+AUC@ROC: 0.813949909076878, threshold:0.127119, EER: 0.2798552472858866, APCER:0.2798552472858866, BPCER:0.2802001429592566, ACER:0.28002769512257164
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=14-val_loss=0.05-train_loss=0.01.ckpt is 0.813950
+epoch 15
+AUC@ROC: 0.8085492739514955, threshold:0.086924, EER: 0.28347406513872137, APCER:0.28347406513872137, BPCER:0.28448892065761255, ACER:0.283981492898167
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=15-val_loss=0.05-train_loss=0.01.ckpt is 0.808549
+epoch 16
+AUC@ROC: 0.8065010247712696, threshold:0.100742, EER: 0.28347406513872137, APCER:0.28347406513872137, BPCER:0.28448892065761255, ACER:0.283981492898167
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=16-val_loss=0.03-train_loss=0.01.ckpt is 0.806501
+epoch 17
+AUC@ROC: 0.8042928302225181, threshold:0.101454, EER: 0.28468033775633295, APCER:0.28468033775633295, BPCER:0.28663330950679056, ACER:0.28565682363156175
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=17-val_loss=0.04-train_loss=0.01.ckpt is 0.804293
+epoch 18
+AUC@ROC: 0.8039112893838525, threshold:0.094385, EER: 0.2882991556091677, APCER:0.2870928829915561, BPCER:0.2873481057898499, ACER:0.28722049439070296
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=18-val_loss=0.05-train_loss=0.01.ckpt is 0.803911
+epoch 19
+AUC@ROC: 0.8035021568913172, threshold:0.09931, EER: 0.2870928829915561, APCER:0.2858866103739445, BPCER:0.2873481057898499, ACER:0.2866173580818972
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=19-val_loss=0.03-train_loss=0.01.ckpt is 0.803502
+epoch 20
+AUC@ROC: 0.8032202046783373, threshold:0.098954, EER: 0.2882991556091677, APCER:0.2870928829915561, BPCER:0.28806290207290924, ACER:0.28757789253223265
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=20-val_loss=0.05-train_loss=0.01.ckpt is 0.803220
+epoch 21
+AUC@ROC: 0.803322811141165, threshold:0.09968, EER: 0.2870928829915561, APCER:0.2858866103739445, BPCER:0.28806290207290924, ACER:0.2869747562234269
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=21-val_loss=0.06-train_loss=0.01.ckpt is 0.803323
+epoch 22
+AUC@ROC: 0.8033943769933892, threshold:0.099765, EER: 0.2870928829915561, APCER:0.2858866103739445, BPCER:0.2873481057898499, ACER:0.2866173580818972
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=22-val_loss=0.04-train_loss=0.01.ckpt is 0.803394
+epoch 23
+AUC@ROC: 0.8033469538383009, threshold:0.10005, EER: 0.2858866103739445, APCER:0.2858866103739445, BPCER:0.28806290207290924, ACER:0.2869747562234269
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=23-val_loss=0.04-train_loss=0.01.ckpt is 0.803347
+epoch 24
+AUC@ROC: 0.8033266912174905, threshold:0.099351, EER: 0.2870928829915561, APCER:0.2870928829915561, BPCER:0.28806290207290924, ACER:0.28757789253223265
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=24-val_loss=0.04-train_loss=0.01.ckpt is 0.803327
+epoch 25
+AUC@ROC: 0.8034379200721522, threshold:0.099144, EER: 0.28950542822677927, APCER:0.2882991556091677, BPCER:0.2873481057898499, ACER:0.2878236306995088
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=25-val_loss=0.04-train_loss=0.01.ckpt is 0.803438
+epoch 26
+AUC@ROC: 0.8034857743468322, threshold:0.099986, EER: 0.2858866103739445, APCER:0.2858866103739445, BPCER:0.28806290207290924, ACER:0.2869747562234269
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=26-val_loss=0.03-train_loss=0.01.ckpt is 0.803486
+epoch 27
+AUC@ROC: 0.8034607694105129, threshold:0.099703, EER: 0.2858866103739445, APCER:0.2858866103739445, BPCER:0.28806290207290924, ACER:0.2869747562234269
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=27-val_loss=0.05-train_loss=0.01.ckpt is 0.803461
+epoch 28
+AUC@ROC: 0.8034189508101168, threshold:0.098953, EER: 0.28950542822677927, APCER:0.2882991556091677, BPCER:0.2873481057898499, ACER:0.2878236306995088
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=28-val_loss=0.04-train_loss=0.01.ckpt is 0.803419
+epoch 29
+AUC@ROC: 0.8033297090546323, threshold:0.099491, EER: 0.2870928829915561, APCER:0.2870928829915561, BPCER:0.28877769835596856, ACER:0.28793529067376233
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=29-val_loss=0.04-train_loss=0.01.ckpt is 0.803330
+epoch 30
+AUC@ROC: 0.8033116020317803, threshold:0.09852, EER: 0.2882991556091677, APCER:0.2870928829915561, BPCER:0.28806290207290924, ACER:0.28757789253223265
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=30-val_loss=0.05-train_loss=0.01.ckpt is 0.803312
+epoch 31
+AUC@ROC: 0.8032253781134379, threshold:0.098344, EER: 0.2870928829915561, APCER:0.2858866103739445, BPCER:0.28806290207290924, ACER:0.2869747562234269
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=31-val_loss=0.03-train_loss=0.01.ckpt is 0.803225
+epoch 32
+AUC@ROC: 0.8031395853146871, threshold:0.098862, EER: 0.2870928829915561, APCER:0.2858866103739445, BPCER:0.28806290207290924, ACER:0.2869747562234269
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=32-val_loss=0.04-train_loss=0.01.ckpt is 0.803140
+epoch 33
+AUC@ROC: 0.8031326874012197, threshold:0.099187, EER: 0.28950542822677927, APCER:0.2858866103739445, BPCER:0.28806290207290924, ACER:0.2869747562234269
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=33-val_loss=0.04-train_loss=0.01.ckpt is 0.803133
+epoch 34
+AUC@ROC: 0.8032133067648699, threshold:0.099018, EER: 0.2882991556091677, APCER:0.2882991556091677, BPCER:0.28877769835596856, ACER:0.28853842698256815
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=34-val_loss=0.04-train_loss=0.01.ckpt is 0.803213
+epoch 35
+AUC@ROC: 0.8031361363579534, threshold:0.099436, EER: 0.28950542822677927, APCER:0.2858866103739445, BPCER:0.28877769835596856, ACER:0.2873321543649565
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k/qkpjz9ae/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k-epoch=35-val_loss=0.05-train_loss=0.01.ckpt is 0.803136

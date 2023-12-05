@@ -58,7 +58,7 @@ parameters:
 
   max_epochs:
     values:
-      - 16
+      
       - 32
       - 48
       - 64
@@ -102,8 +102,17 @@ parameters:
   
   seed:
     values:
-      - -1
+      - 420
       - 1126
+      - 69
+      - 42069
+      - 69420
+    distribution: categorical
+
+  deterministic:
+    values:
+      - True
+      - False
     distribution: categorical
 
   pretrained_backbone:

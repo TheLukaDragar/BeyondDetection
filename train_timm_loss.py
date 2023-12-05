@@ -36,7 +36,8 @@ import timm
 print("imported timm")
 from torch.utils.data import DataLoader
 from torch.optim import AdamW
-from torch.optim.lr_scheduler import ReduceLROnPlateau
+from torch.optim.lr_scheduler import ReduceLROnPlateau,SequentialLR, CosineAnnealingWarmRestarts, LinearLR
+
 from torch.utils.data import random_split
 import wandb
 import random
@@ -46,8 +47,12 @@ import random
 import numpy as np
 from lightning.pytorch import seed_everything
 
+from pytorch_lightning.callbacks import LearningRateMonitor
 
-def train_val_split(dataset, train_prop=0.8, val_prop=0.2, seed=None):
+
+
+# important ALWAYS USE A SEED FOR SPLIT BEACOUSE OF DDP PROCESES
+def train_val_split(dataset, train_prop=0.8, val_prop=0.2, seed=42):
     assert (
         0 <= train_prop <= 1 and 0 <= val_prop <= 1
     ), "Proportions must be between 0 and 1"
@@ -57,14 +62,13 @@ def train_val_split(dataset, train_prop=0.8, val_prop=0.2, seed=None):
     train_length = int(train_prop * total_length)
     val_length = int(val_prop * total_length)
 
-    if seed is not None:
-        return random_split(
-            dataset,
-            [train_length, val_length],
-            generator=torch.Generator().manual_seed(seed),
-        )
-    else:
-        return random_split(dataset, [train_length, val_length])
+    
+    return random_split(
+        dataset,
+        [train_length, val_length],
+        generator=torch.Generator().manual_seed(seed),
+    )
+    
 
 
 class TimmModel(pl.LightningModule):
@@ -77,9 +81,11 @@ class TimmModel(pl.LightningModule):
         lr=2e-5,
         drop_path_rate=0.0,
         weight_decay=0.01,
+        epochs=33,
     ):
         super(TimmModel, self).__init__()
         self.model_name = model_name
+        self.epochs = epochs
 
         # load pretrained deepfake detection model
         self.backbone = create_model(
@@ -251,14 +257,30 @@ class TimmModel(pl.LightningModule):
     def MAE(self, preds, y):
         return self.mae(preds.view(-1), y.view(-1))
 
+    # def configure_optimizers(self):
+    #     optimizer = AdamW(self.parameters(), lr=self.lr, weight_decay=self.weight_decay)
+    #     lr_scheduler = {
+    #         "scheduler": ReduceLROnPlateau(
+    #             optimizer, mode="min", factor=0.1, patience=2, verbose=True
+    #         ),
+    #         "monitor": "val_loss",
+    #     }
+    #     return [optimizer], [lr_scheduler]
+
     def configure_optimizers(self):
+        # Define the optimizer
         optimizer = AdamW(self.parameters(), lr=self.lr, weight_decay=self.weight_decay)
-        lr_scheduler = {
-            "scheduler": ReduceLROnPlateau(
-                optimizer, mode="min", factor=0.1, patience=2, verbose=True
-            ),
-            "monitor": "val_loss",
-        }
+
+        # Define the warm-up scheduler
+        warmup_epochs = 5  # Define the number of warm-up epochs
+        scheduler_warmup = LinearLR(optimizer, start_factor=0.1, total_iters=warmup_epochs)
+
+        # Define the cosine annealing scheduler
+        scheduler_cosine = CosineAnnealingWarmRestarts(optimizer, T_0=10, T_mult=1, eta_min=self.lr * 0.001,verbose=True)
+
+        # Combine them using SequentialLR
+        lr_scheduler = SequentialLR(optimizer, schedulers=[scheduler_warmup, scheduler_cosine], milestones=[warmup_epochs])
+
         return [optimizer], [lr_scheduler]
 
     def get_predictions(self):
@@ -302,7 +324,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--seed",
         type=int,
-        default=-1,
+        default=1126,
         help="Random seed. for reproducibility. Note final model is worse with seed set.",
     )
     parser.add_argument(
@@ -381,6 +403,13 @@ if __name__ == "__main__":
         "--weight_decay", type=float, default=0.01, help="Weight decay."
     )
 
+    parser.add_argument(
+        "--deterministic",
+        type=bool,
+        default=False,
+        help="Whether to use deterministic ptl trainer.",
+    )
+
     # parser.add_argument('--test_labels_dir', default='/d/hpc/projects/FRI/ldragar/label/', help='Path to the test labels directory.')
 
     args = parser.parse_args()
@@ -389,13 +418,19 @@ if __name__ == "__main__":
     batch_size = args.batch_size
     seq_len = args.seq_len
     seed = args.seed
+
+    
+
+
+
+
     wdb_project_name = args.wdb_project_name
 
     # cp_save_dir = args.cp_save_dir
     # test_labels_dir = args.test_labels_dir
 
-    if seed != -1:
-        seed_everything(seed, workers=True)
+    #ALWATS seed
+    seed_everything(seed, workers=True)
 
     # seed only data
 
@@ -408,6 +443,7 @@ if __name__ == "__main__":
         lr=args.lr,
         drop_path_rate=args.drop_path_rate,
         weight_decay=args.weight_decay,
+        epochs=args.max_epochs,
     )
 
     resolution = model.backbone.pretrained_cfg["input_size"][
@@ -441,7 +477,7 @@ if __name__ == "__main__":
         args.labels_file,
         transform=transform_train,
         seq_len=seq_len,
-        seed=seed if seed != -1 else None,
+        seed=seed
     )
 
     print("splitting dataset")
@@ -449,8 +485,18 @@ if __name__ == "__main__":
         face_frames_dataset,
         train_prop=(1 - args.val_split),
         val_prop=args.val_split,
-        seed=seed if seed != -1 else None,
+        seed=seed 
     )
+
+    #log dataset split train indices
+    print("train indices")
+    print(train_ds.indices)
+
+    print("val indices")
+    print(val_ds.indices)
+
+
+    
 
     print("first 5 train labels")
     for i in range(5):
@@ -539,6 +585,8 @@ if __name__ == "__main__":
     checkpoint_callback = ModelCheckpoint(monitor='val_loss',
                                     dirpath=args.cp_save_dir,
                                         filename=f'{wandb_run_id}-{{epoch:02d}}-{{val_loss:.2f}}', mode='min', save_top_k=1)
+    
+    lr_monitor = LearningRateMonitor(logging_interval='step')
 
     trainer = pl.Trainer(
         accelerator="gpu",
@@ -552,11 +600,11 @@ if __name__ == "__main__":
             #             mode="min",
             #             patience=4,
             #             ),
-            checkpoint_callback
+            checkpoint_callback,lr_monitor
         ],
         logger=wandb_logger,
         accumulate_grad_batches=args.accumulate_grad_batches,
-        deterministic=seed != -1,
+        deterministic=args.deterministic,
     )
 
     print("start training")
@@ -646,7 +694,7 @@ if __name__ == "__main__":
                 args.dataset_root,
                 transform=transform_test,
                 seq_len=1,
-                seed=seed if seed != -1 else None,
+                seed=seed
             )
             print(f"loaded {len(ds)} test examples")
 

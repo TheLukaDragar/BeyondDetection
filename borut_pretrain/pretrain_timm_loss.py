@@ -38,8 +38,9 @@ from pytorch_lightning.callbacks import LearningRateMonitor
 from pytorch_lightning.callbacks import ModelCheckpoint
 #tuner ptl
 from pytorch_lightning.tuner.tuning import Tuner
-
-
+# from torch.optim.lr_scheduler import CosineAnnealingLR
+# from transformers import get_linear_schedule_with_warmup
+#import pl_bolts
 import math
 
 print("imports done")
@@ -138,7 +139,7 @@ def parse_args():
     parser.add_argument("--auto_lr_find", action="store_true", default=False)
 
     #loss function  CrossEntropyLoss or MAE
-    parser.add_argument("--loss_function", type=str, default="CrossEntropyLoss")
+    # parser.add_argument("--loss_function", type=str, default="CrossEntropyLoss")
 
     # #auto batch size
     # parser.add_argument("--auto_batch_size", action="store_true", default=False)
@@ -196,7 +197,7 @@ def load_txt(txt_path="./txt3", logger=None):
 
 
 class MyModel(LightningModule):
-    def __init__(self, model_name, num_class=1, learning_rate=0.00005):
+    def __init__(self, model_name, num_class=1, learning_rate=0.00005, total_epochs=60):
         super(MyModel, self).__init__()
 
         #regresion training so only 1 class
@@ -207,6 +208,7 @@ class MyModel(LightningModule):
         #use MSE loss
         self.criterion = nn.MSELoss()
         self.learning_rate = learning_rate
+        self.total_epochs = total_epochs
 
     def forward(self, x):
         return self.model(x)
@@ -249,6 +251,25 @@ class MyModel(LightningModule):
             "monitor": "val_loss",
         }
         return [optimizer], [scheduler]
+    # def configure_optimizers(self):
+    #     optimizer = optim.AdamW(
+    #         filter(lambda p: p.requires_grad, self.parameters()), lr=self.learning_rate
+    #     )
+
+    #     scheduler = pl_bolts.optimizers.lr_scheduler.LinearWarmupCosineAnnealingLR(
+    #         optimizer,
+    #         warmup_epochs=5,
+    #         max_epochs=self.total_epochs,
+    #         warmup_start_lr=0,
+    #         eta_min=0,
+    #     )
+    #     scheduler_cosine = {
+    #         "scheduler": scheduler,
+    #         "interval": "step"
+    #     }
+
+    #     return [optimizer], [scheduler_cosine]
+
 
 
 class MyDataModule(LightningDataModule):
@@ -415,7 +436,8 @@ def main():
 
     # ptl
     model = MyModel(
-        model_name=args.model_name,  learning_rate=args.base_lr ##num_class=args.num_class,
+        model_name=args.model_name,  learning_rate=args.base_lr, total_epochs=args.num_epochs
+          ##num_class=args.num_class,
     )
     # get resolution from model
     resolution = model.model.pretrained_cfg["input_size"][
@@ -437,6 +459,11 @@ def main():
 
     wandb_logger.log_hyperparams({"norm_std": norm_std})
     wandb_logger.log_hyperparams({"norm_mean": norm_mean})
+
+    #log that this is mse pretraining
+    wandb_logger.log_hyperparams({"loss_function": "MSE"})
+
+
 
     # important USE TIMM TRANSFORMS! https://huggingface.co/docs/timm/quickstart
     transform_train, transform_test = build_transforms(

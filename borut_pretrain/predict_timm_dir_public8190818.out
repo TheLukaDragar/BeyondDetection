@@ -1,0 +1,133 @@
+start
+imports done
+wandb run x81may9t
+model_name swinv2_large_window12to16_192to256.ms_in22k_ft_in1k
+resolution 256
+Timm data_cfg {'input_size': (3, 256, 256), 'interpolation': 'bicubic', 'mean': (0.485, 0.456, 0.406), 'std': (0.229, 0.224, 0.225), 'crop_pct': 0.9, 'crop_mode': 'center'}
+using norm_std (0.229, 0.224, 0.225)
+using norm_mean (0.485, 0.456, 0.406)
+found ['/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=00-val_loss=0.09-train_loss=0.08.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=01-val_loss=0.09-train_loss=0.05.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=02-val_loss=0.12-train_loss=0.04.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=03-val_loss=0.11-train_loss=0.03.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=04-val_loss=0.06-train_loss=0.03.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=05-val_loss=0.06-train_loss=0.03.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=06-val_loss=0.03-train_loss=0.03.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=07-val_loss=0.05-train_loss=0.03.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=08-val_loss=0.04-train_loss=0.03.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=09-val_loss=0.06-train_loss=0.02.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=10-val_loss=0.04-train_loss=0.02.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=11-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=12-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=13-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=14-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=15-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=16-val_loss=0.02-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=17-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=18-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=19-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=20-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=21-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=22-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=23-val_loss=0.02-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=24-val_loss=0.02-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=25-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=26-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=27-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=28-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=29-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=30-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=31-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=32-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=33-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=34-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=35-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=36-val_loss=0.04-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=37-val_loss=0.05-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=38-val_loss=0.03-train_loss=0.01.ckpt', '/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=39-val_loss=0.02-train_loss=0.01.ckpt']
+epoch 00
+AUC@ROC: 0.8191608515819072, threshold:0.075741, EER: 0.2605548854041013, APCER:0.25934861278648974, BPCER:0.26018584703359543, ACER:0.2597672299100426
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=00-val_loss=0.09-train_loss=0.08.ckpt is 0.819161
+new best_auc 0.8191608515819072
+epoch 01
+AUC@ROC: 0.8247464370121345, threshold:-0.044814, EER: 0.26658624849215923, APCER:0.26658624849215923, BPCER:0.26590421729807007, ACER:0.26624523289511465
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=01-val_loss=0.09-train_loss=0.05.ckpt is 0.824746
+new best_auc 0.8247464370121345
+epoch 02
+AUC@ROC: 0.8555025086849042, threshold:0.256359, EER: 0.23522316043425814, APCER:0.23522316043425814, BPCER:0.23516797712651893, ACER:0.23519556878038855
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=02-val_loss=0.12-train_loss=0.04.ckpt is 0.855503
+new best_auc 0.8555025086849042
+epoch 03
+AUC@ROC: 0.8921463806216916, threshold:0.30168, EER: 0.20265379975874548, APCER:0.2014475271411339, BPCER:0.20300214438884917, ACER:0.20222483576499153
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=03-val_loss=0.11-train_loss=0.03.ckpt is 0.892146
+new best_auc 0.8921463806216916
+epoch 04
+AUC@ROC: 0.8047843065570703, threshold:0.082409, EER: 0.26658624849215923, APCER:0.26658624849215923, BPCER:0.2666190135811294, ACER:0.2666026310366443
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=04-val_loss=0.06-train_loss=0.03.ckpt is 0.804784
+epoch 05
+AUC@ROC: 0.8054387460972899, threshold:0.060315, EER: 0.3027744270205066, APCER:0.30156815440289503, BPCER:0.30164403145103647, ACER:0.3016060929269657
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=05-val_loss=0.06-train_loss=0.03.ckpt is 0.805439
+epoch 06
+AUC@ROC: 0.8541496554061103, threshold:0.078107, EER: 0.2376357056694813, APCER:0.2376357056694813, BPCER:0.23731236597569694, ACER:0.23747403582258914
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=06-val_loss=0.03-train_loss=0.03.ckpt is 0.854150
+epoch 07
+AUC@ROC: 0.8095033416079553, threshold:0.000251, EER: 0.2750301568154403, APCER:0.2750301568154403, BPCER:0.2773409578270193, ACER:0.2761855573212298
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=07-val_loss=0.05-train_loss=0.03.ckpt is 0.809503
+epoch 08
+AUC@ROC: 0.8628668935505371, threshold:0.067969, EER: 0.22195416164053075, APCER:0.22195416164053075, BPCER:0.22230164403145103, ACER:0.22212790283599088
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=08-val_loss=0.04-train_loss=0.03.ckpt is 0.862867
+epoch 09
+AUC@ROC: 0.8149776981835207, threshold:0.069114, EER: 0.2810615199034982, APCER:0.2798552472858866, BPCER:0.2816297355253753, ACER:0.28074249140563096
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=09-val_loss=0.06-train_loss=0.02.ckpt is 0.814978
+epoch 10
+AUC@ROC: 0.8618744562504148, threshold:0.029366, EER: 0.2316043425814234, APCER:0.2316043425814234, BPCER:0.23373838456040028, ACER:0.23267136357091184
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=10-val_loss=0.04-train_loss=0.02.ckpt is 0.861874
+epoch 11
+AUC@ROC: 0.8771826507129424, threshold:0.110065, EER: 0.22195416164053075, APCER:0.22074788902291917, BPCER:0.22087205146533237, ACER:0.22080997024412577
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=11-val_loss=0.03-train_loss=0.01.ckpt is 0.877183
+epoch 12
+AUC@ROC: 0.8481407105368215, threshold:0.074581, EER: 0.2605548854041013, APCER:0.25934861278648974, BPCER:0.2594710507505361, ACER:0.25940983176851296
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=12-val_loss=0.05-train_loss=0.01.ckpt is 0.848141
+epoch 13
+AUC@ROC: 0.8521298601189373, threshold:0.096167, EER: 0.25331724969843183, APCER:0.25331724969843183, BPCER:0.2537526804860615, ACER:0.25353496509224666
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=13-val_loss=0.04-train_loss=0.01.ckpt is 0.852130
+epoch 14
+AUC@ROC: 0.8844784875634932, threshold:0.040442, EER: 0.20989143546441497, APCER:0.20989143546441497, BPCER:0.21086490350250178, ACER:0.2103781694834584
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=14-val_loss=0.03-train_loss=0.01.ckpt is 0.884478
+epoch 15
+AUC@ROC: 0.880537623375649, threshold:0.04849, EER: 0.2147165259348613, APCER:0.2135102533172497, BPCER:0.21300929235167976, ACER:0.21325977283446473
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=15-val_loss=0.05-train_loss=0.01.ckpt is 0.880538
+epoch 16
+AUC@ROC: 0.8797840263293356, threshold:0.062378, EER: 0.21592279855247287, APCER:0.21592279855247287, BPCER:0.21801286633309508, ACER:0.21696783244278398
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=16-val_loss=0.02-train_loss=0.01.ckpt is 0.879784
+epoch 17
+AUC@ROC: 0.8720984573678771, threshold:0.068693, EER: 0.2255729794933655, APCER:0.2255729794933655, BPCER:0.23016440314510364, ACER:0.22786869131923457
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=17-val_loss=0.03-train_loss=0.01.ckpt is 0.872098
+epoch 18
+AUC@ROC: 0.8724360240081879, threshold:0.060226, EER: 0.22919179734620024, APCER:0.22798552472858866, BPCER:0.22730521801286632, ACER:0.2276453713707275
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=18-val_loss=0.03-train_loss=0.01.ckpt is 0.872436
+epoch 19
+AUC@ROC: 0.868559396639509, threshold:0.073962, EER: 0.2316043425814234, APCER:0.23039806996381182, BPCER:0.23087919942816298, ACER:0.2306386346959874
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=19-val_loss=0.04-train_loss=0.01.ckpt is 0.868559
+epoch 20
+AUC@ROC: 0.8687900456210752, threshold:0.073952, EER: 0.23039806996381182, APCER:0.23039806996381182, BPCER:0.23087919942816298, ACER:0.2306386346959874
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=20-val_loss=0.04-train_loss=0.01.ckpt is 0.868790
+epoch 21
+AUC@ROC: 0.8687577116516968, threshold:0.067731, EER: 0.23281061519903498, APCER:0.2316043425814234, BPCER:0.23087919942816298, ACER:0.2312417710047932
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=21-val_loss=0.05-train_loss=0.01.ckpt is 0.868758
+epoch 22
+AUC@ROC: 0.8685912994892957, threshold:0.073541, EER: 0.23039806996381182, APCER:0.23039806996381182, BPCER:0.23087919942816298, ACER:0.2306386346959874
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=22-val_loss=0.05-train_loss=0.01.ckpt is 0.868591
+epoch 23
+AUC@ROC: 0.8686745055704963, threshold:0.073541, EER: 0.23039806996381182, APCER:0.23039806996381182, BPCER:0.23087919942816298, ACER:0.2306386346959874
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=23-val_loss=0.02-train_loss=0.01.ckpt is 0.868675
+epoch 24
+AUC@ROC: 0.8687141685729338, threshold:0.073699, EER: 0.23039806996381182, APCER:0.23039806996381182, BPCER:0.2315939957112223, ACER:0.23099603283751707
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=24-val_loss=0.02-train_loss=0.01.ckpt is 0.868714
+epoch 25
+AUC@ROC: 0.8688327264606548, threshold:0.073133, EER: 0.2316043425814234, APCER:0.23039806996381182, BPCER:0.23087919942816298, ACER:0.2306386346959874
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=25-val_loss=0.03-train_loss=0.01.ckpt is 0.868833
+epoch 26
+AUC@ROC: 0.8688508334835066, threshold:0.073476, EER: 0.2316043425814234, APCER:0.23039806996381182, BPCER:0.23087919942816298, ACER:0.2306386346959874
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=26-val_loss=0.03-train_loss=0.01.ckpt is 0.868851
+epoch 27
+AUC@ROC: 0.868925417172873, threshold:0.073176, EER: 0.2316043425814234, APCER:0.23039806996381182, BPCER:0.23087919942816298, ACER:0.2306386346959874
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=27-val_loss=0.03-train_loss=0.01.ckpt is 0.868925
+epoch 28
+AUC@ROC: 0.86892972836879, threshold:0.073426, EER: 0.2316043425814234, APCER:0.23039806996381182, BPCER:0.23087919942816298, ACER:0.2306386346959874
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=28-val_loss=0.05-train_loss=0.01.ckpt is 0.868930
+epoch 29
+AUC@ROC: 0.8689956896663221, threshold:0.07333, EER: 0.2316043425814234, APCER:0.23039806996381182, BPCER:0.23087919942816298, ACER:0.2306386346959874
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=29-val_loss=0.03-train_loss=0.01.ckpt is 0.868996
+epoch 30
+AUC@ROC: 0.8690758779103807, threshold:0.072708, EER: 0.2316043425814234, APCER:0.23039806996381182, BPCER:0.23087919942816298, ACER:0.2306386346959874
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=30-val_loss=0.04-train_loss=0.01.ckpt is 0.869076
+epoch 31
+AUC@ROC: 0.8691543416760722, threshold:0.072588, EER: 0.2316043425814234, APCER:0.23039806996381182, BPCER:0.23087919942816298, ACER:0.2306386346959874
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=31-val_loss=0.05-train_loss=0.01.ckpt is 0.869154
+epoch 32
+AUC@ROC: 0.8691521860781136, threshold:0.07273, EER: 0.2316043425814234, APCER:0.23039806996381182, BPCER:0.23087919942816298, ACER:0.2306386346959874
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=32-val_loss=0.03-train_loss=0.01.ckpt is 0.869152
+epoch 33
+AUC@ROC: 0.8691521860781136, threshold:0.07408, EER: 0.22919179734620024, APCER:0.22919179734620024, BPCER:0.23087919942816298, ACER:0.23003549838718163
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=33-val_loss=0.03-train_loss=0.01.ckpt is 0.869152
+epoch 34
+AUC@ROC: 0.8692517747037993, threshold:0.074537, EER: 0.22919179734620024, APCER:0.22919179734620024, BPCER:0.23087919942816298, ACER:0.23003549838718163
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=34-val_loss=0.04-train_loss=0.01.ckpt is 0.869252
+epoch 35
+AUC@ROC: 0.8692996289784793, threshold:0.071997, EER: 0.23281061519903498, APCER:0.2316043425814234, BPCER:0.23016440314510364, ACER:0.23088437286326352
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=35-val_loss=0.05-train_loss=0.01.ckpt is 0.869300
+epoch 36
+AUC@ROC: 0.869277641879302, threshold:0.074133, EER: 0.2316043425814234, APCER:0.23039806996381182, BPCER:0.23016440314510364, ACER:0.23028123655445773
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=36-val_loss=0.04-train_loss=0.01.ckpt is 0.869278
+epoch 37
+AUC@ROC: 0.869459143227413, threshold:0.073866, EER: 0.2316043425814234, APCER:0.23039806996381182, BPCER:0.23016440314510364, ACER:0.23028123655445773
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=37-val_loss=0.05-train_loss=0.01.ckpt is 0.869459
+epoch 38
+AUC@ROC: 0.8695983948555361, threshold:0.073634, EER: 0.2316043425814234, APCER:0.23039806996381182, BPCER:0.23016440314510364, ACER:0.23028123655445773
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=38-val_loss=0.03-train_loss=0.01.ckpt is 0.869598
+epoch 39
+AUC@ROC: 0.8695022551865843, threshold:0.072851, EER: 0.2316043425814234, APCER:0.23039806996381182, BPCER:0.23016440314510364, ACER:0.23028123655445773
+AUC score for model /ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/x81may9t/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=39-val_loss=0.02-train_loss=0.01.ckpt is 0.869502
