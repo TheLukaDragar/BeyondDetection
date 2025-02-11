@@ -20,7 +20,6 @@ conda activate  /ceph/hpc/data/st2207-pgp-users/ldragar/pytorch_env
 
 out_predictions_dir='./predictions/'
 cp_id=$1 
-model_name=$2
 
 #script is made to run on 1 node with 1 gpu
-srun --nodes=1 --exclusive --gpus=1 --ntasks-per-node=1 --time=0-3:00:00 -p gpu python predict_all_frames.py --out_predictions_dir $out_predictions_dir --cp_id $cp_id --model_name $model_name
+srun --nodes=1 --exclusive --gpus=1 --ntasks-per-node=1 --time=0-3:00:00 -p gpu python predict_all_frames2.py --out_predictions_dir $out_predictions_dir --cp_id $cp_id 

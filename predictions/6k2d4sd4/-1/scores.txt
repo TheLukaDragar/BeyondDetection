@@ -1,0 +1,15 @@
+cp_id,6k2d4sd4
+seed,-1
+args,Namespace(dataset_root='/ceph/hpc/data/st2207-pgp-users/ldragar/ds3', labels_dir='./label/', model_dir='./timm_models_images_sb', batch_size=1, seq_len=5, seed=-1, cp_id='6k2d4sd4', out_predictions_dir='./predictions/', test_labels_dir='./competition_end_groundtruth/', max_frames=250)
+test_set1_score_nonflip_flip_combined_meanonly,{'pearson_corr_coef': 0.05177674826769956, 'spearman_corr_coef': 0.0026555306890780803, 'rmse': 1.8718156098302814}
+test_set2_score_nonflip_flip_combined_meanonly,{'pearson_corr_coef': 0.12185229344490324, 'spearman_corr_coef': -0.04038048898675418, 'rmse': 2.0075698001539446}
+test_set3_score_nonflip_flip_combined_meanonly,{'pearson_corr_coef': 0.20391321696771852, 'spearman_corr_coef': -0.004131544841696847, 'rmse': 2.04408080299727}
+test_set1_score_lr,{'pearson_corr_coef': 0.06614104628336193, 'spearman_corr_coef': 0.01279999122987724, 'rmse': 1.8692199201267872}
+test_set2_score_lr,{'pearson_corr_coef': 0.10041112446830952, 'spearman_corr_coef': -0.049967569243262, 'rmse': 2.0081666350001526}
+test_set3_score_lr,{'pearson_corr_coef': 0.21137665455180576, 'spearman_corr_coef': 0.013259295386475196, 'rmse': 2.0388498497898753}
+test_set1_score_non_flip,{'pearson_corr_coef': 0.030957213891780508, 'spearman_corr_coef': -0.04513854942980733, 'rmse': 1.8744877337909605}
+test_set2_score_non_flip,{'pearson_corr_coef': 0.13033871102542205, 'spearman_corr_coef': -0.05437928899380244, 'rmse': 2.007165633789487}
+test_set3_score_non_flip,{'pearson_corr_coef': 0.1902353103630369, 'spearman_corr_coef': -0.04986094749460473, 'rmse': 2.04960649714939}
+final_score_nonflip_flip_combined_meanonly,0.055947625923491395
+final_score_lr,0.05900342377942794
+final_score_non_flip,0.03369207489367083
