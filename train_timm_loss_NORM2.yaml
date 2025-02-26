@@ -1,0 +1,156 @@
+project: BeyondDetection
+name: vega_train_timm_loss_new_head_upgrade
+program: train_timm_loss_NORM2.py
+
+
+command:
+  - ${env}
+  # - echo
+  - srun
+  - "--nodes=1"
+  - "--cpus-per-task=12"
+  - "--gpus=1"
+  - "-p gpu"
+  - "--ntasks-per-node=1"
+  - "--exclusive"
+  - python3
+  - ${program}
+  - ${args}
+  - "--devices"
+  - "0"
+  
+ 
+
+
+
+method: grid
+metric:
+  goal: minimize
+  name: val_loss
+
+parameters:
+  model_name:
+    values:
+      # - swinv2_large_window12to16_192to256.ms_in22k_ft_in1k
+      - eva_large_patch14_336.in22k_ft_in22k_in1k
+      - convnext_xlarge_384_in22ft1k
+    distribution: categorical
+
+  batch_size:
+    values:
+      - 8
+      # - 16
+
+    distribution: categorical
+    
+  seq_len:
+    values:
+      - 10
+      # - 16
+      
+    distribution: categorical
+
+  accumulate_grad_batches:
+    values:
+      - 1
+    distribution: categorical
+
+  dropout:
+    distribution: categorical
+    values:
+      - 0.0
+      # - 0.1
+
+  max_epochs:
+    values:
+      - 32
+      - 48
+      - 64
+      - 80
+    distribution: categorical
+
+  loss:
+    values:
+      - "norm-in-norm"
+      - "norm-in-norm-KL"
+      - "mae"
+    distribution: categorical
+
+
+  augment_prob:
+    values:
+      - 0.0
+      - 0.3
+    distribution: categorical
+
+  drop_path_rate:
+    values:
+      - 0.0
+      # - 0.2
+    distribution: categorical
+
+  val_split:
+    values:
+      - 0.1
+    distribution: categorical
+
+  weight_decay:
+    values:
+      # - 0.01
+      # - 0.1
+      - 0.001
+    distribution: categorical
+  
+  seed:
+    values:
+      - 420
+      # - 69
+      # - 1126
+      # - 69
+      # - 42069
+      # - 69420
+      # - 6969
+    distribution: categorical
+
+  deterministic:
+    values:
+      # - True
+      - False
+    distribution: categorical
+
+  
+  scheduler:
+    values:
+      - "ReduceLROnPlateau"
+      - "CosineAnnealingWarmRestarts"
+    distribution: categorical
+
+  pretrained_backbone:
+    values:
+      # - "/ceph/hpc/data/st2207-pgp-users/models_luka/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k/ys59z47m/swinv2_large_window12to16_192to256.ms_in22k_ft_in1k-epoch=09-val_loss=0.09-train_loss=0.04.ckpt"
+      # - "./borut_models/convnext_xlarge_384_in22ft1k_30.pth"
+      # - "/ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=15-val_loss=0.04-train_loss=0.01.ckpt"
+      # - "/ceph/hpc/data/st2207-pgp-users/models_luka/convnext_xlarge_384_in22ft1k/8e54zlh7/convnext_xlarge_384_in22ft1k-epoch=30-val_loss=0.04-train_loss=0.01.ckpt"
+      - "None"
+    distribution: categorical
+
+  dataset_root:
+    values:
+      - "/ceph/hpc/data/st2207-pgp-users/ldragar/ds3"
+    distribution: categorical
+
+
+  
+  
+
+
+
+  # devices:
+  #   value:
+  #     - [0,1,2,3]
+  #   distribution: constant
+
+  # dataset_root:
+  #   value:
+  #     - "/ceph/hpc/data/st2207-pgp-users/ldragar/ds3/`"
+  #   distribution: constant
